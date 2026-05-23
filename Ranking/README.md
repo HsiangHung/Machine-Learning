@@ -82,14 +82,20 @@ A decent metric that captures this notion of correct order is the count of inver
 
 ### A. Mean reciprocal rank (MRR)
 
-The mean reciprocal rank is the average of the reciprocal ranks of results for a sample of queries Q [[wiki: Mean reciprocal rank]](https://en.wikipedia.org/wiki/Mean_reciprocal_rank):
+The mean reciprocal rank is the average of the reciprocal ranks of results for a sample of queries Q [[wiki: Mean reciprocal rank]](https://en.wikipedia.org/wiki/Mean_reciprocal_rank), [[Mean Reciprocal Rank (MRR) explained]](https://www.evidentlyai.com/ranking-metrics/mean-reciprocal-rank-mrr):
 
 $$\textrm{MRR} = \frac{1}{|Q|}\sum^{|Q|}_{i=1}\frac{1}{\textrm{rank}_i}.$$
 
 
-where $rank_i$ `rank_i` refers to the rank position of the **first** relevant document for the i-th query.
+where $\textrm{rank}_i$ refers to the rank position of the **first** relevant document for the i-th query. 
+![MRR-explain-1](images/MRR-explain-1.png)
+Note:
 
-**Larger MRR better SEO**, and if none of the proposed results are correct, reciprocal rank is 0. 
+* It considers the position of the **only** **first** relevant item in the ranked list.
+* MRR values range from 0 to 1, where "1" indicates that the first relevant item is always at the top.
+* Higher MRR means better system performance.
+* To compute MRR, you need to prepare the dataset and decide on the K parameter.
+
 
 Note that only the rank of the **first relevant answer** is considered, possible further relevant answers are ignored. If users are interested also in further relevant items, **mean average precision** is a potential alternative metric.
 
