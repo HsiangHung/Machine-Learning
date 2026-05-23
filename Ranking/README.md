@@ -140,10 +140,10 @@ In the information retrieval, precision has different definitions. As defined by
 
 ‍**Precision** at K is a common variation to look at the fraction of relevant items only in the top-K recommendations provided by the system. Applying such a cut-off is useful since users typically only interact with a limited number of items.
 
-Precision has a downside, however. This metric only considers the presence of the relevant items but does not take into account their order. Regardless of whether the 5 relevant items take positions 1 through 5 or 6 through 10, the Precision will be the same. 
-
-See the below example: [[Mean Average Precision (MAP) in ranking and recommendations]](https://www.evidentlyai.com/ranking-metrics/mean-average-precision-map)
+Precision has a downside, however. This metric only considers the presence of the relevant items but does not take into account their order. See the below example: [[Mean Average Precision (MAP) in ranking and recommendations]](https://www.evidentlyai.com/ranking-metrics/mean-average-precision-map)
 ![P-explain](images/P-explain.png)
+
+Regardless of whether the 5 relevant items take positions 1 through 5 or 6 through 10, the Precision will be the same. 
 
 #### Average precision @ K 
 
