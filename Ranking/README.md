@@ -149,13 +149,14 @@ Regardless of whether the 5 relevant items take positions 1 through 5 or 6 throu
 
 **Average Precision (AP)** at K is computed as an average of Precision values at all the relevant positions within K. We can express it as the following:
 
-$$\textrm{AP@K} = \frac{1}{N}\sum_k \textrm{Precision}(k) \times rel(k),$$
+$$\textrm{AP@K} = \frac{1}{N}\sum^K_{k=1} \textrm{Precision}(k) \times rel(k),$$
 
 where
 * N is the total number of relevant items for a particular user.
 * Precision(k) is the precision calculated at each position.
 * $rel(k)$ equals 1 if the item at position k is relevant and 0 otherwise.
 
+Now we can see the different rank orders provide different AP: 
 ![AP-explain](images/AP-explain.png)
 
 #### Mean average precision (MAP)
