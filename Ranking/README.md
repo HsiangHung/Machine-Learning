@@ -182,7 +182,7 @@ Precision @8 = 4/(4+4) = 0.5;  Recall @8 = 4/(4+0) = 1.
 ```
 Average Precision can be computed using
 
-$$\textrm{Ave[P(q)]} = \sum_k \big( \textrm{Recall}@k - \textrm{Recall}@(k-1) \big)* \textrm{Precision}@k.$$
+$$\textrm{AP} = \sum_k \big( \textrm{Recall}@k - \textrm{Recall}@(k-1) \big)* \textrm{Precision}@k.$$
 
 
 The article [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduction and Examples] used the algrithm to calculate averge precision:
