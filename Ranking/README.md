@@ -91,7 +91,7 @@ where $\textrm{rank}_i$ refers to the rank position of the **first** relevant do
 ![MRR-explain](images/MRR-explain.png)
 Note:
 
-* It considers the position of the **only** **first** relevant item in the ranked list.
+* Even for multiple queries, we only consider to use the **only** **first** relevant item in the ranked list per query to find MRR.
 * MRR values range from 0 to 1, where "1" indicates that the first relevant item is always at the top.
 * Higher MRR means better system performance.
 * To compute MRR, you need to prepare the dataset and decide on the K parameter.
