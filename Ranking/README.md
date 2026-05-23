@@ -130,15 +130,24 @@ then the MRR = (1 + 1 + 1)/3 = 1.
 
 ### B. Mean average precision (MAP)
 
-Given a precision-recall curve, plotting precision $P(r)$  as a function of recall $r$, average precision computes the average value of $p(r)$  over the interval from $r=0$ to $r=1$ [[wiki: Mean average precision]][ Mean average precision]:
+<!-- Given a precision-recall curve, plotting precision $P(r)$  as a function of recall $r$, average precision computes the average value of $p(r)$  over the interval from $r=0$ to $r=1$ [[wiki: Mean average precision]][ Mean average precision]:
 
 $$\textrm{Ave[P(q)]} = \int^1_0 p(r) dr.$$
 
-In the information retrieval, precision has different definitions. As defined by Wiki, precision is defined as the ratio of the retrived documents that are relevant to user’s query over the retrieved documents.
+In the information retrieval, precision has different definitions. As defined by Wiki, precision is defined as the ratio of the retrived documents that are relevant to user’s query over the retrieved documents. -->
+
+#### Precision @ K 
+
+‍Precision at K is a common variation to look at the fraction of relevant items only in the top-K recommendations provided by the system. Applying such a cut-off is useful since users typically only interact with a limited number of items.
+
+Precision has a downside, however. This metric only considers the presence of the relevant items but does not take into account their order. Regardless of whether the 5 relevant items take positions 1 through 5 or 6 through 10, the Precision will be the same. For example, see below [[Mean Average Precision (MAP) in ranking and recommendations]](https://www.evidentlyai.com/ranking-metrics/mean-average-precision-map)
+![MAP-explain](images/MAP-explain.png)
+
+#### Average precision @ K 
 
 Mean average precision for a set of queries is the mean of the average precision scores for each query.
 
-$$\textrm{MAP} = \frac{1}{Q}\sum^Q_{q=1}\textrm{Ave[P(q)]},$$
+$$\textrm{MAP} = \frac{1}{Q}\sum^Q_{q=1}\textrm{AP@K},$$
 
 
 where Q is the number of queries.
