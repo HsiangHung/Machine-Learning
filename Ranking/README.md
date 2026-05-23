@@ -88,7 +88,7 @@ $$\textrm{MRR} = \frac{1}{|Q|}\sum^{|Q|}_{i=1}\frac{1}{\textrm{rank}_i}.$$
 
 
 where $\textrm{rank}_i$ refers to the rank position of the **first** relevant document for the i-th query. 
-![MRR-explain-1](images/MRR-explain-1.png)
+![MRR-explain](images/MRR-explain.png)
 Note:
 
 * It considers the position of the **only** **first** relevant item in the ranked list.
