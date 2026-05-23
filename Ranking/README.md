@@ -143,18 +143,25 @@ In the information retrieval, precision has different definitions. As defined by
 Precision has a downside, however. This metric only considers the presence of the relevant items but does not take into account their order. Regardless of whether the 5 relevant items take positions 1 through 5 or 6 through 10, the Precision will be the same. 
 
 See the below example: [[Mean Average Precision (MAP) in ranking and recommendations]](https://www.evidentlyai.com/ranking-metrics/mean-average-precision-map)
-![AP-explain](images/AP-explain.png)
+![P-explain](images/P-explain.png)
 
 #### Average precision @ K 
 
 **Average Precision (AP)** at K is computed as an average of Precision values at all the relevant positions within K. We can express it as the following:
 
-$$\textrm{AP@K} = \frac{1}{N}\sum_k \textrm{Precision}(k) \times rel(k)$$
+$$\textrm{AP@K} = \frac{1}{N}\sum_k \textrm{Precision}(k) \times rel(k), $$
+where
+* N is the total number of relevant items for a particular user.
+* Precision(k) is the precision calculated at each position.
+* $rel(k)$ equals 1 if the item at position k is relevant and 0 otherwise.
+
+![AP-explain](images/AP-explain.png)
+
+#### Mean average precision (MAP)
 
 Mean average precision for a set of queries is the mean of the average precision scores for each query.
 
 $$\textrm{MAP} = \frac{1}{Q}\sum^Q_{q=1}\textrm{AP@K},$$
-
 
 where Q is the number of queries.
 
