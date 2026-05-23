@@ -88,7 +88,10 @@ $$\textrm{MRR} = \frac{1}{|Q|}\sum^{|Q|}_{i=1}\frac{1}{\textrm{rank}_i}.$$
 
 
 where $\textrm{rank}_i$ refers to the rank position of the **first** relevant document for the i-th query. 
+
 ![MRR-explain](images/MRR-explain.png)
+(The illustration is given by [[Mean Reciprocal Rank (MRR) explained]](https://www.evidentlyai.com/ranking-metrics/mean-reciprocal-rank-mrr))
+
 Note:
 
 * Even for multiple queries, we only consider to use the **only** **first** relevant item in the ranked list per query to find MRR.
