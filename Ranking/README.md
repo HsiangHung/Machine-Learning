@@ -149,7 +149,8 @@ Regardless of whether the 5 relevant items take positions 1 through 5 or 6 throu
 
 **Average Precision (AP)** at K is computed as an average of Precision values at all the relevant positions within K. We can express it as the following:
 
-$$\textrm{AP@K} = \frac{1}{N}\sum_k \textrm{Precision}(k) \times rel(k), $$
+$$\textrm{AP@K} = \frac{1}{N}\sum_k \textrm{Precision}(k) \times rel(k),$$
+
 where
 * N is the total number of relevant items for a particular user.
 * Precision(k) is the precision calculated at each position.
