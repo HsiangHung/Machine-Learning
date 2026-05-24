@@ -330,14 +330,15 @@ At rank 3: rel_3 = 1; IDCG@3 = IDCG@2 + 1/log(1+3) = 1.63 + 1/2 = 2.13
 At rank 4: rel_4 = 1; IDCG@4 = IDCG@3 + 1/log(1+4) = 2.13 + 0.43 = 2.56
 rank 5- rank 8: IDCG are same since the perfect rank is that top 4 rank documents are all relevant.
 ```
+Then, we can compute NDCG@K. As an example, NDCG@4 = 1.93/2.56 = 0l.75
 
 #### Example D.2
 
-Assume given query ($q_1$, $q_2$), we have the following document rankings:
+Assume given query ($q_1$, $q_2$), we have the following document rankings (by model):
 * $q_1 \to (d_1, d_2)$.
 * $q_2 \to (d_3, d_4, d5)$.
  
-Assuming only ($d_2, d_3, d_5$) are relevant document given their corresponding query, and the document ranks are by model [[Kyle Chung]][Introduction to Learning to Rank]:
+Assuming ($d_2, d_3, d_5$) are relevant document given their corresponding query, [[Kyle Chung]][Introduction to Learning to Rank]:
 
 NDCG of $q_1$ (only $d_2$ is relevant at rank=2):
 
