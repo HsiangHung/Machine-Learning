@@ -64,6 +64,8 @@ LambdaMART is simply a LambdaRank but replaces the underlying neural network mod
 
 In order to use LightGBM for ranking, we use lambdarank as an objective function. The idea of lambdarank is to use the gradient of cost with respect to model score instead of cost [[Raghav Bhutani]][Gradient Boosting Ranking Algorithm: LightGBM], [[Tamara Alexandra Cucumides]][Learning-to-rank with LightGBM (Code example in python)].
 
+For detailed, codes are under `LightGBM-Ranker` folder.
+
 
 ## Data to Prepare
 
