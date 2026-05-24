@@ -286,7 +286,7 @@ One advantage of DCG over other metrics is that it also works if document releva
 
 $$\textrm{DCG@k} = \sum^k_{i=1} \frac{2^{rel_i}-1}{\log(i+1)},$$
 
-where $rel_i$ is the relevance of the document at index. If it is binary relevances, $ rel_i=1$ if document is relevant and 0 otherwise.
+where $rel_i$ is the relevance of the document at index. If it is binary relevances, $rel_i=1$ if document is relevant and 0 otherwise.
 
 Not all pairwise errors are created equal. Because we use DCG as our scoring function, it is critical that the algorithm gets the top results right. Therefore, a pairwise error at positions 1 and 2 is much more severe than an error at positions 9 and 10, all other things being equal. Our algorithm needs to factor this potential gain (or loss) in DCG for each of the result pairs.
 
@@ -311,12 +311,12 @@ Let's look at an example. Here we use binary relevance score.
 
 ```
 At rank 1: rel_1 = 1; DCG@1 = 1
-At rank 2: No change. wrong prediction.
+At rank 2: rel_2 = 0; DCG@2 = DCG@1 + 0/log(1+2) = 1.
 At rank 3: rel_3 = 1; DCG@3 = DCG@2 + 1/log(1+3) = 1 + 1/2 = 1.5.
 At rank 4: rel_4 = 1; DCG@4 = DCG@3 + 1/log(1+4) = 1.93.
-At rank 5: No change, wrong prediction.
+At rank 5: rel_5 = 0; DCG@5 = DCG@4 = 1.
 At rank 6: rel_6 = 1; DCG@6 = DCG@5 + 1/log(1+6) = 2.29.
-At rank 7: No change, wrong prediction.
+At rank 7: rel_7 = 0; DCG@7 = DCG@6 = 1.
 ```
 
 
@@ -331,16 +331,17 @@ rank 5- rank 8: IDCG are same since the perfect rank is that top 4 rank document
 
 #### Example D.2
 
-* q1 -> d1, d2
-* q2 -> d3, d4, d5
+Assume given query ($q_1$, $q_2$), we have document ranking:
+* $q_1 \to (d_1, d_2)$.
+* $q_2 \to (d_3, d_4, d5)$.
  
-Assuming only d2,d3,d5 are relevant document given their corresponding query, and the document ranks are by model [[Kyle Chung]][Introduction to Learning to Rank]:
+Assuming only ($d_2, d_3, d_5$) are relevant document given their corresponding query, and the document ranks are by model [[Kyle Chung]][Introduction to Learning to Rank]:
 
-NDCG of q1:
+NDCG of $q_1$ (only $d_2$ is relevant at rank=2):
 
 $$\frac{0+\frac{2^1-1}{\log_2{3}}}{\frac{2^1-1}{\log_2{2}}+0} = \frac{1}{\log_2{3}} = 0.631,$$
 
-NDCG of q2:
+NDCG of q2 ($d_3$ and $d_5$ are relevant at rank=1, 3):
 
 $$\frac{\frac{2^1-1}{\log_2{2}}+0+\frac{2^1-1}{\log_2{4}}}{\frac{2^1-1}{\log_2{2}}+\frac{2^1-1}{\log_2{3}}+0} = \frac{1.5}{1+\frac{1}{\log_2{3}}} = 0.92.$$
 
