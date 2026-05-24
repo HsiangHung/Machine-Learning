@@ -331,7 +331,7 @@ rank 5- rank 8: IDCG are same since the perfect rank is that top 4 rank document
 
 #### Example D.2
 
-Assume given query ($q_1$, $q_2$), we have document ranking:
+Assume given query ($q_1$, $q_2$), we have the following document rankings:
 * $q_1 \to (d_1, d_2)$.
 * $q_2 \to (d_3, d_4, d5)$.
  
@@ -341,7 +341,7 @@ NDCG of $q_1$ (only $d_2$ is relevant at rank=2):
 
 $$\frac{0+\frac{2^1-1}{\log_2{(1+2)}}}{\frac{2^1-1}{\log_2{(1+1)}}+0} = \frac{1}{\log_2{3}} = 0.631,$$
 
-NDCG of q2 ($d_3$ and $d_5$ are relevant at rank=1, 3):
+NDCG of $q_2$ ($d_3$ and $d_5$ are relevant at rank=1, 3):
 
 $$\frac{\frac{2^1-1}{\log_2{(1+1)}}+0+\frac{2^1-1}{\log_2{(1+3)}}}{\frac{2^1-1}{\log_2{(1+1)}}+\frac{2^1-1}{\log_2{(1+2)}}+0} = \frac{1.5}{1+\frac{1}{\log_2{3}}} = 0.92.$$
 
