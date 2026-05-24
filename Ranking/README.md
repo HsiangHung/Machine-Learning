@@ -156,13 +156,15 @@ If the system includes 5 relevant items in the top 10, the Recall at 10 is 62.5%
 
 Now, let's zoom in on the top 5 recommendations. In this shorter list, we have only 3 relevant suggestions. The Recall at 5 is 37.5% (3 out of 8). This means the system captured less than half of the relevant items within the top 5 recommendations.
 
-#### F score
+#### F-score
 
 You can also use the F-score to get a balanced measure of Precision and Recall at K.
 
 A generic F-score is defined as
 
-$$F_{\beta} = \frac{(1+\beta^2)\textrm{Precision} \textrm{Recall}}{\beta^2 \textrm{Precision} + \textrm{Recall}}$$
+$$F_{\beta} = \frac{(1+\beta^2)\textrm{Precision} \times \textrm{Recall}}{(\beta^2 \textrm{Precision} + \textrm{Recall})}.$$
+
+When Beta is 1, it becomes a traditional F1 score, a harmonic mean of precision and recall. 
 
 ### C. Mean average precision (MAP)
 
