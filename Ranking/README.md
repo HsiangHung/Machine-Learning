@@ -299,7 +299,7 @@ $$\textrm{NDCG@k} = \frac{\textrm{DCG@k}}{\textrm{IDCG@k}},$$
 
 where IDCG@k is the best possible value for DCG@k, i.e. the value of DCG for the best possible ranking of relevant documents at threshold k. 
 
-Thus in a perfect ranking algorithm, the DCG@k will be the same as the IDCG@p producing an NDCG = 1.0.
+Thus, in a perfect ranking algorithm, the DCG@k will be the same as the IDCG@p producing an NDCG = 1.0.
 
 #### Example D.1
 
@@ -315,16 +315,10 @@ At rank 4: rel_4 = 1; DCG@4 = DCG@3 + 1/log(1+4) = 1.93.
 At rank 5: No change, wrong prediction.
 At rank 6: rel_6 = 1; DCG@6 = DCG@5 + 1/log(1+6) = 2.29.
 At rank 7: No change, wrong prediction.
-At rank 8: No change, wrong prediction.
 ```
 
 
-<!-- #### Example D.1 -->
-
-<!-- ![rank_example_NDCG](images/rank_example_NDCG.png) -->
-
-
-The IDCG@k are (by perfect ranking):
+The IDCG@k are (if the 4 relevant items are by perfect ranking):
 ```
 At rank 1: rel_1 = 1; IDCG@1 = 1
 At rank 2: rel_2 = 1; IDCG@2 = IDCG@1 + 1/log(1+2) = 1 + 0.63 = 1.63
