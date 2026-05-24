@@ -1,11 +1,11 @@
 
 # LightGBM-Ranker
 
-This folder has [tutoral notebook](tutorial-lgbm-ranker.ipynb) to train a lightGBM ranker model.
+This folder has the tutoral notebook (tutorial-lgbm-ranker.ipynb) to train a lightGBM ranker model.
 
 NOTE:
 * The objective to train the LightGBM ranker is **Lambdarank**.
-* The data used to train the ranker is released from **MSLR-WEB10K** by Miscrosoft: https://www.microsoft.com/en-us/research/project/mslr/.
+* The dataset used to train the ranker is released from **MSLR-WEB10K** by Miscrosoft: https://www.microsoft.com/en-us/research/project/mslr/.
 * The LoghtGBM LambdaMART training example codes:
     * https://github.com/lezzhov/learning_to_rank/blob/main/learning_to_rank/scripts/train.py
     * https://medium.datadriveninvestor.com/a-practical-guide-to-lambdamart-in-lightgbm-f16a57864f6
