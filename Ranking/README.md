@@ -339,11 +339,11 @@ Assuming only ($d_2, d_3, d_5$) are relevant document given their corresponding 
 
 NDCG of $q_1$ (only $d_2$ is relevant at rank=2):
 
-$$\frac{0+\frac{2^1-1}{\log_2{3}}}{\frac{2^1-1}{\log_2{2}}+0} = \frac{1}{\log_2{3}} = 0.631,$$
+$$\frac{0+\frac{2^1-1}{\log_2{(1+2)}}}{\frac{2^1-1}{\log_2{2}}+0} = \frac{1}{\log_2{3}} = 0.631,$$
 
 NDCG of q2 ($d_3$ and $d_5$ are relevant at rank=1, 3):
 
-$$\frac{\frac{2^1-1}{\log_2{2}}+0+\frac{2^1-1}{\log_2{4}}}{\frac{2^1-1}{\log_2{2}}+\frac{2^1-1}{\log_2{3}}+0} = \frac{1.5}{1+\frac{1}{\log_2{3}}} = 0.92.$$
+$$\frac{\frac{2^1-1}{\log_2{(1+1)}}+0+\frac{2^1-1}{\log_2{(1+3)}}}{\frac{2^1-1}{\log_2{2}}+\frac{2^1-1}{\log_2{3}}+0} = \frac{1.5}{1+\frac{1}{\log_2{3}}} = 0.92.$$
 
 
 
