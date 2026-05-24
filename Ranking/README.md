@@ -314,9 +314,9 @@ At rank 1: rel_1 = 1; DCG@1 = 1
 At rank 2: rel_2 = 0; DCG@2 = DCG@1 + 0/log(1+2) = 1.
 At rank 3: rel_3 = 1; DCG@3 = DCG@2 + 1/log(1+3) = 1 + 1/2 = 1.5.
 At rank 4: rel_4 = 1; DCG@4 = DCG@3 + 1/log(1+4) = 1.93.
-At rank 5: rel_5 = 0; DCG@5 = DCG@4 = 1.
+At rank 5: rel_5 = 0; DCG@5 = DCG@4 + 0 = 1.93.
 At rank 6: rel_6 = 1; DCG@6 = DCG@5 + 1/log(1+6) = 2.29.
-At rank 7: rel_7 = 0; DCG@7 = DCG@6 = 1.
+At rank 7: rel_7 = 0; DCG@7 = DCG@6 + 0 = 2.29.
 ```
 
 
