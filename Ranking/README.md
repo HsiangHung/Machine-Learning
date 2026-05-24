@@ -310,6 +310,7 @@ Let's look at an example. Here we use binary relevance score.
 
 ![rank_example_NDCG](images/rank_example_NDCG.png)
 
+Compute DCG@K:
 ```
 At rank 1: rel_1 = 1; DCG@1 = 1
 At rank 2: rel_2 = 0; DCG@2 = DCG@1 + 0/log(1+2) = 1.
