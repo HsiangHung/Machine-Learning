@@ -289,7 +289,7 @@ where $rel_i$ is the relevance of the document at index. If it is binary relevan
 Not all pairwise errors are created equal. Because we use DCG as our scoring function, it is critical that the algorithm gets the top results right. Therefore, a pairwise error at positions 1 and 2 is much more severe than an error at positions 9 and 10, all other things being equal. Our algorithm needs to factor this potential gain (or loss) in DCG for each of the result pairs.
 
 
-**Higher** DCG, better IR. [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG].
+**Higher** DCG, better information-retreieval. [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG].
 
 #### Normalized discounted cumulative gain (NDCG)
 
@@ -297,9 +297,13 @@ A way to make comparison across queries fairer is to normalize the DCG score by 
 
 $$\textrm{NDCG@k} = \frac{\textrm{DCG@k}}{\textrm{IDCG@k}},$$
 
-where `IDCG@k` is the best possible value for DCG@k, i.e. the value of DCG for the best possible ranking of relevant documents at threshold k. 
+where IDCG@k is the best possible value for DCG@k, i.e. the value of DCG for the best possible ranking of relevant documents at threshold k. 
 
-#### Example 
+Thus in a perfect ranking algorithm, the DCG@k will be the same as the IDCG@p producing an NDCG = 1.0.
+
+#### Example D.1
+
+Let's look at an example. Here we use binary relevance score.
 
 ![rank_example_NDCG](images/rank_example_NDCG.png)
 
@@ -314,17 +318,10 @@ At rank 7: No change, wrong prediction.
 At rank 8: No change, wrong prediction.
 ```
 
-A way to make comparison across queries fairer is to normalize the DCG score by the maximum possible DCG at each threshold [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduction and Examples], [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG]
 
-$$\textrm{NDCG@k} = \frac{\textrm{DCG@k}}{\textrm{IDCG@k}},$$
+<!-- #### Example D.1 -->
 
-where `IDCG@k` is the best possible value for DCG@k, i.e. the value of DCG for the best possible ranking of relevant documents at threshold k. 
-
-**Note that in a perfect ranking algorithm, the DCG@k will be the same as the IDCG@p producing an nDCG = 1.0.**
-
-#### Example D.1
-
-![rank_example_NDCG](images/rank_example_NDCG.png)
+<!-- ![rank_example_NDCG](images/rank_example_NDCG.png) -->
 
 
 The IDCG@k are (by perfect ranking):
@@ -335,6 +332,7 @@ At rank 3: rel_3 = 1; IDCG@3 = IDCG@2 + 1/log(1+3) = 1.63 + 1/2 = 2.13
 At rank 4: rel_4 = 1; IDCG@4 = IDCG@3 + 1/log(1+4) = 2.13 + 0.43 = 2.56
 rank 5- rank 8: IDCG are same since the perfect rank is that top 4 rank documents are all relevant.
 ```
+
 #### Example D.2
 
 * q1 -> d1, d2
