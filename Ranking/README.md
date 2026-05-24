@@ -79,7 +79,7 @@ Most major search engines have a human-powered relevance measurement system whic
 Later, Microsoft released a dataset **MSLR-WEB10K** (https://www.microsoft.com/en-us/research/project/mslr/). Under `LightGBM-Ranker` folder, we have training codes to demo show to train a lightGBM ranker model on the dataset.
 
 
-## Metric to Evaluate 
+## Evaluation Metrics
 
 A decent metric that captures this notion of correct order is the count of inversions in your ranking, the number of times a lower-rated result appears above a higher-rated one. 
 
