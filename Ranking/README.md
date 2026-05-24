@@ -334,11 +334,11 @@ Then, we can compute NDCG@K. As an example, NDCG@4 = 1.93/2.56 = 0l.75
 
 #### Example D.2
 
-Assume given query ($q_1$, $q_2$), we have the following document rankings (by model):
+Assume given query ($q_1$, $q_2$), we expect to have relevant documents ($d_2, d_3, d_5$) [[Kyle Chung]][Introduction to Learning to Rank]. By a certain ranking model, we have the following document rankings:
 * $q_1 \to (d_1, d_2)$.
 * $q_2 \to (d_3, d_4, d5)$.
  
-Assuming ($d_2, d_3, d_5$) are relevant document given their corresponding query, [[Kyle Chung]][Introduction to Learning to Rank]:
+The NDCG are:
 
 NDCG of $q_1$ (only $d_2$ is relevant at rank=2):
 
