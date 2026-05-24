@@ -76,6 +76,7 @@ Most major search engines have a human-powered relevance measurement system whic
 3. Train a set of human raters to rate the quality of these results. 
 4. Repeat the "extract results - rate results" step 
 
+Later, Microsoft released a dataset **MSLR-WEB10K** (https://www.microsoft.com/en-us/research/project/mslr/). Under `LightGBM-Ranker` folder, we have training codes to demo show to train a lightGBM ranker model on the dataset.
 
 
 ## Metric to Evaluate 
