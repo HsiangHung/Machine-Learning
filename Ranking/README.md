@@ -318,7 +318,7 @@ At rank 7: No change, wrong prediction.
 ```
 
 
-The IDCG@k are (if the 4 relevant items are by perfect ranking):
+The IDCG@k are (if the 4 relevant items are ranked perfectly):
 ```
 At rank 1: rel_1 = 1; IDCG@1 = 1
 At rank 2: rel_2 = 1; IDCG@2 = IDCG@1 + 1/log(1+2) = 1 + 0.63 = 1.63
