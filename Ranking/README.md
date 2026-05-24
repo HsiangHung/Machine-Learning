@@ -129,11 +129,10 @@ then the MRR = (1 + 1 + 1)/3 = 1.
 
 ### B. Precision, Recall and F1
 
-* **Precision @ K** measures how many items with the top K positions are relevant. 
-* **Recall @ K** measures the share of relevant items captured within the top K positions.
-* You can also use the F-score to get a balanced measure of Precision and Recall at K. 
+TL; DR:
 * Precision, Recall, and F-score can take values from 0 to 1. Higher values mean better performance. 
-* However, Precision and Recall only reflect the number of relevant items in the top K without evaluating the ranking quality inside a list.
+* Precision and Recall only reflect the number of relevant items in the top K without evaluating the ranking quality inside a list.
+
 
 #### Precision @ K 
 
@@ -142,9 +141,11 @@ then the MRR = (1 + 1 + 1)/3 = 1.
 Precision has a downside, however. This metric only considers the presence of the relevant items but does not take into account their order. See the below example: [[Precision and recall at K in ranking and recommendations]](https://www.evidentlyai.com/ranking-metrics/precision-recall-at-k)
 ![P-explain](images/P-explain.png)
 
-As shown in the right panel, regardless of whether the 5 relevant items take positions 1 through 5 or 6 through 10, the Precision will be the same. 
+As shown in the above right panel, regardless of whether the 5 relevant items take positions 1 through 5 or 6 through 10, the Precision will be the same. 
 
 #### Recall @ K 
+
+**Recall @ K** measures the share of relevant items captured within the top K positions.
 
 Imagine you have a list of top 10 recommendations, and there are a total of 8 items in the dataset that are actually relevant.
 
@@ -155,7 +156,13 @@ If the system includes 5 relevant items in the top 10, the Recall at 10 is 62.5%
 
 Now, let's zoom in on the top 5 recommendations. In this shorter list, we have only 3 relevant suggestions. The Recall at 5 is 37.5% (3 out of 8). This means the system captured less than half of the relevant items within the top 5 recommendations.
 
-#### F1
+#### F score
+
+You can also use the F-score to get a balanced measure of Precision and Recall at K.
+
+A generic F-score is defined as
+
+$$F_{\beta} = \frac{(1+\beta^2)\textrm{Precision} \textrm{Recall}}{\beta^2 \textrm{Precision} + \textrm{Recall}}$$
 
 ### C. Mean average precision (MAP)
 
