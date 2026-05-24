@@ -279,7 +279,6 @@ TL;DR:
 
 #### Discounted cumulative gain (DCG)
 
-<!-- Therefore, a pairwise error at positions 1 and 2 is much more severe than an error at positions 9 and 10, all other things being equal. Our algorithm needs to factor this potential gain (or loss) in DCG for each of the result pairs. -->
 
 One advantage of DCG over other metrics is that it also works if document relevances are a real number. In other words, when each document is not simply relevant/non-relevant (as in the example), but has a relevance score instead [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduction and Examples], [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG].
 
@@ -291,6 +290,14 @@ Not all pairwise errors are created equal. Because we use DCG as our scoring fun
 
 
 **Higher** DCG, better IR. [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG].
+
+#### Normalized discounted cumulative gain (NDCG)
+
+A way to make comparison across queries fairer is to normalize the DCG score by the maximum possible DCG at each threshold [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduction and Examples], [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG]
+
+$$\textrm{NDCG@k} = \frac{\textrm{DCG@k}}{\textrm{IDCG@k}},$$
+
+where `IDCG@k` is the best possible value for DCG@k, i.e. the value of DCG for the best possible ranking of relevant documents at threshold k. 
 
 #### Example 
 
@@ -309,12 +316,7 @@ At rank 8: No change, wrong prediction.
 
 A way to make comparison across queries fairer is to normalize the DCG score by the maximum possible DCG at each threshold [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduction and Examples], [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG]
 
-```
-NDCG@k = DCG@k/IDCG@k
-```
-
 $$\textrm{NDCG@k} = \frac{\textrm{DCG@k}}{\textrm{IDCG@k}},$$
-
 
 where `IDCG@k` is the best possible value for DCG@k, i.e. the value of DCG for the best possible ranking of relevant documents at threshold k. 
 
