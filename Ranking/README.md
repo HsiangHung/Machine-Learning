@@ -306,7 +306,7 @@ Thus, in a perfect ranking algorithm, the DCG@k will be the same as the IDCG@p p
 
 #### Example D.1
 
-Let's look at an example. Here we use binary relevance score.
+Let's look at an example. Here we assume relevance scores are binary.
 
 ![rank_example_NDCG](images/rank_example_NDCG.png)
 
