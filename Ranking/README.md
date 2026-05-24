@@ -169,17 +169,9 @@ When Beta is 1, it becomes a traditional F1 score, a harmonic mean of precision 
 ### C. Mean average precision (MAP)
 
 
-
-#### Precision @ K 
-
-‍**Precision** at K is a common variation to look at the fraction of relevant items only in the top-K recommendations provided by the system. Applying such a cut-off is useful since users typically only interact with a limited number of items.
-
-Precision has a downside, however. This metric only considers the presence of the relevant items but does not take into account their order. See the below example: [[Mean Average Precision (MAP) in ranking and recommendations]](https://www.evidentlyai.com/ranking-metrics/mean-average-precision-map)
-![P-explain](images/P-explain.png)
-
-Regardless of whether the 5 relevant items take positions 1 through 5 or 6 through 10, the Precision will be the same. 
-
 #### Average precision @ K 
+
+As we show above, precision only considers the presence of the relevant items, but does not take into account their order. 
 
 **Average Precision (AP)** at K is computed as an average of Precision values at all the relevant positions within K. We can express it as the following:
 
@@ -201,7 +193,7 @@ $$\textrm{MAP} = \frac{1}{Q}\sum^Q_{q=1}\textrm{AP@K},$$
 
 where Q is the number of queries.
 
-#### Example B.1
+#### Example C.1
 
 supposed given a query, we have the following rank result (credit from [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduction and Examples]):
 
@@ -240,7 +232,7 @@ At rank 8: No change, wrong prediction.
 ```
 AP (Average Precision) is a metric that tells you how a single sorted prediction compares with the ground truth. MAP is to evaluate on a whole validation set, and defines as the sum the AP value for each example in a validation dataset and then divide by the number of examples (1 + 1 + 0.9 + 0.83 + 0.83 + 0.8 + ..)/8=0.97.
 
-#### Example B.2
+#### Example C.2
 
 Suppose our SEO is perfect, i.e. all relevant documents rank the top 4, then we have 
 ```
@@ -255,7 +247,7 @@ At rank 8: No change, wrong prediction.
 ```
 then the MAP is given by 1.
 
-#### Example B.3
+#### Example C.3
 
 The average precision given a query q @k items can be also written as [[Kyle Chung]][Introduction to Learning to Rank]
 
@@ -273,7 +265,38 @@ and assuming only d2,d3,d5 are relevant document given their corresponding query
 * AP of query 2: (1/2) × ((1/1)×1 + (1/2)×0 + (2/3)×1)=5/6
 * MAP: (1/2+5/6)/2≈67%
 
-### C. Discounted cumulative gain (DCG)
+<!-- ### C. Discounted cumulative gain (DCG)
+
+Therefore, a pairwise error at positions 1 and 2 is much more severe than an error at positions 9 and 10, all other things being equal. Our algorithm needs to factor this potential gain (or loss) in DCG for each of the result pairs. -->
+
+<!-- One advantage of DCG over other metrics is that it also works if document relevances are a real number. In other words, when each document is not simply relevant/non-relevant (as in the example), but has a relevance score instead [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduction and Examples], [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG].
+
+$$\textrm{DCG@k} = \sum^k_{i=1} \frac{2^{rel_i}-1}{\log(i+1)}.$$
+
+
+Not all pairwise errors are created equal. Because we use DCG as our scoring function, it is critical that the algorithm gets the top results right. Therefore, a pairwise error at positions 1 and 2 is much more severe than an error at positions 9 and 10, all other things being equal. Our algorithm needs to factor this potential gain (or loss) in DCG for each of the result pairs. -->
+
+
+<!-- **Higher** DCG, better IR. [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG].
+
+#### Example  -->
+
+<!-- ![rank_example_NDCG](images/rank_example_NDCG.png)
+
+```
+At rank 1: rel_1 = 1; DCG@1 = 1
+At rank 2: No change. wrong prediction.
+At rank 3: rel_3 = 1; DCG@3 = DCG@2 + 1/log(1+3) = 1 + 1/2 = 1.5.
+At rank 4: rel_4 = 1; DCG@4 = DCG@3 + 1/log(1+4) = 1.93.
+At rank 5: No change, wrong prediction.
+At rank 6: rel_6 = 1; DCG@6 = DCG@5 + 1/log(1+6) = 2.29.
+At rank 7: No change, wrong prediction.
+At rank 8: No change, wrong prediction.
+``` -->
+
+### D. Normalized Discounted Cumulative Gain (NDCG)
+
+#### Discounted cumulative gain (DCG)
 
 Therefore, a pairwise error at positions 1 and 2 is much more severe than an error at positions 9 and 10, all other things being equal. Our algorithm needs to factor this potential gain (or loss) in DCG for each of the result pairs.
 
@@ -301,8 +324,6 @@ At rank 6: rel_6 = 1; DCG@6 = DCG@5 + 1/log(1+6) = 2.29.
 At rank 7: No change, wrong prediction.
 At rank 8: No change, wrong prediction.
 ```
-
-### D. Normalized Discounted Cumulative Gain (NDCG)
 
 A way to make comparison across queries fairer is to normalize the DCG score by the maximum possible DCG at each threshold [[Felipe Almeida]][Evaluation Metrics for Ranking problems: Introduction and Examples], [[Pranay Chandekar]][Evaluate your Recommendation Engine using NDCG]
 
