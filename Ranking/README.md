@@ -127,14 +127,39 @@ If our search engine works perfectly, we will have
 then the MRR = (1 + 1 + 1)/3 = 1. 
 
 
+### B. Precision, Recall and F1
 
-### B. Mean average precision (MAP)
+* **Precision @ K** measures how many items with the top K positions are relevant. 
+* **Recall @ K** measures the share of relevant items captured within the top K positions.
+* You can also use the F-score to get a balanced measure of Precision and Recall at K. 
+* Precision, Recall, and F-score can take values from 0 to 1. Higher values mean better performance. 
+* However, Precision and Recall only reflect the number of relevant items in the top K without evaluating the ranking quality inside a list.
 
-<!-- Given a precision-recall curve, plotting precision $P(r)$  as a function of recall $r$, average precision computes the average value of $p(r)$  over the interval from $r=0$ to $r=1$ [[wiki: Mean average precision]][ Mean average precision]:
+#### Precision @ K 
 
-$$\textrm{Ave[P(q)]} = \int^1_0 p(r) dr.$$
+**Precision @ K** is a common variation to look at the fraction of relevant items only in the top-K recommendations provided by the system. Applying such a cut-off is useful since users typically only interact with a limited number of items.
 
-In the information retrieval, precision has different definitions. As defined by Wiki, precision is defined as the ratio of the retrived documents that are relevant to user’s query over the retrieved documents. -->
+Precision has a downside, however. This metric only considers the presence of the relevant items but does not take into account their order. See the below example: [[Precision and recall at K in ranking and recommendations]](https://www.evidentlyai.com/ranking-metrics/precision-recall-at-k)
+![P-explain](images/P-explain.png)
+
+As shown in the right panel, regardless of whether the 5 relevant items take positions 1 through 5 or 6 through 10, the Precision will be the same. 
+
+#### Recall @ K 
+
+Imagine you have a list of top 10 recommendations, and there are a total of 8 items in the dataset that are actually relevant.
+
+[[Precision and recall at K in ranking and recommendations]](https://www.evidentlyai.com/ranking-metrics/precision-recall-at-k)
+![R-explain](images/R-explain.png)
+
+If the system includes 5 relevant items in the top 10, the Recall at 10 is 62.5% (5 out of 8).
+
+Now, let's zoom in on the top 5 recommendations. In this shorter list, we have only 3 relevant suggestions. The Recall at 5 is 37.5% (3 out of 8). This means the system captured less than half of the relevant items within the top 5 recommendations.
+
+#### F1
+
+### C. Mean average precision (MAP)
+
+
 
 #### Precision @ K 
 
