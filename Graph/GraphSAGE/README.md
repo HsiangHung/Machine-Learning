@@ -7,16 +7,18 @@ For super large graphs it’s computationally impossible to process all neighbor
 
 GraphSAGE makes training much faster and scalable by:
 * Sampling only a **subset** of neighbors.
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Graph/GraphSAGE/images/graphSAGE_sampling.png" width="700">
+
 * Combining the features of the sampled neighbors with an aggregation function. 
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Graph/GraphSAGE/images/graphSAGE_sampling.png" width="900">
 
 
 ## Sampling Neighbors
 
 Sampling is easy for tabular data, when creating train, test, and validation sets. With graphs, you cannot select random nodes. This can result in disconnected graphs, nodes without neighbors. For example, like:
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Graph/GraphSAGE/images/random_select_node.png" width="900">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Graph/GraphSAGE/images/random_select_node.png" width="600">
 
 ## Aggregate Information
 
@@ -58,7 +60,7 @@ The aggregation of step 2 is done over all neighbors, and then the feature repre
 
 The first three steps can be repeated multiple times, when this happens, information can flow from distant neighbors. In the image below you see a node with three neighbors selected in the first layer (direct neighbors), and two neighbors selected in the second layer (neighbors of neighbors). 
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Graph/GraphSAGE/images/repeat_multilayer.png" width="900">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Graph/GraphSAGE/images/repeat_multilayer.png" width="700">
 
 
 
