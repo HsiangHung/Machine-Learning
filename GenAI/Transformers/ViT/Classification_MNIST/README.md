@@ -1,7 +1,7 @@
 
-# Vision Transformers on Classification Model
+# Classification Model Using Vision-Transformer
 
-In this example, we are going to build a classification model with vision transformers from scratch, and test is on the handwritten digits MNIST dataset.
+In this example, we are going to build a **classification model** with **vision transformers** from scratch, and test is on the **handwritten digits MNIST dataset**.
 
 The codes here follows the Medium blog: [Building a Vision Transformer Model From Scratch](https://medium.com/correll-lab/building-a-vision-transformer-model-from-scratch-a3054f707cc6).
 
