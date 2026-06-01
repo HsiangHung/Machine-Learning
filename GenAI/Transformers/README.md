@@ -28,6 +28,6 @@ Here we build few models to demo vision-transformer implementation in ML:
 ### Diffusion Transformer
 
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/images/diffusion_transformer_arch.png" width="800">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/images/diffusion_transformer_arch.png" width="900">
 
 
