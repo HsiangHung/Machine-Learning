@@ -1,6 +1,6 @@
 # GraphSAGE (SAmple and aggreGatE)
 
-* Reference: [Graph Neural Networks Part 3: How GraphSAGE Handles Changing Graph Structure](https://towardsdatascience.com/graph-neural-networks-part-3-how-graphsage-handles-changing-graph-structure/)
+All the following content follows the blog [How GraphSAGE Handles Changing Graph Structure](https://towardsdatascience.com/graph-neural-networks-part-3-how-graphsage-handles-changing-graph-structure/).
 
 
 For super large graphs it’s computationally impossible to process all neighbors of a node (except if you have limitless time, which we all don’t…), like with traditional GCNs. 
@@ -11,7 +11,6 @@ GraphSAGE makes training much faster and scalable by:
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Graph/GraphSAGE/images/graphSAGE_sampling.png" width="700">
 
 * Combining the features of the sampled neighbors with an aggregation function. 
-
 
 
 ## Sampling Neighbors
@@ -61,6 +60,9 @@ The aggregation of step 2 is done over all neighbors, and then the feature repre
 The first three steps can be repeated multiple times, when this happens, information can flow from distant neighbors. In the image below you see a node with three neighbors selected in the first layer (direct neighbors), and two neighbors selected in the second layer (neighbors of neighbors). 
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Graph/GraphSAGE/images/repeat_multilayer.png" width="700">
+
+
+In short, GraphSAGE has it scalability and flexibility. Aggregation helps with generalization because it smooths out noisy features. The multi-layers allow the model to learn from far-away nodes.
 
 
 
