@@ -15,6 +15,9 @@ Transformers are later used for image models. For example, we can patch an image
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/images/vision_transformer_arch.png" width="800">
 
+Here we build few models to demo vision-transformer implementation in ML:
+1. Image classification model
+2. Text-Image Clip model
 
 ### Video Vision Transformer
 
