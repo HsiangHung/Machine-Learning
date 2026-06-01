@@ -13,7 +13,7 @@ The transformer architecture from the paper:
 Transformers are later used for image models. For example, we can patch an image to sequences of tokens.
 
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/images/vision_transformer_arch.png" width="700">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/images/vision_transformer_arch.png" width="800">
 
 
 ### Video Vision Transformer
@@ -25,6 +25,6 @@ Transformers are later used for image models. For example, we can patch an image
 ### Diffusion Transformer
 
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/images/diffusion_transformer_arch.png" width="700">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/images/diffusion_transformer_arch.png" width="800">
 
 
