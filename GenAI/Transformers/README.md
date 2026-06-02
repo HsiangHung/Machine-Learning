@@ -9,6 +9,7 @@ The transformer architecture from the paper:
 Transformers are first used for language model, used for ChatGPT and translation.
 Here we list good resources to explain transformer:
 
+* Quick Reivew: [ransformers Step-by-Step Explained (Attention Is All You Need)](https://www.youtube.com/watch?v=avjX3QrYkls)
 * [Decoder-Only Transformers, ChatGPTs specific Transformer, Clearly Explained!!!](https://www.youtube.com/watch?v=bQ5BoolX9Ag)
 * [Vizuara lab: The Transformers](https://www.vizuaranewsletter.com/p/the-transformers?r=5b5pyd&utm_campaign=post&utm_medium=web)
 
