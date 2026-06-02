@@ -224,6 +224,13 @@ $$L(\theta, \symbf{x}) = - \sum^K_{j=1}\symbf{I}(y=j)\log\big( h_{\theta}(\symbf
 
 where $\symbf{I} = 1$ for $y = j$; otherwise $\symbf{I}=0$. 
 
+We also call the model as Softmax Classifier since it implements the softmax function:
+
+$$ p(y=j|x) = Softmax(z)_j = \frac{e^{\theta^{(j)T}\symbf{x}}}{\sum_{j=1} e^{\theta^{(j)T}\symbf{x}}}, $$
+
+
+Where $z_j$​ represents the j-th calss score (also known as logits) of the model. $p(y=j|x)$ is probability of the input belonging to the class.
+
 The cross-entropy of a $K = 3$ example is shown below (credit from [Cross-entropy for classification](https://towardsdatascience.com/cross-entropy-for-classification-d98e7f974451))
 
 ![](images/cross_entropy-3.png)
