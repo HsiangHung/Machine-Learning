@@ -189,7 +189,7 @@ The cross-entropy can be used as loss to optimize using gradient descent in clas
 
 For binary classification $c = {0, 1}$, if using one-hot representation to $p$, i.e. $p = [1,0]$ for $y = 1$; $p = [0,1]$ for $y = 0$, and prediction $q$ is a sigmoid function, it arrives at the commonly-seen cross-entropy ($h$ is the hypothesis function)
 
-$$L(\theta, \symbf{x}) = - \big( y \cdot \log(h_{\theta}(\symbf{x})) + (1-y) \cdot \log{(1-h_{\theta}(\symbf{x}))} \big),$$
+$$L(\theta, \symbf{x}) = - \big[ y \cdot \log(h_{\theta}(\symbf{x})) + (1-y) \cdot \log{(1-h_{\theta}(\symbf{x}))} \big],$$
 
 where $\theta$ describes the model $\theta_0, \theta_1, \cdots$ needed to be determined by training.
 
