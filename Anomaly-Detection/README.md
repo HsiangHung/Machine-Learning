@@ -157,7 +157,9 @@ by defining weights for majority and minority classes and pass to `class_weight=
 
 If your training data does not have label, using unsupervised learning and semi-supervised learning. However, after building the model, you will have no idea how well it is doing as you have nothing to test it against. Hence, the results of those methods need to be tested in the field before placing them in the critical path.
 
-#### 5.3.1 DBSCAN (Density Based Spatial Clustering) [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]
+#### 5.3.1 DBSCAN (Density Based Spatial Clustering) 
+
+[[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]
 
 Dbscan is a density based clustering algorithm, focusing on finding neighbors by density (MinPts) on an `n-dimensional sphere` with radius `ɛ`. A cluster can be defined as the maximal set of ‘density connected points’ in the feature space. The complexity of dbscan is of O(n log n). Outliers (noise) will be assigned to the -1 cluster. 
 
@@ -167,7 +169,9 @@ The parameter `eps (ɛ)` must be chosen accordingly to perform clustering. If `�
 
 The cons of Dbscan are that selecting the optimal parameters eps, MinPts and metric can be difficult since it is very sensitive to any of the three params [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques].
 
-#### 5.3.2 Isolation Forests [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]
+#### 5.3.2 Isolation Forests 
+
+[[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]
 
 One of approaches to solving the imbalance problem is to discard the minority examples and treat it as a single-class (or anomaly detection) problem. Isolation forest implemented the concept.
 
@@ -199,9 +203,13 @@ The anomaly score of an input sample is computed as the mean anomaly score of th
 
 The cons of isolation forest include that visualizing results is complicated, and if not correctly optimized, training time can be very long and computationally expensive [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques].
 
-#### 5.3.3 AutoEncoder [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]
+#### 5.3.3 AutoEncoder 
+
+[[Amnah Ebrahim]][Autoencoders and Testing their Potential in Anomaly Detection]
 
 Autoencoders are feedforward neural network, “compressing” (or encoding) input data into a lower-dimensional code and then reconstructing (or decoding) the output from this representation, by minimizing the reconstruction error. 
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Anomaly-Detection/images/autoencoder.png" width="600">
 
 Autoencoders help us discover non-linear hidden variables/parameters of the input data by passing it through a “bottleneck” before it reaches the decoder.
 
@@ -279,6 +287,8 @@ iForest is the fastest performing algorithm for its performance. PCA and Histogr
 [[Srinath Perera] Introduction to Anomaly Detection: Concepts and Techniques](https://iwringer.wordpress.com/2015/11/17/anomaly-detection-concepts-and-techniques/)
 * [Fraud Detection Under Extreme Class Imbalance]: https://towardsdatascience.com/fraud-detection-under-extreme-class-imbalance-c241854e60c
 [[Syed Sadat Nazrul] Fraud Detection Under Extreme Class Imbalance](https://towardsdatascience.com/fraud-detection-under-extreme-class-imbalance-c241854e60c)
+* [Autoencoders and Testing their Potential in Anomaly Detection]: https://medium.com/@amnahhmohammed/autoencoders-and-testing-their-potential-in-anomaly-detection-09135140fd56
+[[Amnah Ebrahim] Autoencoders and Testing their Potential in Anomaly Detection](https://medium.com/@amnahhmohammed/autoencoders-and-testing-their-potential-in-anomaly-detection-09135140fd56)
 
 
 
