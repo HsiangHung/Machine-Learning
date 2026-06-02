@@ -191,13 +191,15 @@ For binary classification $c = {0, 1}$, if using one-hot representation to $p$, 
 
 $$L(\theta, \symbf{x}) = - \big[ y \cdot \log(h_{\theta}(\symbf{x})) + (1-y) \cdot \log{(1-h_{\theta}(\symbf{x}))} \big],$$
 
-where $\theta$ describes the model $\theta_0, \theta_1, \cdots$ needed to be determined by training.
+where $\theta$ describes the model parameters: $(\theta_0, \theta_1, \cdots)$ needed to be determined by training.
 
 The hypothesis function $h_{\theta}(\symbf{x})$ for binary case is the **sigmoid function** $g(z)=1/(1+e^{-z})$, thus the loss function is:
 
 $$L(\theta, \symbf{x}) = - \Big[ y \cdot \log \Big(\frac{1}{1+e^{-\theta^T \symbf{x}}} \Big) + (1-y) \cdot \log \Big(1- \frac{1}{1+e^{-\theta^T \symbf{x}}} \Big) \Big]$$
 
-Given an input $x$, the model predicts the probability of the data being positive as $h_{\theta}(\symbf{x})$.
+Given an input $x$, the model predicts the probability of the data being positive as 
+
+$$p(y=1|x) = h_{\theta}(\symbf{x}) = \frac{1}{1+e^{-\theta^T \symbf{x}}}.$$
 
 See an example below (credit from [Cross-entropy for classification](https://towardsdatascience.com/cross-entropy-for-classification-d98e7f974451))
 
