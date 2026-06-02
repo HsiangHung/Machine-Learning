@@ -6,6 +6,12 @@ The transformer architecture from the paper:
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/images/seminal_transformer_arch.png" width="500">
 
+
+The transformer architecture can replace traditional models like LSTMs and GRUs with self attention mechanisms in language models due to crucial advantages: 
+* The ability to capture **long range** dependencies in text
+* **Parallel** processing that enables faster training
+* Unprecedented **scalability** that allows building increasingly powerful models.
+
 Transformers are first used for language model, used for ChatGPT and translation.
 Here we list good resources to explain transformer:
 
