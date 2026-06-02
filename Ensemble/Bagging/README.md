@@ -61,7 +61,11 @@ In the followings, we show how the hyperparameter influences the performance. Th
 
 
 1. `max_samples`: Each decision tree in the ensemble is fit on a bootstrap sample drawn from the training dataset. More sample data for training, better accuracy. “max_samples” argument can be set to a float between 0 and 1 to control the percentage of the size of the training dataset to make the bootstrap sample used to train each decision tree. Below is the box plot of Random Forest Bootstrap Sample Size vs. Classification Accuracy [[Jason Brownlee]][How to Develop a Random Forest Ensemble in Python].
-![](images/n_sample.png)
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Ensemble/Bagging/images/n_sample.png" width="600">
+
+
+<!-- ![](images/n_sample.png) -->
 
 2. `n_estimators`: is the **number of trees** in the forest. Usually higher the number of trees the better to learn the data [[Mohtadi Ben Fraj]][In Depth: Parameter tuning for Random Forest]:
 
