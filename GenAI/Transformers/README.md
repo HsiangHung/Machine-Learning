@@ -78,6 +78,25 @@ Here we build few models to demo vision-transformer implementation in ML:
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/images/diffusion_transformer_arch.png" width="900">
 
 
+### Behavior Transformers
+
+#### Treat Transactions Like Language
+
+[Stripe’s Payments Foundation Model: When Transactions Learned to Speak](https://medium.com/@mumbaiyachori/stripes-payments-foundation-model-when-transactions-learned-to-speak-30c87111cb31)
+
+
+#### Treat User & Customer Behaviour Like Language
+
+Idea: language could be applied to the analysis of user behavior. In language problem, we “play” with predicting the next word in a sentence to create wonders like text generation or tools that describe language, such as embeddings. Here author tried to predict the next page view, the next purchase, or the next user action using a sufficiently large dataset. [Beha2Vec — Using Transformers to Analyze User & Customer Behaviour](https://pdellov.medium.com/beha2vec-using-transformers-to-analyze-user-customer-behaviour-34d9f45b652a)
+
+
+The author used the old-fashioned Google Merchandise Store dataset, a demo dataset available through Kaggle. It is basically the dataset created over the Google Merchandise Store, which Google itself uses to demo its Google Analytics product. It contains 2+ GiB of user navigation events tracked via GA4. These include anonymous user_pseudo_id (cookie IDs) tied to actions like page views and purchases.
+
+The ustom transformer model dramatically increases the performance.
+
+Code: https://github.com/pdellov/beha2vec
+
+
 ### Heterogeneous Graph Transformers
 
 See teh medium post: [Building a Fraud Detection Model using Graph Neural Networks (GNNs)](https://natashagluons.medium.com/building-a-fraud-detection-model-using-graph-neural-networks-gnns-d3c62b7c38e9) and the demo code on github: [Syndicate Indication using Network Graph Analytics](https://github.com/natgluons/Syndicate-Indication-using-Network-Graph-Analytics).
