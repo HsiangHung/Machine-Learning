@@ -157,7 +157,7 @@ by defining weights for majority and minority classes and pass to `class_weight=
 
 If your training data does not have label, using unsupervised learning and semi-supervised learning. However, after building the model, you will have no idea how well it is doing as you have nothing to test it against. Hence, the results of those methods need to be tested in the field before placing them in the critical path.
 
-#### 5.3.1 Dbscan (Density Based Spatial Clustering) [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]
+#### 5.3.1 DBSCAN (Density Based Spatial Clustering) [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]
 
 Dbscan is a density based clustering algorithm, focusing on finding neighbors by density (MinPts) on an `n-dimensional sphere` with radius `ɛ`. A cluster can be defined as the maximal set of ‘density connected points’ in the feature space. The complexity of dbscan is of O(n log n). Outliers (noise) will be assigned to the -1 cluster. 
 
@@ -198,6 +198,15 @@ The anomaly score of an input sample is computed as the mean anomaly score of th
 
 
 The cons of isolation forest include that visualizing results is complicated, and if not correctly optimized, training time can be very long and computationally expensive [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques].
+
+#### 5.3.3 AutoEncoder [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]
+
+Autoencoders are feedforward neural network, encoding or “compressing” input data into a lower-dimensional code (encoder) and then reconstructing the output from this representation, by minimizing the reconstruction error. 
+
+Autoencoders help us discover non-linear hidden variables/parameters of the input data by passing it through a “bottleneck” before it reaches the decoder.
+
+
+An autoencoder is trained to minimise the reconstruction error. So if we have a dataset of a device that is behaving in its **normal** condition, we can train the autoencoder to realise what “normal” operating behaviour is. If input data is abnormal, it will have **higher reconstruction error** it will be totally different from what normal distribution shows. So the reconstruction error will serve as an indicator for anomalous behaviour.
 
 
 ## 6. Time-Series Anomaly Detection
