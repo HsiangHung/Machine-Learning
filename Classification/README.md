@@ -159,7 +159,7 @@ In the imbalanced cases, how do fraud rates (proportion of positive events) infl
 Suppose for same amount of positive cases and model performance, lower fraud rate means more negative events. Thus precision may drop if recall keeps the same. The False positive rate doesn't change. Then we can expect 
 ROC curve remains similar, but precision-recall curve will change.
 
-[[Sin-Yi Chou]][Precision - Recall Curve, a Different View of Imbalanced Classifiers] shows comparison on ROC and PR curves at various positive rates: 0.5, 0.1, 0.01 below. We can see in (a) ROC patterns are roughly irrespective of the positive rates. 
+[[Sin-Yi Chou]][Precision - Recall Curve, a Different View of Imbalanced Classifiers] shows comparison on ROC and PR curves at various positive rates: 0.5 (50%), 0.1 (10%), 0.01 (1%) below. We can see in (a) ROC patterns are roughly irrespective of the positive rates. 
 
 ![imbalanced_ROC_PR](images/ROC_PR_comparison.png)
 
@@ -189,16 +189,19 @@ The cross-entropy can be used as loss to optimize using gradient descent in clas
 
 For binary classification $c = {0, 1}$, if using one-hot representation to $p$, i.e. $p = [1,0]$ for $y = 1$; $p = [0,1]$ for $y = 0$, and prediction $q$ is a sigmoid function, it arrives at the commonly-seen cross-entropy ($h$ is the hypothesis function)
 
-$$L(\theta, \symbf{x}) = - \big( y \cdot \log(h_{\theta}(\symbf{x})) + (1-y) \cdot \log{(1-h_{\theta}(\symbf{x}))} \big)$$
+$$L(\theta, \symbf{x}) = - \big( y \cdot \log(h_{\theta}(\symbf{x})) + (1-y) \cdot \log{(1-h_{\theta}(\symbf{x}))} \big),$$
+
+where $\theta$ describes the model $\theta_0, \theta_1, \cdots$ needed to be determined by training.
+
+The hypothesis function $h_{\theta}(\symbf{x})$ for binary case is the **sigmoid function** $g(z)=1/(1+e^{-z})$, thus the loss function is:
+
+$$L(\theta, \symbf{x}) = - \Big[ y \cdot \log \Big(\frac{1}{1+e^{-\theta^T \symbf{x}}} \Big) + (1-y) \cdot \log \Big(1- \frac{1}{1+e^{-\theta^T \symbf{x}}} \Big) \Big]$$
+
+Given an input $x$, the model predicts the probability of the data being positive as $h_{\theta}(\symbf{x})$.
 
 See an example below (credit from [Cross-entropy for classification](https://towardsdatascience.com/cross-entropy-for-classification-d98e7f974451))
 
 ![](images/cross_entropy-2.png)
-
-The hypothesis function $h_{\theta}(\symbf{x})$ for binary case is the sigmoid function $g(z)=1/(1+e^{-z})$, thus the loss function is:
-
-$$L(\theta, \symbf{x}) = - \Big[ y \cdot \log \Big(\frac{1}{1+e^{-\theta^T \symbf{x}}} \Big) + (1-y) \cdot \log \Big(1- \frac{1}{1+e^{-\theta^T \symbf{x}}} \Big) \Big]$$
-
 
 Note that the **loss function of logistic regression model is convex**. The followings are some detailed discussion:
 
