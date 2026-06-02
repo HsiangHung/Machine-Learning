@@ -6,7 +6,17 @@ The transformer architecture from the paper:
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/images/seminal_transformer_arch.png" width="500">
 
-## Transformer Models
+Transformers are first used for language model, used for ChatGPT and translation.
+Here we list good resources to explain transformer:
+
+* [Decoder-Only Transformers, ChatGPTs specific Transformer, Clearly Explained!!!](https://www.youtube.com/watch?v=bQ5BoolX9Ag)
+* [Vizuara lab: The Transformers](https://www.vizuaranewsletter.com/p/the-transformers?r=5b5pyd&utm_campaign=post&utm_medium=web)
+
+## Variants of Transformers
+
+### Translator
+
+See [Encoder + Decoder Translator](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/Transformers/LLM/Translators).
 
 ### Vision Transformers
 
@@ -31,3 +41,6 @@ Here we build few models to demo vision-transformer implementation in ML:
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/images/diffusion_transformer_arch.png" width="900">
 
 
+### Heterogeneous Graph Transformers
+
+See teh medium post: [Building a Fraud Detection Model using Graph Neural Networks (GNNs)](https://natashagluons.medium.com/building-a-fraud-detection-model-using-graph-neural-networks-gnns-d3c62b7c38e9) and the demo code on github: [Syndicate Indication using Network Graph Analytics](https://github.com/natgluons/Syndicate-Indication-using-Network-Graph-Analytics).
