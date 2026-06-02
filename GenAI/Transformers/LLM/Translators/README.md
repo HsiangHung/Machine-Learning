@@ -3,7 +3,7 @@
 
 ![encoder_decoder_architecture](images/translator_arch.png)
 
-The translator code here follows the medium post: [Building a Sequence-to-Sequence Transformer Model for Language Translation](https://medium.com/@samson.sabu/building-a-sequence-to-sequence-transformer-model-for-language-translation-ac4a37533cfa)
+The translator code here follows the medium post: [Building a Sequence-to-Sequence Transformer Model for Language Translation](https://medium.com/@samson.sabu/building-a-sequence-to-sequence-transformer-model-for-language-translation-ac4a37533cfa).
 
 ## Understanding the Transformer Architecture
 
@@ -19,16 +19,19 @@ The transformer uses self-attention mechanisms to capture relationships between 
 In the training process, we:
 * Use **Cross-Entropy Loss** to compute the loss.
 * Use **Adam** as the optimizer.
-* Use metrics like **BLEU score** To evaluate the model.
+* Use metrics like **BLEU score** to evaluate the model.
 
 
 ## The Roles in Cross-Attention
 
 To understand why "the decoder provides the queries" and "the encoder provides the keys and values", it helps to use the analogy of a **library retrieval system**:
 
-* The Queries ($Q$) come from the Decoder: * Think of the Query as the **search term**.The decoder looks at the words it has translated so far and asks a question: "Based on what I've written, what information do I need from the original sentence to predict the very next word?"
-* The Keys ($K$) come from the Encoder: * Think of the Keys as the **tags or labels on the books in the library**.The encoder has processed the entire original source sentence. The keys represent the grammar, position, and role of every word in that original sentence (e.g., "I am a verb," or "I am the subject of the sentence").
-* The Values ($V$) come from the Encoder: * Think of the Values as the actual contents of the book.Once the decoder's Query matches strongly with an encoder's Key, the Transformer pulls the corresponding Value (the rich, mathematical representation of that word's meaning) and uses it to generate the next translated word.
+* The **Queries ($Q$)** come from the **Decoder**: Think of the Query as the **search term**.
+    * The decoder looks at the words it has translated so far and asks a question: "Based on what I've written, what information do I need from the original sentence to predict the very next word?"
+* The **Keys ($K$)** come from the **Encoder**: Think of the Keys as the **tags or labels on the books in the library**.
+    * The encoder has processed the entire original source sentence. The keys represent the grammar, position, and role of every word in that original sentence (e.g., "I am a verb," or "I am the subject of the sentence").
+* The **Values ($V$)** come from the **Encoder**: Think of the Values as the actual contents of the book.
+    * Once the decoder's Query matches strongly with an encoder's Key, the Transformer pulls the corresponding Value (the rich, mathematical representation of that word's meaning) and uses it to generate the next translated word.
 
 ### A Concrete Example: French to English
 
