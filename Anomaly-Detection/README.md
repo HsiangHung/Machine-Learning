@@ -201,12 +201,12 @@ The cons of isolation forest include that visualizing results is complicated, an
 
 #### 5.3.3 AutoEncoder [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]
 
-Autoencoders are feedforward neural network, encoding or “compressing” input data into a lower-dimensional code (encoder) and then reconstructing the output from this representation, by minimizing the reconstruction error. 
+Autoencoders are feedforward neural network, “compressing” (or encoding) input data into a lower-dimensional code and then reconstructing (or decoding) the output from this representation, by minimizing the reconstruction error. 
 
 Autoencoders help us discover non-linear hidden variables/parameters of the input data by passing it through a “bottleneck” before it reaches the decoder.
 
 
-An autoencoder is trained to minimise the reconstruction error. So if we have a dataset of a device that is behaving in its **normal** condition, we can train the autoencoder to realise what “normal” operating behaviour is. If input data is abnormal, it will have **higher reconstruction error** it will be totally different from what normal distribution shows. So the reconstruction error will serve as an indicator for anomalous behaviour.
+An autoencoder is trained to minimise the reconstruction error. So if we have a dataset of a device that is behaving in its **normal** condition, we can train the autoencoder to realise what “normal” operating behaviour is. If input data is abnormal, it will have **higher reconstruction error**, different from what the normal data behave. So the reconstruction error will serve as an indicator for anomalous behaviour.
 
 
 ## 6. Time-Series Anomaly Detection
