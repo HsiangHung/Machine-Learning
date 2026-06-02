@@ -239,7 +239,24 @@ The cross-entropy of a $K = 3$ example is shown below (credit from [Cross-entrop
 
 ## 4. Label Smoothing
 
-When using deep learning models for classification tasks, we usually encounter the following problems: overfitting, and overconfidence. Overfitting is well studied and can be tackled with early stopping, dropout, weight regularization etc. **Label smoothing** is a **regularization** technique that addresses both problems [[Wanshun Wong]][What is Label Smoothing?].
+When using deep learning models for classification tasks, we usually encounter the following problems: overfitting, and overconfidence. Overfitting is well studied and can be tackled with early stopping, dropout, weight regularization etc. 
+
+**Label smoothing** is a **regularization** technique that addresses both problems [[Wanshun Wong]][What is Label Smoothing?]. You typically need label smoothing when you want to prevent a neural network from becoming overconfident, especially when dealing with noisy training data or when you need the model's output probabilities to be well-calibrated.
+
+Normally, classification tasks use hard "one-hot" encoded labels. If an instance belongs to class 1 out of 3, the target distribution is $[1, 0, 0]$.
+
+Label smoothing softens these hard targets. By introducing a small smoothing parameter $\alpha$ (often between 0.1 and 0.2), we redistribute a fraction of the probability mass across all $K$ classes:
+
+$$y_k^{LS} = y_k(1 - \alpha) + \frac{\alpha}{K}$$
+
+A target of $[1, 0, 0]$ with $\alpha = 0.1$ becomes $[0.933, 0.033, 0.033]$. The model is no longer penalized for not being 100% absolutely certain.
+
+When You Need Label Smoothing:
+1. Handling Noisy or Ambiguous Labels
+2. Mitigating Model Overconfidence (Calibration)
+3. Improving Representation Learning for Downstream Tasks
+4. Teacher-Student Knowledge Distillation
+
 
 ## Reference
 
