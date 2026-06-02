@@ -1,4 +1,4 @@
-# Anomaly Detection Study Note (And Blogs)
+# Anomaly Detection
 
 
 Table of Contents:
