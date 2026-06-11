@@ -6,14 +6,14 @@ Though GPUs are designed for highly parallel computation workloads, LLMs often f
 
 Instead of processing each request individually, batching them together allows you to use the same loaded model parameters across multiple requests, thus dramatically improving throughput.
 
-Here we list three batching strategies below.
+Below we list three batching strategies.
 
 ## Static batching
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Optimizaton/images/static_batching.png" width="700">
 
 
-* The first request in a batch is forced to wait for the last one, adding unnecessary delay. Picture a printer that won’t start printing until you’ve queued up a set number of documents, regardless of how long it takes for the last document to arrive.
+* The first request in a static batch is forced to wait for the last one, adding unnecessary delay. Picture a printer that won’t start printing until you’ve queued up a set number of documents, regardless of how long it takes for the last document to arrive.
 
 * Not all requests in a batch are created equal. In LLM inference, some requests may generate very short responses, while others could involve lengthy, step-by-step reasoning. Since all requests in the batch must wait until the slowest one finishes, this can lead to wasted compute resources and increased latency.
 
@@ -22,7 +22,7 @@ Here we list three batching strategies below.
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Optimizaton/images/dynamic_batching.png" width="700">
 
-* Dynamic batching collects incoming requests into batches, but it doesn’t insist on a fixed batch size. Instead, it sets a time window and processes whatever requests have arrived in that time frame. If the batch reaches its size limit sooner, it launches immediately.
+* Dynamic batching collects incoming requests into batches, but it doesn’t insist on a fixed batch size. Instead, it **sets a time window** and processes whatever requests have arrived in that time frame. If the batch reaches its size limit sooner, it launches immediately.
 * From above picture, some batches might not be completely full when launched, it doesn’t always achieve maximum GPU efficiency.
 * Another drawback is that, like static batching, the longest request in a batch still dictates when the batch finishes; short requests have to wait unnecessarily.
 
