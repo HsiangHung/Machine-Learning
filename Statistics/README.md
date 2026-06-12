@@ -32,6 +32,14 @@ $$\sigma_{\bar{X}} = \frac{s}{\sqrt{n}},$$
 
 where $s$ here is the sample standard deviation.
 
+The CLT for sample means tells us ([Coursera class](https://www.coursera.org/learn/inferential-statistics-intro/lecture/lkQnZ/sampling-variability-and-clt)):
+
+The distribution of **sample mean** $\lbrace \bar{X}_1, \bar{X}_2, \cdots, \bar{X}_n \rbrace$ is nearly normal, is centered at the population mean $\mu$, and with standard deviation equal to population standard deviation divided by squared root of the sample size
+
+$$\color{green}{X \sim N \Big(\textrm{mean}=\mu, \textrm{SE}=\frac{\sigma}{\sqrt{n}} \Big)}.$$
+
+(**SE** means **standard error**.)
+
 ### Sample proportion
 
 This also holds true even if the population is **binomial**, provided that $\min(np, n(1-p))> 5$, where $n$ is the sample size and p is the probability of success in the population. This means that we can **use the normal probability model to quantify uncertainty** when making inferences about a population mean based on the sample mean.
@@ -46,11 +54,11 @@ $$\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}},$$
 
 where $\sigma$ here is the sample standard deviation. -->
 
-In the [Coursera class](https://www.coursera.org/learn/inferential-statistics-intro/lecture/lkQnZ/sampling-variability-and-clt), the CLT for sample means states:
+<!-- In the [Coursera class](https://www.coursera.org/learn/inferential-statistics-intro/lecture/lkQnZ/sampling-variability-and-clt), the CLT for sample means states:
 
 The distribution of **sample mean** $\lbrace \bar{X}_1, \bar{X}_2, \cdots, \bar{X}_n \rbrace$ is nearly normal, is centered at the population mean $\mu$, and with standard deviation equal to population standard deviation divided by squared root of the sample size
 
-$$\color{green}{X \sim N \Big(\textrm{mean}=\mu, \textrm{SE}=\frac{\sigma}{\sqrt{n}} \Big)}.$$
+$$\color{green}{X \sim N \Big(\textrm{mean}=\mu, \textrm{SE}=\frac{\sigma}{\sqrt{n}} \Big)}.$$ -->
 
 The [CLT for proportions](https://www.coursera.org/learn/inferential-statistics-intro/lecture/oJxbr/sampling-variability-and-clt-for-proportions): The distribution of sample proportions is nearly normal, centered at the population proportion, and with a standard error inversely proportional to the sample size.
 
