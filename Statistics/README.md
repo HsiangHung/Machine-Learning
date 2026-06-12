@@ -7,19 +7,21 @@ The central limit theorem states that [[The Role of Probability]][Central Limit 
 
 if you have a population with mean $\mu$ (population parameter) and standard deviation σ and take **sufficiently large random samples** from the population **with replacement**, then the distribution of the sample means will be **approximately normal** distributed. 
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist.png" width="700">
+The relation between sample distribution, sampling distribution and population are like
 
-Each sample has sample statistic, and the sample statistics form a distribution, called **sampling distribution**. This will hold true **regardless** of whether the source population is **normal** or **skewed**, provided the sample size is sufficiently large (usually $n > 30$).
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist.png" width="1000">
 
-The concept between sample distribution, sampling distribution looks like
+Each sample has sample statistic, and the **sample statistics** form a distribution, called **sampling distribution**. This will hold true **regardless** of whether the source population is **normal** or **skewed**, provided the sample size is sufficiently large (usually $n > 30$).
+
+
 <!-- ![](images/sampling_dist.png) -->
 
 
 Note that if the source population is normal, then the theorem holds true even for samples smaller than 30. 
 
-As a conceret example:
+As a conceret example, sampling distribution of sample means:
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist_means.png" width="700">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist_means.png" width="900">
 
 
 This also holds true even if the population is **binomial**, provided that $\min(np, n(1-p))> 5$, where $n$ is the sample size and p is the probability of success in the population. This means that we can **use the normal probability model to quantify uncertainty** when making inferences about a population mean based on the sample mean.
