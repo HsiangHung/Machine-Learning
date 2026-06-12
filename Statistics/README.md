@@ -5,26 +5,22 @@
 
 The central limit theorem states that [[The Role of Probability]][Central Limit Theorem]
 
-if you have a population with mean $\mu$ (population parameter) and standard deviation σ and take **sufficiently large random samples** from the population **with replacement**, then the distribution of the sample means will be **approximately normal** distributed. 
+if you have a population with mean $\mu$ (population parameter) and standard deviation σ and take **sufficiently large random samples** from the population **with replacement**, then the distribution of the sample statistic (e.g. means) will be **approximately normal** distributed. 
 
 The relation between sample distribution, sampling distribution and population are like
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist.png" width="1000">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist.png" width="900">
 
-Each sample has sample statistic, and the **sample statistics** form a distribution, called **sampling distribution**. This will hold true **regardless** of whether the source population is **normal** or **skewed**, provided the sample size is sufficiently large (usually $n > 30$).
+Each sample has sample statistic, and the **sample statistics** form a distribution, called **sampling distribution**. 
 
+This will hold true **regardless** of whether the source population is **normal** or **skewed**, provided the sample size is sufficiently large (usually $n > 30$). However, note that if the source population is normal, then the theorem holds true even for samples smaller than 30. 
 
-<!-- ![](images/sampling_dist.png) -->
-
-
-Note that if the source population is normal, then the theorem holds true even for samples smaller than 30. 
+### Sample Mean and Math Expression
 
 As a conceret example, sampling distribution of sample means:
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist_means.png" width="900">
 
-
-This also holds true even if the population is **binomial**, provided that $\min(np, n(1-p))> 5$, where $n$ is the sample size and p is the probability of success in the population. This means that we can **use the normal probability model to quantify uncertainty** when making inferences about a population mean based on the sample mean.
 
 For the random samples we take from the population, we can compute the mean of the sample means:
 
@@ -32,9 +28,23 @@ $$\mu_{\bar{X}} = \mu,$$
 
 where $\mu_{\bar{X}}$ ($\bar{X}$ is called point estimate) came from the mean of the sampling distribution: $\lbrace \bar{X}_1, \bar{X}_2, \cdots, \bar{X}_n \rbrace$, and the standard deviation of the sample means is:
 
+$$\sigma_{\bar{X}} = \frac{s}{\sqrt{n}},$$
+
+where $s$ here is the sample standard deviation.
+
+### Sample proportion
+
+This also holds true even if the population is **binomial**, provided that $\min(np, n(1-p))> 5$, where $n$ is the sample size and p is the probability of success in the population. This means that we can **use the normal probability model to quantify uncertainty** when making inferences about a population mean based on the sample mean.
+
+<!-- For the random samples we take from the population, we can compute the mean of the sample means:
+
+$$\mu_{\bar{X}} = \mu,$$
+
+where $\mu_{\bar{X}}$ ($\bar{X}$ is called point estimate) came from the mean of the sampling distribution: $\lbrace \bar{X}_1, \bar{X}_2, \cdots, \bar{X}_n \rbrace$, and the standard deviation of the sample means is:
+
 $$\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}},$$
 
-where $\sigma$ here is the sample standard deviation.
+where $\sigma$ here is the sample standard deviation. -->
 
 In the [Coursera class](https://www.coursera.org/learn/inferential-statistics-intro/lecture/lkQnZ/sampling-variability-and-clt), the CLT for sample means states:
 
