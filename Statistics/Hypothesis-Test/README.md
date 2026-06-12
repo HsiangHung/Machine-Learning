@@ -23,7 +23,7 @@ Check Condition:
 
 From Coursera course **Inferential Statistcs**, p-value is the probability
 
-$$\textrm{p-value} = Pr \Big(\textrm{observed or more extreme outcome}| H_0 \textrm{is true} \Big).$$
+$$\textrm{p-value} = Pr \Big(\textrm{observed or more extreme outcome}| H_0 \textrm{ is true} \Big).$$
 
 If p-value is very low, we have strong evidence against the null hypothesis. Therefore we can reject $H_0$. Otherwise we cannot reject $H_0$.
 
