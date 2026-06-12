@@ -9,7 +9,7 @@ if you have a population with mean $\mu$ (population parameter) and standard dev
 
 The relation between sample distribution, sampling distribution and population are like
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist.png" width="900">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist.png" width="800">
 
 Each sample has sample statistic, and the **sample statistics** form a distribution, called **sampling distribution**. 
 
@@ -19,7 +19,7 @@ This will hold true **regardless** of whether the source population is **normal*
 
 As a conceret example, sampling distribution of sample means:
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist_means.png" width="900">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist_means.png" width="800">
 
 
 For the random samples we take from the population, we can compute the mean of the sample means:
@@ -35,15 +35,15 @@ where $s$ here is the sample standard deviation.
 
 From the CLT ([Coursera class](https://www.coursera.org/learn/inferential-statistics-intro/lecture/lkQnZ/sampling-variability-and-clt)), the distribution of **sample mean** $\lbrace \bar{X}_1, \bar{X}_2, \cdots, \bar{X}_n \rbrace$ is nearly normal, is centered at the population mean $\mu$, and with standard deviation equal to population standard deviation divided by squared root of the sample size
 
-$$\color{green}{X \sim N \Big(\textrm{mean}=\mu, \textrm{SE}=\frac{\sigma}{\sqrt{n}} \Big)}.$$
+$$\color{green}{X \sim N \Big(\textrm{mean}=\mu, \textrm{SE}=\frac{s}{\sqrt{n}} \Big)}.$$
 
-(**SE** means **standard error**.)
+Note **SE** means **standard error**.
 
 ### Sample proportion
 
 This also holds true even if the population is **binomial**, provided that $\min(np, n(1-p))> 5$, where $n$ is the sample size and p is the probability of success in the population. 
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist_proportion.png" width="900">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist_proportion.png" width="800">
 
 This means that we can **use the normal probability model to quantify uncertainty** when making inferences about a population mean based on the sample mean.
 
