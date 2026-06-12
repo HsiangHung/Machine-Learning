@@ -41,25 +41,14 @@ $$\color{green}{X \sim N \Big(\textrm{mean}=\mu, \textrm{SE}=\frac{\sigma}{\sqrt
 
 ### Sample proportion
 
-This also holds true even if the population is **binomial**, provided that $\min(np, n(1-p))> 5$, where $n$ is the sample size and p is the probability of success in the population. This means that we can **use the normal probability model to quantify uncertainty** when making inferences about a population mean based on the sample mean.
+This also holds true even if the population is **binomial**, provided that $\min(np, n(1-p))> 5$, where $n$ is the sample size and p is the probability of success in the population. 
 
-<!-- For the random samples we take from the population, we can compute the mean of the sample means:
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist_proportion.png" width="900">
 
-$$\mu_{\bar{X}} = \mu,$$
+This means that we can **use the normal probability model to quantify uncertainty** when making inferences about a population mean based on the sample mean.
 
-where $\mu_{\bar{X}}$ ($\bar{X}$ is called point estimate) came from the mean of the sampling distribution: $\lbrace \bar{X}_1, \bar{X}_2, \cdots, \bar{X}_n \rbrace$, and the standard deviation of the sample means is:
 
-$$\sigma_{\bar{X}} = \frac{\sigma}{\sqrt{n}},$$
-
-where $\sigma$ here is the sample standard deviation. -->
-
-<!-- In the [Coursera class](https://www.coursera.org/learn/inferential-statistics-intro/lecture/lkQnZ/sampling-variability-and-clt), the CLT for sample means states:
-
-The distribution of **sample mean** $\lbrace \bar{X}_1, \bar{X}_2, \cdots, \bar{X}_n \rbrace$ is nearly normal, is centered at the population mean $\mu$, and with standard deviation equal to population standard deviation divided by squared root of the sample size
-
-$$\color{green}{X \sim N \Big(\textrm{mean}=\mu, \textrm{SE}=\frac{\sigma}{\sqrt{n}} \Big)}.$$ -->
-
-The [CLT for proportions](https://www.coursera.org/learn/inferential-statistics-intro/lecture/oJxbr/sampling-variability-and-clt-for-proportions): The distribution of sample proportions is nearly normal, centered at the population proportion, and with a standard error inversely proportional to the sample size.
+The [CLT for proportions](https://www.coursera.org/learn/inferential-statistics-intro/lecture/oJxbr/sampling-variability-and-clt-for-proportions) tells us : the distribution of sample proportions is nearly normal, centered at the population proportion, and with a standard error inversely proportional to the sample size.
 
 $$\color{green}{\hat{p} \sim N \Big(\textrm{mean}=p, \textrm{SE}=\sqrt{\frac{p(1-p)}{n}}} \Big).$$
 
