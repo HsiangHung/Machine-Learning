@@ -15,7 +15,7 @@ Each sample has sample statistic, and the **sample statistics** form a distribut
 
 This will hold true **regardless** of whether the source population is **normal** or **skewed**, provided the sample size is sufficiently large (usually $n > 30$). However, note that if the source population is normal, then the theorem holds true even for samples smaller than 30. 
 
-NOTE don't confuse sample size $n$ with the number of samples. We randomly select $n$ observations from population, and the number of samples form sampling distribution.
+NOTE don't confuse sample size $n$ with the number of samples. We randomly select $n$ observations from population, which is sample size, and we repeat it many times which is the number of samples.
 
 ### Sample Mean
 
