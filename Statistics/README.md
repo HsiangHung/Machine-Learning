@@ -32,9 +32,8 @@ $$\sigma_{\bar{X}} = \frac{s}{\sqrt{n}},$$
 
 where $s$ here is the sample standard deviation.
 
-The CLT for sample means tells us ([Coursera class](https://www.coursera.org/learn/inferential-statistics-intro/lecture/lkQnZ/sampling-variability-and-clt)):
 
-The distribution of **sample mean** $\lbrace \bar{X}_1, \bar{X}_2, \cdots, \bar{X}_n \rbrace$ is nearly normal, is centered at the population mean $\mu$, and with standard deviation equal to population standard deviation divided by squared root of the sample size
+From the CLT ([Coursera class](https://www.coursera.org/learn/inferential-statistics-intro/lecture/lkQnZ/sampling-variability-and-clt)), the distribution of **sample mean** $\lbrace \bar{X}_1, \bar{X}_2, \cdots, \bar{X}_n \rbrace$ is nearly normal, is centered at the population mean $\mu$, and with standard deviation equal to population standard deviation divided by squared root of the sample size
 
 $$\color{green}{X \sim N \Big(\textrm{mean}=\mu, \textrm{SE}=\frac{\sigma}{\sqrt{n}} \Big)}.$$
 
