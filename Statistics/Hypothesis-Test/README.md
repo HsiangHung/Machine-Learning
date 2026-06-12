@@ -1,6 +1,12 @@
 
 # Hypothesis Test
 
+
+## Hypothesis
+
+* Null, $H_0$: .... = 
+* Alternative, $H_a$: .... >, <, $\ne$.
+
 [[Statistics How to]][Hypothesis Testing]
 
 Use the following steps to set up hypothesis testing. Assume we compare a single mean:
