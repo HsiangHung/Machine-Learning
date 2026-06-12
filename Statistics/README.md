@@ -5,12 +5,19 @@
 
 The central limit theorem states that [[The Role of Probability]][Central Limit Theorem]
 
-if you have a population with mean $\mu$ (population parameter) and standard deviation σ and take **sufficiently large random samples** from the population **with replacement**, then the distribution of the sample means will be **approximately normal** distributed. The distribution is **sampling distribution**. This will hold true **regardless** of whether the source population is **normal** or **skewed**, provided the sample size is sufficiently large (usually $n > 30$).
+if you have a population with mean $\mu$ (population parameter) and standard deviation σ and take **sufficiently large random samples** from the population **with replacement**, then the distribution of the sample means will be **approximately normal** distributed. 
+
+Each sample has sample statistic, and the sample statistics form a distribution, called **sampling distribution**. This will hold true **regardless** of whether the source population is **normal** or **skewed**, provided the sample size is sufficiently large (usually $n > 30$).
+
+The concept between sample distribution, sampling distribution looks like
+<!-- ![](images/sampling_dist.png) -->
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist.png" width="700">
 
 Note that if the source population is normal, then the theorem holds true even for samples smaller than 30. 
 
-The concept between sample distribution, sampling distribution looks like
-![](images/sampling_dist.png)
+As a conceret example:
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist_means.png" width="700">
+
 
 This also holds true even if the population is **binomial**, provided that $\min(np, n(1-p))> 5$, where $n$ is the sample size and p is the probability of success in the population. This means that we can **use the normal probability model to quantify uncertainty** when making inferences about a population mean based on the sample mean.
 
