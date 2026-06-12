@@ -7,15 +7,18 @@ The central limit theorem states that [[The Role of Probability]][Central Limit 
 
 if you have a population with mean $\mu$ (population parameter) and standard deviation σ and take **sufficiently large random samples** from the population **with replacement**, then the distribution of the sample means will be **approximately normal** distributed. 
 
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist.png" width="700">
+
 Each sample has sample statistic, and the sample statistics form a distribution, called **sampling distribution**. This will hold true **regardless** of whether the source population is **normal** or **skewed**, provided the sample size is sufficiently large (usually $n > 30$).
 
 The concept between sample distribution, sampling distribution looks like
 <!-- ![](images/sampling_dist.png) -->
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist.png" width="700">
+
 
 Note that if the source population is normal, then the theorem holds true even for samples smaller than 30. 
 
 As a conceret example:
+
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Statistics/images/sampling_dist_means.png" width="700">
 
 
