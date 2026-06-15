@@ -36,7 +36,7 @@ $$\textrm{p-value} = Pr \big(\textrm{observed or more extreme outcome}|H_0 \text
 
 If p-value is very low, we have strong evidence against the null hypothesis. Therefore we can reject $H_0$. Otherwise we cannot reject $H_0$.
 
-For example, if a hypothesis: 
+For example, if a one-sided hypothesis test: 
 * $H_0$: $\mu=3$,
 * Our sample has $\bar{X}=3.2$ and $s=1.74$,
 * $n=50$, so $\textrm{SE} = s/\sqrt{50} = 0.246$, 
