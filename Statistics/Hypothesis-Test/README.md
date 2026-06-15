@@ -24,7 +24,7 @@ $$Z = \frac{\textrm{point estimate - null value}}{\textrm{standard error}}$$
 
 * **Step 6**: Determine if rejection the null hypothesis.
 
-For nearly normal distribution, point estimate could be:
+For nearly normal sampling distribution, point estimate could be:
 * sample mean: $\bar{x}$
 * difference between sample means: $\bar{x}_1 - \bar{x}_2$
 * sample proportion: $\hat{p}$
