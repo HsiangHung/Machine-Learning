@@ -26,7 +26,9 @@ $$Z = \frac{\textrm{point estimate - null value}}{\textrm{standard error}}$$
 
 For nearly normal distribution, point estimate:
 * sample mean: $\bar{x}$
-* difference between sample means: $\bar{x}$
+* difference between sample means: $\bar{x}_1 - \bar{x}_2$
+* sample proportion: $\hat{p}$
+* difference between sample proportion: $\hat{p}_1 - \hat{p}_2$
 
 ### Check Condition:
 
