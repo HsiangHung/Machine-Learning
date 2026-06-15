@@ -24,9 +24,13 @@ $$Z = \frac{\textrm{point estimate - null value}}{\textrm{standard error}}$$
 
 * **Step 6**: Determine if rejection the null hypothesis.
 
+For nearly normal distribution, point estimate:
+* sample mean: $\bar{x}$
+* difference between sample means: $\bar{x}$
+
 ### Check Condition:
 
-Depends on inference type, there are checking conditions to select test statistics. For example, to use Z-test for inference sample means, the conditions are:
+Depending on inference type, there are checking conditions to select test statistics. For example, to use Z-test for inference sample means, the conditions are:
 1. **Independent**: Sample observations must be independent (random sample/assignment & if sampling without replacement, $n < 10%$ of population).
 2. Sample size/skew: n ≥ 30, larger if the population distribution is very skewed.
 
