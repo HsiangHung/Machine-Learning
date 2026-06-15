@@ -45,7 +45,7 @@ We obtain the test statistic Z = (3.2-3)/0.246 = 0.81. For one trailed, p-value 
 
 It is interpreted as:
 * If in fact population has mean = 3 on average, there is a 21% chance that a random sample of 50 would yield a sample mean of 3.2 or higher.
-* This is a pretty high probability, so a sample mean of 3.2 or more is likely to happen simply by chance. So we don't have enough evidence to reject the null hypothesis, even if $H_0$ is true.
+* The p-value a pretty high, meaning that a sample mean of 3.2 or more is likely to happen simply by chance. So we don't have enough evidence to reject the null hypothesis, even if $H_0$ is true.
 
 ### Agreement Between Confidence Level (CL) and Hypothesis Testing
 
