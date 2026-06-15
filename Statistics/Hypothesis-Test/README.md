@@ -7,7 +7,7 @@
 * Null, $H_0$: .... = $\mu$
 * Alternative, $H_a$: .... >, <, $\ne \mu$.
 
-$${\color{red} NOTE: \mu \ is \ awlays \ population \ parameter, \ never \ be \ sample \  statistic}$$.
+$${\color{red} NOTE: \mu \ (null \value) \ is \ awlays \ population \ parameter, \ never \ be \ sample \  statistic}$$.
 
 
 [[Statistics How to]][Hypothesis Testing]
@@ -24,7 +24,7 @@ $$Z = \frac{\textrm{point estimate - null value}}{\textrm{standard error}}$$
 
 * **Step 6**: Determine if rejection the null hypothesis.
 
-For nearly normal sampling distribution, point estimate could be:
+For nearly normal sampling distribution, point estimates could be:
 * sample mean: $\bar{x}$
 * difference between sample means: $\bar{x}_1 - \bar{x}_2$
 * sample proportion: $\hat{p}$
