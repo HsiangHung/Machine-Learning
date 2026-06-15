@@ -84,7 +84,7 @@ Also see [Inferential Statistics: Inference for comparing two paired means](http
 
 The two-sample t-test is used to determine if two population means are equal [[NIST Two-Sample t-Test]][NIST, 1.3.5.3. Two-Sample t-Test for Equal Means], [[Plonsky]][M. Plonsky, Hypothesis Testing: Continuous Variables (2 Sample)]
 
-$$\textrm{H}_0: \bar{X}_1 = \bar{X}_2 \ (\textrm{or} \bar{X}_1 - \bar{X}_2 = 0), \ \ \textrm{H}_a: \bar{X}_1 \ne \bar{X}_2.$$
+$$\textrm{H}_0: \bar{X}_1 = \bar{X}_2 \ (\textrm{or} \ \bar{X}_1 - \bar{X}_2 = 0), \ \ \textrm{H}_a: \bar{X}_1 \ne \bar{X}_2  (\textrm{or} \ \bar{X}_1 - \bar{X}_2 \ne 0).$$
 
 If population standard deviations are known, then we have z-statistic
 
