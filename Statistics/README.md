@@ -69,7 +69,7 @@ If population standard deviation $\sigma$ or proportion $p$ is unknown, use samp
 
 The conversion matrix of testing is [[Massa]][S. Massa, Kolmogorov Smirnov Test & Power of Tests], [[Coursera: Inferential Statistics]][Coursera: Inferential Statistics, Decision Errors]
 
-| Decision \ Truth | $H_a$ is True  | $H_0$ is True | 
+| Decision \ Truth | $H_a$ is True ($H_0$ is False) | $H_0$ is True | 
 | :---: | :---: | :---: | 
 | $H_a$ is True (reject $H_0$) |  $1 - \beta$ |  $\alpha$ (Type-I error, false positive) | 
 | $H_0$ is True (fail to reject $H_0$) |  $\beta$ (Type-II error, false negative)  |  $1-\alpha$ | 
