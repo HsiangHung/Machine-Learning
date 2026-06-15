@@ -41,7 +41,7 @@ For example, if a one-sided hypothesis test:
 * Our sample has $\bar{X}=3.2$ (point estimate) and $s=1.74$,
 * $n=50$, so $\textrm{SE} = s/\sqrt{50} = 0.246$, 
 
-We obtain the test statistic 
+We obtain the test statistic Z ($n>30$)
 
 $$Z = \frac{\bar{X}-\mu}{\textrm{SE}} = \frac{3.2-3}{0.246} = 0.81.$$ 
 
