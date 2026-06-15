@@ -41,7 +41,7 @@ For example, if a hypothesis:
 * Our sample has $\bar{X}=3.2$ and $s=1.74$$,
 * n=50$, so $\textrm{SE} = s/\sqrt{50} = 0.246$, 
 
-We obtain the test statistic Z = (3.2-3)/0.246 = 0.81. For one trailed, p-value = 0.209 $P(\bar{X} > 3.2 |H_0: \mu=3)$.
+We obtain the test statistic Z = (3.2-3)/0.246 = 0.81. For one trailed, p-value $P(\bar{X} > 3.2 |H_0: \mu=3) = 0.209$.
 
 It is interpreted as:
 * If in fact population has mean = 3 on average, there is a 21% chance that a random sample of 50 would yield a sample mean of 3.2 or higher.
