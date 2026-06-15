@@ -91,18 +91,20 @@ or
 $$\textrm{H}_0:  \ \bar{X}_1 - \bar{X}_2 = 0, \  \ \textrm{H}_a: \bar{X}_1 - \bar{X}_2 \ne 0.$$
 
 
-If population standard deviations are known, then we have z-statistic
+If **population** standard deviations are **known**, then we have **z-statistic**
 
 $$z = \frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma^2_2}{n_2}}}.$$
 
 
-If the population standard deviations are unknown, the t-test test statistic is
+If the population standard deviations are **unknown**, the **t test statistic** is
 
 $$t =\frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1}+\frac{s^2_2}{n_2}}}.$$
 
 
 
-where $s_1$ and $s_2$ are the sample variances. If equal variances are assumed, the test statistic becomes
+where $s_1$ and $s_2$ are the sample variances. 
+
+If **equal variances are assumed**, the test statistic becomes
 
 $$t = \frac{\bar{X}_1-\bar{X}_2}{s_p\sqrt{\frac{1}{n_1}+\frac{1}{n_2}}},$$
 
