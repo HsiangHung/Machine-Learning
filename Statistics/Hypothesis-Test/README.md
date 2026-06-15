@@ -7,7 +7,7 @@
 * Null, $H_0$: .... = $\mu$
 * Alternative, $H_a$: .... >, <, $\ne \mu$.
 
-$${\color{red} NOTE: \mu \ (null \value) \ is \ awlays \ population \ parameter, \ never \ be \ sample \  statistic}$$.
+$${\color{red} NOTE: \mu \ (null \ value) \ is \ awlays \ population \ parameter, \ never \ be \ sample \  statistic}$$.
 
 
 [[Statistics How to]][Hypothesis Testing]
