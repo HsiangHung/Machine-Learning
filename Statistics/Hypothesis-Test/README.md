@@ -4,8 +4,11 @@
 
 ## Hypothesis
 
-* Null, $H_0$: .... = 
+* Null, $H_0$: .... = $\mu$
 * Alternative, $H_a$: .... >, <, $\ne$.
+
+$${\color{red} \textrm{NOTE:} \mu \textrm{is awlays population paraters, never be sample statistic} $$.
+
 
 [[Statistics How to]][Hypothesis Testing]
 
