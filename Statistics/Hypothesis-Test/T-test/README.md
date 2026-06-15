@@ -96,7 +96,7 @@ If **population** standard deviations are **known**, then we have **z-statistic*
 $$z = \frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{\sigma^2_1}{n_1}+\frac{\sigma^2_2}{n_2}}}.$$
 
 
-If the population standard deviations are **unknown**, the **t test statistic** is
+If the population standard deviations are **unknown**, the **t-statistic** is
 
 $$t =\frac{\bar{X}_1-\bar{X}_2}{\sqrt{\frac{s^2_1}{n_1}+\frac{s^2_2}{n_2}}}.$$
 
