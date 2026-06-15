@@ -24,11 +24,11 @@ $$Z = \frac{\textrm{point estimate - null value}}{\textrm{standard error}}$$
 
 * **Step 6**: Determine if rejection the null hypothesis.
 
-For nearly normal distribution, point estimate:
+For nearly normal distribution, point estimate could be:
 * sample mean: $\bar{x}$
 * difference between sample means: $\bar{x}_1 - \bar{x}_2$
 * sample proportion: $\hat{p}$
-* difference between sample proportion: $\hat{p}_1 - \hat{p}_2$
+* difference between sample proportions: $\hat{p}_1 - \hat{p}_2$
 
 ### Check Condition:
 
