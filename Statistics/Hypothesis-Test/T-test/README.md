@@ -88,7 +88,7 @@ $$\textrm{H}_0: \bar{X}_1 = \bar{X}_2, \ \ \textrm{H}_a: \bar{X}_1 \ne \bar{X}_2
 
 or 
 
-$$\textrm{H}_0:  \ \bar{X}_1 - \bar{X}_2 = 0, \  \ \bar{X}_1 - \bar{X}_2 \ne 0).$$
+$$\textrm{H}_0:  \ \bar{X}_1 - \bar{X}_2 = 0, \  \ \bar{X}_1 - \bar{X}_2 \ne 0.$$
 
 
 If population standard deviations are known, then we have z-statistic
