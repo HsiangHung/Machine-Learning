@@ -43,7 +43,7 @@ For example, if a one-sided hypothesis test:
 
 We obtain the test statistic 
 
-$$ Z = (3.2-3)/0.246 = 0.81.$$ 
+$$ Z = \frac{3.2-3}{0.246} = 0.81$$. 
 
 For one trailed, p-value = $P(\bar{X} > 3.2 |H_0: \ \mu=3) = 0.209$. 
 
