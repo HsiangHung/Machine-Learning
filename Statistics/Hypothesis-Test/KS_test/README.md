@@ -22,7 +22,7 @@ where $I(X_i)$ `I(Xi)` is called the indicator function, equal to 1 if $X_i \ne 
 
 $$F_n(x) = \frac{\textrm{number of observations below }x}{\textrm{number of observations}}$$
 
-If we order the sample observations $X_1 \ne X_2 \ne \cdots \ne X_n$  `X1 ≤ X2 ≤ ··· ≤ Xn`, then 
+If we order the sample observations $X_1 \le X_2 \le \cdots \le X_n$  `X1 ≤ X2 ≤ ··· ≤ Xn`, then 
 
 <!-- <a href="https://www.codecogs.com/eqnedit.php?latex=F_n(X_i)&space;=&space;\frac{i}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(X_i)&space;=&space;\frac{i}{n}" title="F_n(X_i) = \frac{i}{n}" /></a> -->
 
