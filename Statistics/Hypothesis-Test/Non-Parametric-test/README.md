@@ -33,7 +33,7 @@ How it works:
 
 ## In Production Reality
 
-#### 1. The "Big Data" Trap: Statistical vs. Practical Significance
+### 1. The "Big Data" Trap: Statistical vs. Practical Significance
 
 At Apple’s scale (evaluating millions of devices), any standard statistical test—including the Mann-Whitney U test—will almost certainly return a highly significant p-value ($p < 0.001$) even if the CPU usage only increases by a microscopic $0.05\%$.
 
@@ -41,7 +41,7 @@ When your $N$ (sample size) is massive, **everything is statistically significan
 
 Therefore, we cannot just rely on a p-value to make a launch decision. We must define Practical Significance.
 
-#### 2. Using "Non-Inferiority" Margins ($\delta$)
+### 2. Using "Non-Inferiority" Margins ($\delta$)
 
 Since you know the new feature uses more memory, you don't test if memory usage is identical. You ask Engineering: "What is the memory budget for this feature?" Thus, you don't always need the canary to be better; you usually just need to prove it is not worse. This is called **Non-Inferiority Testing**.
 
@@ -51,7 +51,7 @@ Let's say Engineering expects a 15MB increase in RAM usage.
 
 You shift the Baseline data by your tolerance margin ($\delta = 15\text{MB}$), and then run your one-sided Mann-Whitney U test. You are statistically proving that the memory increase is confined to the expected budget and isn't a runaway memory leak.
 
-#### 3. The Concept of "Guardrail Metrics"
+### 3. The Concept of "Guardrail Metrics"
 
 CPU and Memory are usually Proxy Metrics. Users don't actually care about CPU utilization; they care about what high CPU utilization causes.
 
