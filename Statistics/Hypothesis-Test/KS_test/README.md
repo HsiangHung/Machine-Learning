@@ -87,7 +87,7 @@ $$D_n > D_{\textrm{crit}, n} = \frac{K_{\alpha}}{\sqrt{n}}.$$
 
 we reject the null hypothesis.
 
-As an example given by Massa [[Massa]][S. Massa, Kolmogorov Smirnov Test & Power of Tests], suppose we have data and are wondering if it comes from a normally distributed `N(0,1)`. In her lecture, we first order the data to form the empirical distribution function `Fn` $F_n$, and prepare the CDF of `N(0,1)` as `F`. Then we compute all $|F_n-F|$ `|Fn-F|` and determine the KS statistic `Dn` $D_n$ is 0.092 (maximal difference). For significant level $\alpha=0.05$ `α=0.05`, $K_{\alpha} = 1.36"$ <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}&space;=&space;1.36" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}&space;=&space;1.36" title="K_{\alpha} = 1.36" /></a>, such that the critical value is 1.36/10 = 0.136 if sample size `n=100`. As a consequence,
+As an example given by Massa [[Massa]][S. Massa, Kolmogorov Smirnov Test & Power of Tests], suppose we have data and are wondering if it comes from a normally distributed $N(0,1)$. In her lecture, we first order the data to form the empirical distribution function $F_n$, and prepare the CDF of $N(0,1)$ as $F$. Then we compute all $|F_n-F|$  and determine the KS statistic $D_n$ is 0.092 (maximal difference). For significant level $\alpha=0.05$, $K_{\alpha} = 1.36$, such that the critical value is 1.36/10 = 0.136 if sample size $n=100$. As a consequence,
 
 <!-- <a href="https://www.codecogs.com/eqnedit.php?latex=D_{n}&space;=&space;0.092&space;<&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{1.36}{\sqrt{100}}&space;=&space;0.136" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{n}&space;=&space;0.092&space;<&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{1.36}{\sqrt{100}}&space;=&space;0.136" title="D_{n} = 0.092 < D_{\textrm{crit}, n} = \frac{1.36}{\sqrt{100}} = 0.136" /></a> -->
 
@@ -98,7 +98,7 @@ and we retain the null hypothesis.
 
 ### Two-sample KS test
 
-Suppose now we have two samples, $F_1$ and $F_2$ are the empirical distribution functions of the first and the second sample respectively (subscripts`n` and `m` denote the sample size), then the KS statistic is
+Suppose now we have two samples, $F_1$ and $F_2$ are the empirical distribution functions of the first and the second sample respectively (subscripts $n$ and $m$ denote the sample size), then the KS statistic is
 
 <!-- <a href="https://www.codecogs.com/eqnedit.php?latex=D_{n,m}&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_{1,n}(x)&space;-F_{2,m}(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{n,m}&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_{1,n}(x)&space;-F_{2,m}(x)&space;\right&space;|" title="D_{n,m} = \textrm{sup}_x \left | F_{1,n}(x) -F_{2,m}(x) \right |" /></a> -->
 
@@ -118,7 +118,7 @@ $C(\alpha)$  is a function of α; for $\alpha=0.05$, $C(\alpha)=1.224$ and for $
 
 ## Canary Test
 
-### 1. The One-Sided KS Test
+### The One-Sided KS Test
 
 The KS test absolutely supports one-sided hypotheses. It does this by modifying the KS statistic, which is based on the Empirical Cumulative Distribution Function (eCDF). 
 
@@ -139,7 +139,7 @@ $$D^+ = \sup_x (F_{baseline}(x) - F_{canary}(x))$$
 If your one-sided test statistic is larger than the critical value, you reject the null hypothesis and conclude the canary is definitively better (or worse, depending on how you structure the test).
 
 
-### 2. The Mann-Whitney U Test
+### The Mann-Whitney U Test
 
 While the one-sided KS test is valid, it has a notable flaw in production environments: **it is highly sensitive to changes in the shape and variance of the distribution, not just the median. If the new software release has the exact same median latency, but a slightly longer tail (higher variance), the KS test might flag it as a massive difference.**
 
@@ -148,7 +148,38 @@ How it works:
 * It combines all the data from both the baseline and canary, ranks them from smallest to largest, and then checks if the **ranks** from the canary tend to be significantly lower or higher than the baseline.
 * One-Sided Application: You can easily run a one-sided Mann-Whitney test to ask: "What is the probability that a randomly selected iOS device on the Canary build has a higher battery drain than a randomly selected device on the Baseline build?" 
 
-In reality, you don't always need the canary to be better; you usually just need to prove it is not worse. This is called Non-Inferiority Testing:
+
+### In Reality
+
+#### 1. The "Big Data" Trap: Statistical vs. Practical Significance
+
+At Apple’s scale (evaluating millions of devices), any standard statistical test—including the Mann-Whitney U test—will almost certainly return a highly significant p-value ($p < 0.001$) even if the CPU usage only increases by a microscopic $0.05\%$.
+
+When your $N$ (sample size) is massive, **everything is statistically significant**.
+
+Therefore, we cannot just rely on a p-value to make a launch decision. We must define Practical Significance.
+
+#### 2. Using "Non-Inferiority" Margins ($\delta$)
+
+Since you know the new feature uses more memory, you don't test if memory usage is identical. You ask Engineering: "What is the memory budget for this feature?" Let's say Engineering expects a 15MB increase in RAM usage.
+* The Wrong Test: Is Canary RAM = Baseline RAM? (Mann-Whitney will say no; rollout blocked).
+* The Right Test becomes: Is Canary RAM $\le$ Baseline RAM + 15MB?
+
+You shift the Baseline data by your tolerance margin ($\delta = 15\text{MB}$), and then run your one-sided Mann-Whitney U test. You are statistically proving that the memory increase is confined to the expected budget and isn't a runaway memory leak.
+
+#### 3. The Concept of "Guardrail Metrics"
+
+CPU and Memory are usually Proxy Metrics. Users don't actually care about CPU utilization; they care about what high CPU utilization causes.
+
+If you are defending a release that increases CPU usage, you must introduce Guardrail Metrics to the interviewer. You tell them: "We accept a 2% expected hit to CPU, provided our guardrail metrics remain flat."
+
+* Examples of OS-level guardrails:Thermal Throttling Events: Did the device get so hot it had to slow itself down?
+* OOM (Out of Memory) Crashes: Did our 15MB memory increase cause background apps (like Spotify or Maps) to be aggressively killed by the iOS Jetsam process?
+* Battery Depletion Rate: Did the CPU increase actually translate to a noticeable drop in battery life for the average user?
+* UI Frame Drops: Did the UI stutter while scrolling?
+
+
+In reality, you don't always need the canary to be better; you usually just need to prove it is not worse. This is called **Non-Inferiority Testing**:
 1. You define a practically acceptable margin of degradation ($\delta$). For example, a $2\%$ increase in CPU usage is acceptable if the new feature is highly valuable.
 2. You shift the canary distribution by $\delta$ and then apply your one-sided test (like Mann-Whitney).
 3. You test the null hypothesis that the canary is worse by more than $\delta$. If you reject it, you prove the release is safe to launch.
