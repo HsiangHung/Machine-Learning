@@ -54,25 +54,25 @@ where <a href="https://www.codecogs.com/eqnedit.php?latex=D_{\textrm{crit},&spac
 
 The `Kolmogorov–Smirnov statistic` for a given **cumulative distribution function** (reference) `F(x)` is
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" title="D_n = \textrm{sup}_x \left | F_n(x) -F(x) \right |" /></a>,
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" title="D_n = \textrm{sup}_x \left | F_n(x) -F(x) \right |" /></a>, -->
 
 $$D_n = \textrm{sup}_x \left | F_n(x) -F(x) \right |,$$
 
 where the KS statistic is determined by the maximal distance between `F` and `Fn`. The null hypothesis is 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=H_0&space;:&space;\textrm{the&space;samples&space;come&space;from&space;}&space;F_n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_0&space;:&space;\textrm{the&space;samples&space;come&space;from&space;}&space;F_n" title="H_0 : \textrm{the samples come from } F_n" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=H_0&space;:&space;\textrm{the&space;samples&space;come&space;from&space;}&space;F_n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_0&space;:&space;\textrm{the&space;samples&space;come&space;from&space;}&space;F_n" title="H_0 : \textrm{the samples come from } F_n" /></a> -->
 
 $$ H_0 : \textrm{The samples come from } F_n $$
 
 against the alternative hypothesis 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=H_a&space;:&space;\textrm{the&space;samples&space;do&space;NOT&space;come&space;from&space;}&space;F_n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_a&space;:&space;\textrm{the&space;samples&space;do&space;NOT&space;come&space;from&space;}&space;F_n" title="H_a : \textrm{the samples do NOT come from } F_n" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=H_a&space;:&space;\textrm{the&space;samples&space;do&space;NOT&space;come&space;from&space;}&space;F_n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_a&space;:&space;\textrm{the&space;samples&space;do&space;NOT&space;come&space;from&space;}&space;F_n" title="H_a : \textrm{The samples do NOT come from } F_n" /></a> -->
 
 $$H_a : \textrm{the samples do NOT come from } F_n".$$
 
 As we described previously, when 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;>&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{K_{\alpha}}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;>&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{K_{\alpha}}{\sqrt{n}}" title="D_n > D_{\textrm{crit}, n} = \frac{K_{\alpha}}{\sqrt{n}}" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;>&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{K_{\alpha}}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;>&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{K_{\alpha}}{\sqrt{n}}" title="D_n > D_{\textrm{crit}, n} = \frac{K_{\alpha}}{\sqrt{n}}" /></a> -->
 
 $$D_n > D_{\textrm{crit}, n} = \frac{K_{\alpha}}{\sqrt{n}}.$$
 
@@ -94,11 +94,15 @@ Suppose now we have two samples, `F1` and `F2` are the empirical distribution fu
 <a href="https://www.codecogs.com/eqnedit.php?latex=D_{n,m}&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_{1,n}(x)&space;-F_{2,m}(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{n,m}&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_{1,n}(x)&space;-F_{2,m}(x)&space;\right&space;|" title="D_{n,m} = \textrm{sup}_x \left | F_{1,n}(x) -F_{2,m}(x) \right |" /></a>
 
 
+$$D_{n,m} = \textrm{sup}_x \left | F_{1,n}(x) -F_{2,m}(x) \right |$$
+
 The null hypothesis is rejected at level α if
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=D_{n,m}&space;>&space;C(\alpha)&space;\sqrt{\frac{1}{n}&plus;\frac{1}{m}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{n,m}&space;>&space;C(\alpha)&space;\sqrt{\frac{1}{n}&plus;\frac{1}{m}}" title="D_{n,m} > C(\alpha) \sqrt{\frac{1}{n}+\frac{1}{m}}" /></a>
 
-`C(α)` is a function of α; for α = 0.05, `C(α) = 1.224` and for α = 0.01, `C(α) = 1.517`.
+$$D_{n,m} > C(\alpha) \sqrt{\frac{1}{n}+\frac{1}{m}}$$
+
+$C(\alha)$ `C(α)` is a function of α; for α = 0.05 $\alpha=0.05$, $C(\alha)=1.224$ `C(α) = 1.224` and for $\alpha=0.01$ α = 0.01, `C(α) = 1.517` $C(\alha)=1.517.
 
 
 
