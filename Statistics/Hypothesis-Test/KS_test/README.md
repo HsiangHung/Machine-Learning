@@ -13,16 +13,20 @@ There defines a the **empirical distribution function** (for n iid ordered obser
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" title="F_n(x) = \frac{1}{n}\sum^n_{i=1} \textrm{I}_{[-\infty, x]}(X_i)" /></a>
 
+$$F_n(x) = \frac{1}{n}\sum^n_{i=1} \textrm{I}_{[-\infty, x]}(X_i)$$
+
 
 where `I(Xi)` is called the indicator function, equal to 1 if Xi ≤ x and equal to 0 otherwise. More simply speaking, given sample `{X1, . . . , Xn}`, the empirical distribution function is the proportion of the data that lies below x [[Massa]][S. Massa, Kolmogorov Smirnov Test & Power of Tests], 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_n(x)&space;=&space;\frac{\textrm{number&space;of&space;observations&space;below&space;}x}{\textrm{number&space;of&space;observations}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(x)&space;=&space;\frac{\textrm{number&space;of&space;observations&space;below&space;}x}{\textrm{number&space;of&space;observations}}" title="F_n(x) = \frac{\textrm{number of observations below }x}{\textrm{number of observations}}" /></a>
 
+$$F_n(x) = \frac{\textrm{number of observations below }x}{\textrm{number of observations}}$$
+
 If we order the sample observations  `X1 ≤ X2 ≤ ··· ≤ Xn`, then 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=F_n(X_i)&space;=&space;\frac{i}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(X_i)&space;=&space;\frac{i}{n}" title="F_n(X_i) = \frac{i}{n}" /></a>
 
-
+$$F_n(X_i) = \frac{i}{n}$$
 
 Massa provides very good explanation about the application of KS test in her lecture [[Massa]][S. Massa, Kolmogorov Smirnov Test & Power of Tests]. Marc-Olivier Arsenault has very nice blog to introduce the concept without math [[Marc-Olivier Arsenault]][Marc-Olivier Arsenault, Kolmogorov-Smirnov Test].
 
@@ -32,23 +36,23 @@ Massa provides very good explanation about the application of KS test in her lec
 
 The Kolmogorov distribution is the distribution of the random variable
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=K&space;=&space;\lbrace&space;X_1,&space;X_2,&space;\cdots,&space;X_n&space;\rbrace&space;=&space;\textrm{sup}_{x&space;\in&space;[0,1]}&space;\left&space;|&space;B(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K&space;=&space;\lbrace&space;X_1,&space;X_2,&space;\cdots,&space;X_n&space;\rbrace&space;=&space;\textrm{sup}_{x&space;\in&space;[0,1]}&space;\left&space;|&space;B(x)&space;\right&space;|" title="K = \lbrace X_1, X_2, \cdots, X_n \rbrace = \textrm{sup}_{x \in [0,1]} \left | B(x) \right |" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=K&space;=&space;\lbrace&space;X_1,&space;X_2,&space;\cdots,&space;X_n&space;\rbrace&space;=&space;\textrm{sup}_{x&space;\in&space;[0,1]}&space;\left&space;|&space;B(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K&space;=&space;\lbrace&space;X_1,&space;X_2,&space;\cdots,&space;X_n&space;\rbrace&space;=&space;\textrm{sup}_{x&space;\in&space;[0,1]}&space;\left&space;|&space;B(x)&space;\right&space;|" title="K = \lbrace X_1, X_2, \cdots, X_n \rbrace = \textrm{sup}_{x \in [0,1]} \left | B(x) \right |" /></a> -->
 
 $$K = \lbrace X_1, X_2, \cdots, X_n \rbrace = \textrm{sup}_{x \in [0,1]} \left | B(x) \right |,$$
 
 where B(x) is the [Brownian bridge](https://en.wikipedia.org/wiki/Brownian_bridge). The cumulative distribution function of K is given by [[Wiki]][Wiki, Kolmogorov–Smirnov test]
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;x^2)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;x^2)}" title="\textrm{Pr}(K \le x) = \frac{\sqrt{2 \pi}}{x} \sum^{\infty}_{k=1} e^{-(2k-1)^2 \pi^2/(8 x^2)}" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;x^2)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;x^2)}" title="\textrm{Pr}(K \le x) = \frac{\sqrt{2 \pi}}{x} \sum^{\infty}_{k=1} e^{-(2k-1)^2 \pi^2/(8 x^2)}" /></a> -->
 
 $$\textrm{Pr}(K \le x) = \frac{\sqrt{2 \pi}}{x} \sum^{\infty}_{k=1} e^{-(2k-1)^2 \pi^2/(8 x^2)}$$
 
-Given a null hypothesis, we reject the null hypothesis at level α (α = 0.05, for example), if Kolmogorov–Smirnov statistic `Dn` satisfies
+Given a null hypothesis, we reject the null hypothesis at level α (α = 0.05, for example), if Kolmogorov–Smirnov statistic `Dn` $D_n$ satisfies
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;>&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{K_{\alpha}}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;>&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{K_{\alpha}}{\sqrt{n}}" title="D_n > D_{\textrm{crit}, n} = \frac{K_{\alpha}}{\sqrt{n}}" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;>&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{K_{\alpha}}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;>&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{K_{\alpha}}{\sqrt{n}}" title="D_n > D_{\textrm{crit}, n} = \frac{K_{\alpha}}{\sqrt{n}}" /></a> -->
 
 $$D_n > D_{\textrm{crit}, n} = \frac{K_{\alpha}}{\sqrt{n}}$$
 
-where <a href="https://www.codecogs.com/eqnedit.php?latex=D_{\textrm{crit},&space;n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{\textrm{crit},&space;n}" title="D_{\textrm{crit}, n}" /></a> $D_{\textrm{crit}, n}$ is the critical value and <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}" title="K_{\alpha}" /></a> $K_{\alpha}$ is from <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Pr}(K&space;\le&space;K_{\alpha})&space;=&space;1&space;-\alpha" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Pr}(K&space;\le&space;K_{\alpha})&space;=&space;1&space;-\alpha" title="\textrm{Pr}(K \le K_{\alpha}) = 1 -\alpha" /></a> $\textrm{Pr}(K \le K_{\alpha}) = 1 -\alpha$.
+where $D_{\textrm{crit}, n}$  is the critical value and $K_{\alpha}$ is from $\textrm{Pr}(K \le K_{\alpha}) = 1 -\alpha$.
 
 
 
