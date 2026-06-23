@@ -9,22 +9,22 @@ Kolmogorov–Smirnov test (`K–S test` or `KS test`) is a **nonparametric** tes
 
 The Kolmogorov–Smirnov statistic quantifies a **distance** between the **empirical distribution function of the sample** and the cumulative distribution function of the reference distribution, or between the empirical distribution functions of two samples.  The null hypothesis is the sample drawn from the reference distribution (in the one-sample case), or from the same distribution (in the two-sample case). The two-sample K–S test is sensitive to differences in both location and shape of the empirical cumulative distribution functions of the two samples. 
 
-There defines a the **empirical distribution function** (for n iid ordered observations `Xi`) as [[Wiki]][Wiki, Kolmogorov–Smirnov test], [[MIT]][MIT course, Kolmogorov-Smirnov Test]
+There defines a the **empirical distribution function** (for n iid ordered observations $X_i$ `Xi`) as [[Wiki]][Wiki, Kolmogorov–Smirnov test], [[MIT]][MIT course, Kolmogorov-Smirnov Test]
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" title="F_n(x) = \frac{1}{n}\sum^n_{i=1} \textrm{I}_{[-\infty, x]}(X_i)" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(x)&space;=&space;\frac{1}{n}\sum^n_{i=1}&space;\textrm{I}_{[-\infty,&space;x]}(X_i)" title="F_n(x) = \frac{1}{n}\sum^n_{i=1} \textrm{I}_{[-\infty, x]}(X_i)" /></a> -->
 
 $$F_n(x) = \frac{1}{n}\sum^n_{i=1} \textrm{I}_{[-\infty, x]}(X_i)$$
 
 
-where `I(Xi)` is called the indicator function, equal to 1 if Xi ≤ x and equal to 0 otherwise. More simply speaking, given sample `{X1, . . . , Xn}`, the empirical distribution function is the proportion of the data that lies below x [[Massa]][S. Massa, Kolmogorov Smirnov Test & Power of Tests], 
+where $I(X_i)$ `I(Xi)` is called the indicator function, equal to 1 if $X_i \ne x$ Xi ≤ x and equal to 0 otherwise. More simply speaking, given sample $\lbrace X_1, \cdots, X_n \rbrace$ `{X1, . . . , Xn}`, the empirical distribution function is the proportion of the data that lies below x [[Massa]][S. Massa, Kolmogorov Smirnov Test & Power of Tests], 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=F_n(x)&space;=&space;\frac{\textrm{number&space;of&space;observations&space;below&space;}x}{\textrm{number&space;of&space;observations}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(x)&space;=&space;\frac{\textrm{number&space;of&space;observations&space;below&space;}x}{\textrm{number&space;of&space;observations}}" title="F_n(x) = \frac{\textrm{number of observations below }x}{\textrm{number of observations}}" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=F_n(x)&space;=&space;\frac{\textrm{number&space;of&space;observations&space;below&space;}x}{\textrm{number&space;of&space;observations}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(x)&space;=&space;\frac{\textrm{number&space;of&space;observations&space;below&space;}x}{\textrm{number&space;of&space;observations}}" title="F_n(x) = \frac{\textrm{number of observations below }x}{\textrm{number of observations}}" /></a> -->
 
 $$F_n(x) = \frac{\textrm{number of observations below }x}{\textrm{number of observations}}$$
 
-If we order the sample observations  `X1 ≤ X2 ≤ ··· ≤ Xn`, then 
+If we order the sample observations $X_1 \ne X_2 \ne \cdots \ne X_n$  `X1 ≤ X2 ≤ ··· ≤ Xn`, then 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=F_n(X_i)&space;=&space;\frac{i}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(X_i)&space;=&space;\frac{i}{n}" title="F_n(X_i) = \frac{i}{n}" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=F_n(X_i)&space;=&space;\frac{i}{n}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?F_n(X_i)&space;=&space;\frac{i}{n}" title="F_n(X_i) = \frac{i}{n}" /></a> -->
 
 $$F_n(X_i) = \frac{i}{n}$$
 
