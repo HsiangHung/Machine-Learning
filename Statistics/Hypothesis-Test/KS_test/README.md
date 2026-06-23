@@ -118,6 +118,8 @@ $C(\alpha)$  is a function of α; for $\alpha=0.05$, $C(\alpha)=1.224$ and for $
 
 ## Canary Test
 
+### 1. The One-Sided KS Test
+
 The KS test absolutely supports one-sided hypotheses. It does this by modifying the KS statistic, which is based on the Empirical Cumulative Distribution Function (eCDF). 
 
 Let $F_{baseline}(x)$ be the eCDF of the current release, and $F_{canary}(x)$ be the eCDF of the new release. 
@@ -135,6 +137,23 @@ $$D^- = \sup_x (F_{canary}(x) - F_{baseline}(x))$$
 $$D^+ = \sup_x (F_{baseline}(x) - F_{canary}(x))$$
 
 If your one-sided test statistic is larger than the critical value, you reject the null hypothesis and conclude the canary is definitively better (or worse, depending on how you structure the test).
+
+
+### 2. The Mann-Whitney U Test
+
+While the one-sided KS test is valid, it has a notable flaw in production environments: it is highly sensitive to changes in the shape and variance of the distribution, not just the median.
+
+If the new software release has the exact same median latency, but a slightly longer tail (higher variance), the KS test might flag it as a massive difference.
+
+For canary testing where you want to know "Is the typical user experiencing a worse metric?", the industry standard non-parametric test is the **Mann-Whitney U Test** (also called the **Wilcoxon rank-sum test**).
+How it works: 
+* It combines all the data from both the baseline and canary, ranks them from smallest to largest, and then checks if the **ranks** from the canary tend to be significantly lower or higher than the baseline.
+* One-Sided Application: You can easily run a one-sided Mann-Whitney test to ask: "What is the probability that a randomly selected iOS device on the Canary build has a higher battery drain than a randomly selected device on the Baseline build?" 
+
+In reality, you don't always need the canary to be better; you usually just need to prove it is not worse. This is called Non-Inferiority Testing:
+1. You define a practically acceptable margin of degradation ($\delta$). For example, a $2\%$ increase in CPU usage is acceptable if the new feature is highly valuable.
+2. You shift the canary distribution by $\delta$ and then apply your one-sided test (like Mann-Whitney).
+3. You test the null hypothesis that the canary is worse by more than $\delta$. If you reject it, you prove the release is safe to launch.
 
 
 # Reference
