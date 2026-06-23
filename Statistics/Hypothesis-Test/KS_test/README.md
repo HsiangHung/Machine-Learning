@@ -141,9 +141,7 @@ If your one-sided test statistic is larger than the critical value, you reject t
 
 ### 2. The Mann-Whitney U Test
 
-While the one-sided KS test is valid, it has a notable flaw in production environments: it is highly sensitive to changes in the shape and variance of the distribution, not just the median.
-
-If the new software release has the exact same median latency, but a slightly longer tail (higher variance), the KS test might flag it as a massive difference.
+While the one-sided KS test is valid, it has a notable flaw in production environments: **it is highly sensitive to changes in the shape and variance of the distribution, not just the median. If the new software release has the exact same median latency, but a slightly longer tail (higher variance), the KS test might flag it as a massive difference.**
 
 For canary testing where you want to know "Is the typical user experiencing a worse metric?", the industry standard non-parametric test is the **Mann-Whitney U Test** (also called the **Wilcoxon rank-sum test**).
 How it works: 
