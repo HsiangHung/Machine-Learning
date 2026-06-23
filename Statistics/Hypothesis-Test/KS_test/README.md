@@ -58,7 +58,7 @@ where $D_{\textrm{crit}, n}$  is the critical value and $K_{\alpha}$ is from $\t
 
 
 
-## One-sample KS test
+### One-sample KS test
 
 
 The `Kolmogorov–Smirnov statistic` for a given **cumulative distribution function** (reference) $F(x)$  is
@@ -96,7 +96,7 @@ $$D_{n} = 0.092 < D_{\textrm{crit}, n} = \frac{1.36}{\sqrt{100}} = 0.136$$
 and we retain the null hypothesis. 
 
 
-## Two-sample KS test
+### Two-sample KS test
 
 Suppose now we have two samples, $F_1$ and $F_2$ are the empirical distribution functions of the first and the second sample respectively (subscripts`n` and `m` denote the sample size), then the KS statistic is
 
@@ -116,7 +116,25 @@ $C(\alpha)$  is a function of α; for $\alpha=0.05$, $C(\alpha)=1.224$ and for $
 
 
 
+## Canary Test
 
+The KS test absolutely supports one-sided hypotheses. It does this by modifying the KS statistic, which is based on the Empirical Cumulative Distribution Function (eCDF). 
+
+Let $F_{baseline}(x)$ be the eCDF of the current release, and $F_{canary}(x)$ be the eCDF of the new release. 
+
+* Two-Sided (Did it change?): Uses the absolute maximum distance between the curves.
+
+$$D = \sup_x |F_{baseline}(x) - F_{canary}(x)|$$
+
+* One-Sided "Smaller is Better" (e.g., Latency, App Launch Time): If the canary is faster, its CDF will rise to $1.0$ quicker than the baseline. It will sit above and to the left of the baseline CDF. We test for this using the $D^-$ statistic:
+
+$$D^- = \sup_x (F_{canary}(x) - F_{baseline}(x))$$
+
+* One-Sided "Larger is Better" (e.g., Time to Battery Depletion): If the canary has better battery life, its values are larger, so its CDF is shifted to the right (sitting below the baseline). We test for this using the $D^+$ statistic:
+
+$$D^+ = \sup_x (F_{baseline}(x) - F_{canary}(x))$$
+
+If your one-sided test statistic is larger than the critical value, you reject the null hypothesis and conclude the canary is definitively better (or worse, depending on how you structure the test).
 
 
 # Reference
