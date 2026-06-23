@@ -80,7 +80,7 @@ we reject the null hypothesis.
 
 As an example given by Massa [[Massa]][S. Massa, Kolmogorov Smirnov Test & Power of Tests], suppose we have data and are wondering if it comes from a normally distributed `N(0,1)`. In her lecture, we first order the data to form the empirical distribution function `Fn`, and prepare the CDF of `N(0,1)` as `F`. Then we compute all `|Fn-F|` and determine the KS statistic `Dn` is 0.092 (maximal difference). For significant level `α=0.05`, <a href="https://www.codecogs.com/eqnedit.php?latex=K_{\alpha}&space;=&space;1.36" target="_blank"><img src="https://latex.codecogs.com/gif.latex?K_{\alpha}&space;=&space;1.36" title="K_{\alpha} = 1.36" /></a>, such that the critical value is 1.36/10 = 0.136 if sample size `n=100`. As a consequence,
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=D_{n}&space;=&space;0.092&space;<&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{1.36}{\sqrt{100}}&space;=&space;0.136" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{n}&space;=&space;0.092&space;<&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{1.36}{\sqrt{100}}&space;=&space;0.136" title="D_{n} = 0.092 < D_{\textrm{crit}, n} = \frac{1.36}{\sqrt{100}} = 0.136" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=D_{n}&space;=&space;0.092&space;<&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{1.36}{\sqrt{100}}&space;=&space;0.136" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{n}&space;=&space;0.092&space;<&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{1.36}{\sqrt{100}}&space;=&space;0.136" title="D_{n} = 0.092 < D_{\textrm{crit}, n} = \frac{1.36}{\sqrt{100}} = 0.136" /></a> -->
 
 $$D_{n} = 0.092 < D_{\textrm{crit}, n} = \frac{1.36}{\sqrt{100}} = 0.136$$
 
@@ -89,20 +89,20 @@ and we retain the null hypothesis.
 
 ## Two-sample KS test
 
-Suppose now we have two samples, `F1` and `F2` are the empirical distribution functions of the first and the second sample respectively (subscripts`n` and `m` denote the sample size), then the KS statistic is
+Suppose now we have two samples, $F_1$ and $F_2$ are the empirical distribution functions of the first and the second sample respectively (subscripts`n` and `m` denote the sample size), then the KS statistic is
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=D_{n,m}&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_{1,n}(x)&space;-F_{2,m}(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{n,m}&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_{1,n}(x)&space;-F_{2,m}(x)&space;\right&space;|" title="D_{n,m} = \textrm{sup}_x \left | F_{1,n}(x) -F_{2,m}(x) \right |" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=D_{n,m}&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_{1,n}(x)&space;-F_{2,m}(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{n,m}&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_{1,n}(x)&space;-F_{2,m}(x)&space;\right&space;|" title="D_{n,m} = \textrm{sup}_x \left | F_{1,n}(x) -F_{2,m}(x) \right |" /></a> -->
 
 
 $$D_{n,m} = \textrm{sup}_x \left | F_{1,n}(x) -F_{2,m}(x) \right |$$
 
-The null hypothesis is rejected at level α if
+The null hypothesis is rejected at level α $\alpha$ if
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=D_{n,m}&space;>&space;C(\alpha)&space;\sqrt{\frac{1}{n}&plus;\frac{1}{m}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{n,m}&space;>&space;C(\alpha)&space;\sqrt{\frac{1}{n}&plus;\frac{1}{m}}" title="D_{n,m} > C(\alpha) \sqrt{\frac{1}{n}+\frac{1}{m}}" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=D_{n,m}&space;>&space;C(\alpha)&space;\sqrt{\frac{1}{n}&plus;\frac{1}{m}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_{n,m}&space;>&space;C(\alpha)&space;\sqrt{\frac{1}{n}&plus;\frac{1}{m}}" title="D_{n,m} > C(\alpha) \sqrt{\frac{1}{n}+\frac{1}{m}}" /></a> -->
 
 $$D_{n,m} > C(\alpha) \sqrt{\frac{1}{n}+\frac{1}{m}}$$
 
-$C(\alha)$ `C(α)` is a function of α; for α = 0.05 $\alpha=0.05$, $C(\alha)=1.224$ `C(α) = 1.224` and for $\alpha=0.01$ α = 0.01, `C(α) = 1.517` $C(\alha)=1.517.
+$C(\alpha)$ `C(α)` is a function of α; for α = 0.05 $\alpha=0.05$, $C(\alpha)=1.224$ `C(α) = 1.224` and for $\alpha=0.01$ α = 0.01, `C(α) = 1.517` $C(\alha)=1.517.
 
 
 
