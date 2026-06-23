@@ -1,5 +1,5 @@
 
-# Kolmogorov–Smirnov test 
+# Kolmogorov–Smirnov (KS) Test 
 
 For z-test and t-test, we have a strong assumption: the sample distribution is normal distribution. What about if you sample is not? 
 
@@ -40,13 +40,13 @@ The Kolmogorov distribution is the distribution of the random variable
 
 $$K = \lbrace X_1, X_2, \cdots, X_n \rbrace = \textrm{sup}_{x \in [0,1]} \left | B(x) \right |,$$
 
-where B(x) is the [Brownian bridge](https://en.wikipedia.org/wiki/Brownian_bridge). The cumulative distribution function of K is given by [[Wiki]][Wiki, Kolmogorov–Smirnov test]
+where $B(x)$ is the [Brownian bridge](https://en.wikipedia.org/wiki/Brownian_bridge). The cumulative distribution function of K is given by [[Wiki]][Wiki, Kolmogorov–Smirnov test]
 
 <!-- <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;x^2)}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{Pr}(K&space;\le&space;x)&space;=&space;\frac{\sqrt{2&space;\pi}}{x}&space;\sum^{\infty}_{k=1}&space;e^{-(2k-1)^2&space;\pi^2/(8&space;x^2)}" title="\textrm{Pr}(K \le x) = \frac{\sqrt{2 \pi}}{x} \sum^{\infty}_{k=1} e^{-(2k-1)^2 \pi^2/(8 x^2)}" /></a> -->
 
 $$\textrm{Pr}(K \le x) = \frac{\sqrt{2 \pi}}{x} \sum^{\infty}_{k=1} e^{-(2k-1)^2 \pi^2/(8 x^2)}$$
 
-Given a null hypothesis, we reject the null hypothesis at level α (α = 0.05, for example), if Kolmogorov–Smirnov statistic `Dn` $D_n$ satisfies
+Given a null hypothesis, we reject the null hypothesis at level $\alpha$ ($\alpha = 0.05$, for example), if Kolmogorov–Smirnov statistic $D_n$ satisfies
 
 <!-- <a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;>&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{K_{\alpha}}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;>&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{K_{\alpha}}{\sqrt{n}}" title="D_n > D_{\textrm{crit}, n} = \frac{K_{\alpha}}{\sqrt{n}}" /></a> -->
 
