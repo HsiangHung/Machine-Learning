@@ -68,6 +68,8 @@ against the alternative hypothesis
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=H_a&space;:&space;\textrm{the&space;samples&space;do&space;NOT&space;come&space;from&space;}&space;F_n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_a&space;:&space;\textrm{the&space;samples&space;do&space;NOT&space;come&space;from&space;}&space;F_n" title="H_a : \textrm{the samples do NOT come from } F_n" /></a>
 
+$$H_a : \textrm{the samples do NOT come from } F_n".$$
+
 As we described previously, when 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;>&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{K_{\alpha}}{\sqrt{n}}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;>&space;D_{\textrm{crit},&space;n}&space;=&space;\frac{K_{\alpha}}{\sqrt{n}}" title="D_n > D_{\textrm{crit}, n} = \frac{K_{\alpha}}{\sqrt{n}}" /></a>
