@@ -161,7 +161,9 @@ Therefore, we cannot just rely on a p-value to make a launch decision. We must d
 
 #### 2. Using "Non-Inferiority" Margins ($\delta$)
 
-Since you know the new feature uses more memory, you don't test if memory usage is identical. You ask Engineering: "What is the memory budget for this feature?" Let's say Engineering expects a 15MB increase in RAM usage.
+Since you know the new feature uses more memory, you don't test if memory usage is identical. You ask Engineering: "What is the memory budget for this feature?" Thus, you don't always need the canary to be better; you usually just need to prove it is not worse. This is called **Non-Inferiority Testing**.
+
+Let's say Engineering expects a 15MB increase in RAM usage.
 * The Wrong Test: Is Canary RAM = Baseline RAM? (Mann-Whitney will say no; rollout blocked).
 * The Right Test becomes: Is Canary RAM $\le$ Baseline RAM + 15MB?
 
@@ -179,10 +181,6 @@ If you are defending a release that increases CPU usage, you must introduce Guar
 * UI Frame Drops: Did the UI stutter while scrolling?
 
 
-In reality, you don't always need the canary to be better; you usually just need to prove it is not worse. This is called **Non-Inferiority Testing**:
-1. You define a practically acceptable margin of degradation ($\delta$). For example, a $2\%$ increase in CPU usage is acceptable if the new feature is highly valuable.
-2. You shift the canary distribution by $\delta$ and then apply your one-sided test (like Mann-Whitney).
-3. You test the null hypothesis that the canary is worse by more than $\delta$. If you reject it, you prove the release is safe to launch.
 
 
 # Reference
