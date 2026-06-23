@@ -61,13 +61,13 @@ where $D_{\textrm{crit}, n}$  is the critical value and $K_{\alpha}$ is from $\t
 ## One-sample KS test
 
 
-The `Kolmogorov–Smirnov statistic` for a given **cumulative distribution function** (reference) $F(x)$ `F(x)` is
+The `Kolmogorov–Smirnov statistic` for a given **cumulative distribution function** (reference) $F(x)$  is
 
 <!-- <a href="https://www.codecogs.com/eqnedit.php?latex=D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?D_n&space;=&space;\textrm{sup}_x&space;\left&space;|&space;F_n(x)&space;-F(x)&space;\right&space;|" title="D_n = \textrm{sup}_x \left | F_n(x) -F(x) \right |" /></a>, -->
 
 $$D_n = \textrm{sup}_x \left | F_n(x) -F(x) \right |,$$
 
-where the KS statistic is determined by the maximal distance between $F$ `F` and $F_n$ `Fn`. The null hypothesis is 
+where the KS statistic is determined by the maximal distance between $F$ and $F_n$. The null hypothesis is 
 
 <!-- <a href="https://www.codecogs.com/eqnedit.php?latex=H_0&space;:&space;\textrm{the&space;samples&space;come&space;from&space;}&space;F_n" target="_blank"><img src="https://latex.codecogs.com/gif.latex?H_0&space;:&space;\textrm{the&space;samples&space;come&space;from&space;}&space;F_n" title="H_0 : \textrm{the samples come from } F_n" /></a> -->
 
