@@ -111,7 +111,7 @@ The null hypothesis is rejected at level $\alpha$ if
 
 $$D_{n,m} > C(\alpha) \sqrt{\frac{1}{n}+\frac{1}{m}}$$
 
-$C(\alpha)$  is a function of α; for α = 0.05 $\alpha=0.05$, $C(\alpha)=1.224$ and for $\alpha=0.01$ α = 0.01,  $C(\alha)=1.517.
+$C(\alpha)$  is a function of α; for $\alpha=0.05$, $C(\alpha)=1.224$ and for $\alpha=0.01$  $C(\alpha)=1.517.
 
 
 
