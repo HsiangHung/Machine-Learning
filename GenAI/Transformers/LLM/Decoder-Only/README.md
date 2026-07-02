@@ -144,3 +144,54 @@ $$
 \end{bmatrix},
 $$
 
+$$
+"statQuest" = \begin{bmatrix} 
+0  \\
+0  \\
+1  \\
+0  \\
+0  
+\end{bmatrix}
+\to 
+\begin{bmatrix} 
+-2.38  \\
+0.1
+\end{bmatrix} +  
+\begin{bmatrix} 
+0.9  \\
+-0.4
+\end{bmatrix} = 
+\begin{bmatrix} 
+-1.47  \\
+-0.32
+\end{bmatrix},
+$$
+
+
+## 3. Q K V 
+
+Assume we have Q/K/V matrices (from trained or randomly initialized) as 
+
+$$
+Q = \begin{bmatrix} 
+-0.8 & -1.7 \\
+0.4 & 2.8  
+\end{bmatrix} 
+
+\\ 
+\\
+
+K = \begin{bmatrix} 
+-1.5 & 0.7 \\
+1.5 & -2.1  
+\end{bmatrix} 
+
+\ 
+\
+
+V = \begin{bmatrix} 
+1 & -0.5 \\
+0.6 & 0.1  
+\end{bmatrix} 
+
+$$
