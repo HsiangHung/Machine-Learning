@@ -114,7 +114,33 @@ $$
 \begin{bmatrix} 
 0  \\
 1
-\end{bmatrix}
+\end{bmatrix} = 
+\begin{bmatrix} 
+-2.38  \\
+1.1
+\end{bmatrix},
 $$
 
+$$
+"is" = \begin{bmatrix} 
+0  \\
+1  \\
+0  \\
+0  \\
+0  
+\end{bmatrix}
+\to 
+\begin{bmatrix} 
+0.61  \\
+0.17
+\end{bmatrix} +  
+\begin{bmatrix} 
+0.8  \\
+0.5
+\end{bmatrix} = 
+\begin{bmatrix} 
+1.41  \\
+0.67
+\end{bmatrix},
+$$
 
