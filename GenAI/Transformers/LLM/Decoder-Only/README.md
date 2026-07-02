@@ -17,21 +17,21 @@ Now we have a simple vocabulary and the **tokens** are: "what", "is", "StatQuest
 Here EOS stands as "end of sentence" or "end of sequence". Therefore we can simply represent the tokens as vectors:
 
 $$
-"what" = \begin{bmatrix} 
+w["what"] = \begin{bmatrix} 
 1  \\
 0  \\
 0  \\
 0  \\
 0
 \end{bmatrix}, \ \ 
-"is" = \begin{bmatrix} 
+w["is"] = \begin{bmatrix} 
 0  \\
 1  \\
 0  \\
 0  \\
 0
 \end{bmatrix}, \ \ 
-"StatQuest" = \begin{bmatrix} 
+w["StatQuest"] = \begin{bmatrix} 
 0  \\
 0  \\
 1  \\
@@ -61,7 +61,7 @@ Thus the word embeddings of the above tokens are
 
 
 $$
-e("what") =  \mathbf{E} "what" = \begin{bmatrix} 
+e("what") =  \mathbf{E} w["what"] = \begin{bmatrix} 
 -2.38 & 0.61 & -2.38 & 2.21 & 2.92 \\
 0.1 & 0.17 & 0.1 & -0.64 & -2.97 
 \end{bmatrix} \begin{bmatrix} 
@@ -77,14 +77,14 @@ e("what") =  \mathbf{E} "what" = \begin{bmatrix}
 $$
 
 $$
-e("is") = E "is" = \begin{bmatrix} 
+e("is") = E w["is"] = \begin{bmatrix} 
 0.61  \\
 0.17
 \end{bmatrix},
 $$
 
 $$
-e("StatQuest") = E "StatQuest" = \begin{bmatrix} 
+e("StatQuest") = E w["StatQuest"] = \begin{bmatrix} 
 -2.38  \\
 0.1
 \end{bmatrix}.
