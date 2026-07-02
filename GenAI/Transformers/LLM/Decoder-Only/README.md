@@ -178,8 +178,8 @@ Q = \begin{bmatrix}
 0.4 & 2.8  
 \end{bmatrix} 
 
-\\ 
-\\
+\ 
+\
 
 K = \begin{bmatrix} 
 -1.5 & 0.7 \\
