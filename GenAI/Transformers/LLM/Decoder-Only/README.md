@@ -61,7 +61,7 @@ Thus the word embeddings of the above tokens are
 
 
 $$
-e("what") = E \cdot w("what") = \begin{bmatrix} 
+e("what") = \mathbf{E} \cdot w("what") = \begin{bmatrix} 
 -2.38 & 0.61 & -2.38 & 2.21 & 2.92 \\
 0.1 & 0.17 & 0.1 & -0.64 & -2.97 
 \end{bmatrix} \begin{bmatrix} 
