@@ -24,14 +24,14 @@ $$
 0  \\
 0
 \end{bmatrix}, \ \ 
-w("is") = \begin{bmatrix} 
+"is" = \begin{bmatrix} 
 0  \\
 1  \\
 0  \\
 0  \\
 0
 \end{bmatrix}, \ \ 
-w("StatQuest") = \begin{bmatrix} 
+"StatQuest" = \begin{bmatrix} 
 0  \\
 0  \\
 1  \\
@@ -61,7 +61,7 @@ Thus the word embeddings of the above tokens are
 
 
 $$
-e("what") =  \mathbf{E} w("what") = \begin{bmatrix} 
+e("what") =  \mathbf{E} "what" = \begin{bmatrix} 
 -2.38 & 0.61 & -2.38 & 2.21 & 2.92 \\
 0.1 & 0.17 & 0.1 & -0.64 & -2.97 
 \end{bmatrix} \begin{bmatrix} 
@@ -77,14 +77,14 @@ e("what") =  \mathbf{E} w("what") = \begin{bmatrix}
 $$
 
 $$
-e("is") = E w("is") = \begin{bmatrix} 
+e("is") = E "is" = \begin{bmatrix} 
 0.61  \\
 0.17
 \end{bmatrix},
 $$
 
 $$
-e("StatQuest") = E w("StatQuest") = \begin{bmatrix} 
+e("StatQuest") = E "StatQuest" = \begin{bmatrix} 
 -2.38  \\
 0.1
 \end{bmatrix}.
