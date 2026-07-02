@@ -57,11 +57,11 @@ $$
 
 and the activation function is just a linear function, e.g. $f(x)=x$. A word embedding is givn by $f(E \cdot w(". ."))$. 
 
-Thus the word embeddings of the above tokens are $\boldsymbol{A} A$
+Thus the word embeddings of the above tokens are
 
 
 $$
-e("what") = \boldsymbol{A}  \mathbf{E}  w("what") = \begin{bmatrix} 
+e("what") =  \mathbf{E} w("what") = \begin{bmatrix} 
 -2.38 & 0.61 & -2.38 & 2.21 & 2.92 \\
 0.1 & 0.17 & 0.1 & -0.64 & -2.97 
 \end{bmatrix} \begin{bmatrix} 
@@ -77,14 +77,14 @@ e("what") = \boldsymbol{A}  \mathbf{E}  w("what") = \begin{bmatrix}
 $$
 
 $$
-e("is") = E \cdot w("is") = \begin{bmatrix} 
+e("is") = E w("is") = \begin{bmatrix} 
 0.61  \\
 0.17
 \end{bmatrix},
 $$
 
 $$
-e("StatQuest") = E \cdot w("StatQuest") = \begin{bmatrix} 
+e("StatQuest") = E w("StatQuest") = \begin{bmatrix} 
 -2.38  \\
 0.1
 \end{bmatrix}.
@@ -92,8 +92,27 @@ $$
 
 ## 2. Positional Encoding
 
+The positional encoding functions are like
 
 ![positional_encoding_squiggle](images/positional_encoding_squiggle.png)
 
+Since embedding dimension D = 2, we only need to look up first two plots, and first three token positions. Thus the inputs from the tokens are
+
+$$
+"what" = \begin{bmatrix} 
+1  \\
+0  \\
+0  \\
+0  \\
+0  \to 
+ \begin{bmatrix} 
+-2.38  \\
+0.1
+\end{bmatrix} +  
+\begin{bmatrix} 
+0  \\
+1
+\end{bmatrix}
+$$
 
 
