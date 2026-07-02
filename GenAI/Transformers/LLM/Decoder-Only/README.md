@@ -104,8 +104,10 @@ $$
 0  \\
 0  \\
 0  \\
-0  \to 
- \begin{bmatrix} 
+0  
+\end{bmatrix}
+\to 
+\begin{bmatrix} 
 -2.38  \\
 0.1
 \end{bmatrix} +  
