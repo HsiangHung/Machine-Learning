@@ -57,7 +57,7 @@ $$
 
 and the activation function is just a linear function, e.g. $f(x)=x$. A word embedding is givn by $f(E \cdot w(". ."))$. 
 
-Thus the word embeddings of the above tokens are $\boldsymbol{A}$
+Thus the word embeddings of the above tokens are $\boldsymbol{A} A$
 
 
 $$
