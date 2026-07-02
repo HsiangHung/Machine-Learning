@@ -17,7 +17,7 @@ Now we have a simple vocabulary and the **tokens** are: "what", "is", "StatQuest
 Here EOS stands as "end of sentence" or "end of sequence". Therefore we can simply represent the tokens as vectors:
 
 $$
-w("what") = \begin{bmatrix} 
+w_{"what"} = \begin{bmatrix} 
 1  \\
 0  \\
 0  \\
