@@ -177,18 +177,13 @@ Q = \begin{bmatrix}
 -0.8 & -1.7 \\
 0.4 & 2.8  
 \end{bmatrix} 
-
-\ 
-\
+\  \
 
 K = \begin{bmatrix} 
 -1.5 & 0.7 \\
 1.5 & -2.1  
 \end{bmatrix} 
-
-\ 
-\
-
+\  \
 V = \begin{bmatrix} 
 1 & -0.5 \\
 0.6 & 0.1  
