@@ -273,7 +273,7 @@ For masked self-attention, we only need tokens prior to the query.
 
 Then we need to masked self-attention
 
-$$ \textrm{Softmax} (Q K^T) $$
+$$ \textrm{Softmax} (\frac{Q K^T}{\sqrt{d}})V. $$
 
 ### Similarity
 
