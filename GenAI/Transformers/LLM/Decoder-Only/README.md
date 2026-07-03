@@ -259,4 +259,4 @@ $$ < Q \langle "is"  \rangle, K \langle "is" \rangle > = \begin{bmatrix}
 
 The softmax 
 
-$$ Q K^T["is", "is"] = \frac{e^{5.9}}{e^{5.9} + e^{-25}} \sim 100 \% $$
+$$ Q K^T["is", "is"] = \frac{e^{5.9}}{e^{5.9} + e^{-25}} \sim 100 % $$
