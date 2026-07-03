@@ -8,7 +8,7 @@ Here we focus on LLM application.
 
 ## Decoder-Only Transformers
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/decoder-only_diagram.png" width="800">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/decoder-only_diagram.png" width="900">
 
 [StatQuest video: Decoder-Only Transformers, ChatGPTs specific Transformer, Clearly Explained!!!](https://www.youtube.com/watch?v=bQ5BoolX9Ag) has tutorial explanation how  a decoder-only transformer works. 
 
@@ -17,7 +17,7 @@ In this [repo](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/
 
 ## Encoder-Only Transformers
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/images/encoder-only_diagram.png" width="300">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/images/encoder-only_diagram.png" width="250">
 
 [Encoder-Only Transformers (like BERT) for RAG, Clearly Explained!!!](https://www.youtube.com/watch?v=GDN649X_acE&t=972s) has itroduction about what an encoder-only transformer is. 
 
