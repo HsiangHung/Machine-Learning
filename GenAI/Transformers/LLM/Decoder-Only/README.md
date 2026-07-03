@@ -182,6 +182,8 @@ $$
 
 In general terms, **self-attention** works by seeing how similar each word is to all of the words in the sentences, including itself.
 
+Self-attention for word $w_1$ is defined as
+
 $$ \textrm{SoftMax} \Big( \frac{Q[w_1] K[w_2]^T}{\sqrt{d}} \Big) V[w_2] = Pr(w_1, w_2) V[w_2], $$
 
 where $\sqrt{d}$ is the normalization relevant to embedding dimensions. Here $\sqrt{d}=\sqrt{2}$. However, in the following, for simplicity, I just ignore it as $\sqrt{d}=1$. (This doesn't impact results of attentions.)
