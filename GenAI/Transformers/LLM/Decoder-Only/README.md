@@ -384,7 +384,7 @@ $$ Pr("is", "is") = \textrm{Softmax} \Big( Q["is"] K["is"]^T \Big) = \frac{e^{5.
 
 The masked self-attention for "is" is
 
-$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  V["what"]Pr("what", "is") + V["is"]Pr("is", "is") = \begin{bmatrix} 
+$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  V["what"]Pr("is", "what") + V["is"]Pr("is", "is") = \begin{bmatrix} 
 -2.9 \\
 -1.3
 \end{bmatrix} \times 0 + 
