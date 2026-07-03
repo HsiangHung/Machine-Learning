@@ -48,6 +48,7 @@ In a decoder-only transformer, we need to process the following components:
 2. Positional Encoding
 3. Masked Self-Attention
 4. Residual Connection
+5. Fully Connect Layer + SoftMax
 
 ## 1. Word Embedding
 
@@ -447,7 +448,7 @@ Sum over word embeddings, positional encodings and masked self-attentions, we ha
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/resid_connection.png" width="1000">
 
 
-## 5. Fully Connect Layer and Token Prediction
+## 5. Fully Connect Layer + SoftMax
 
 Given residual connects for the tokens, assume we have trained fully connected layer (MLP), we can compute the probability of each token.
 
@@ -456,10 +457,10 @@ For example, for input token "what" and "is":
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-1.png" width="1000">
 <!-- <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-2.png" width="400"> -->
 
-We see the first predicted token is correct, but second slightly deviated from our expectation.
+We see the first predicted token is correct, but the second slightly deviates from our expectation.
 
 For token "StatQuest":
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-3.png" width="400">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-2.png" width="600">
 
 We see the model predicts it is the end of sentence.
