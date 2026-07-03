@@ -46,6 +46,8 @@ $$
 In a decoder-only transformer, we need to process the following components:
 1. Word Embedding
 2. Positional Encoding
+3. Masked Self-Attention
+4. Residual Connection
 
 ## 1. Word Embedding
 
@@ -436,3 +438,9 @@ $$
 \end{bmatrix}.
 \end{aligned}
 $$
+
+## 4. Residual Connection
+
+Sum over word embedding, positional encoding and masked self-attention, we have residual connection
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/resid_connection.png" width="1000">
