@@ -267,9 +267,13 @@ V \langle "is" \rangle = \begin{bmatrix}
 \end{bmatrix}.
 $$
 
+For masked self-attention, we only need tokens prior to the query.
+
 ## 4. (Masked) Self-Attention
 
 Then we need to masked self-attention
+
+### Similarity
 
 The similarity between Q and V for "what" is
 
@@ -290,6 +294,8 @@ $$ < Q \langle "is"  \rangle, K \langle "is" \rangle > = \begin{bmatrix}
 -1.7 \\
 0.7  
 \end{bmatrix} = 5.9.$$
+
+### Softmax
 
 The softmax 
 
