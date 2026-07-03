@@ -299,8 +299,25 @@ $$ \langle Q["is"], K["is"] \rangle = \begin{bmatrix}
 
 ### Softmax
 
-The softmax 
+The softmax probabilities are
 
-$$ \textrm{Softmax} \Big( Q["is"] K["is"]^T \Big) = \frac{e^{5.9}}{e^{5.9} + e^{-25}} \sim 1. $$
+$$ P("what", "is") = \textrm{Softmax} \Big( Q["is"] K["is"]^T \Big) = \frac{e^{5.9}}{e^{5.9} + e^{-25}} \sim 1. $$
 
-$$ \textrm{Softmax} \Big( Q["is"] K["what"]^T \Big) = \frac{e^{-25}}{e^{5.9} + e^{-25}} \sim 0. $$
+$$ P("is", "is") = \textrm{Softmax} \Big( Q["is"] K["what"]^T \Big) = \frac{e^{-25}}{e^{5.9} + e^{-25}} \sim 0. $$
+
+### Masked Self-Attention
+
+The masked self-attention for "is" is
+
+$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  V["what"]P("what", "is") + V["is"]P("is", "is") = \begin{bmatrix} 
+-2.9 \\
+-1.3
+\end{bmatrix} \times 0 + 
+\begin{bmatrix} 
+1.1 \\
+0.9
+\end{bmatrix} \times 1 = \begin{bmatrix} 
+1.1 \\
+0.9
+\end{bmatrix}
+$$
