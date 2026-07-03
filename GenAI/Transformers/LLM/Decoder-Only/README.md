@@ -454,13 +454,13 @@ Given residual connects for the tokens, assume we have trained fully connected l
 
 For example, for input token "what" and "is":
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-1.png" width="1000">
-<!-- <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-2.png" width="400"> -->
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-1.png" width="800">
+
 
 We see the first predicted token is correct, but the second slightly deviates from our expectation.
 
 For token "StatQuest":
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-2.png" width="600">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-2.png" width="500">
 
 We see the model predicts it is the end of sentence.
