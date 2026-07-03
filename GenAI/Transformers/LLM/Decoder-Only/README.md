@@ -360,6 +360,8 @@ $$
 
 ### 3.2 Similarity
 
+Assume now query is "is".
+
 The similarity score between $Q["is"]$ and $K["what"]$ is
 
 $$ \langle Q["is"], K["what"] \rangle = \begin{bmatrix} 
