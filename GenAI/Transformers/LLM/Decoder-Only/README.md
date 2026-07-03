@@ -6,6 +6,9 @@ We followed the StatQuest video: [Decoder-Only Transformers, ChatGPTs specific T
 
 The explanation also covers detailed computation step by step using more math way. We used all numbers shown in the above video. Meanwhile, the notebook under this directory has the correspodning transformer code.
 
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/decoder-only_diagram.png" width="1000">
+
+
 ### Example:
 
 In ChatGPT:
