@@ -1,4 +1,4 @@
-# How Transformers Work
+# Explain Decoders Step By Step
 
 Below we will have a step-by-step instruction how transformer works in a decoder-only language model, which is used for **ChatGPT**. 
 
@@ -106,7 +106,7 @@ Since the embedding dimension D = 2, we only need to look up lower two plots, an
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/pos_encoding.png" width="800">
 
-Thus the inputs of the tokens into the transformer are
+Thus the inputs of the tokens into the transformer are (embedding + positional encoding)
 
 $$
 "what" = \begin{bmatrix} 
