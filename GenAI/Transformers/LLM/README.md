@@ -17,7 +17,7 @@ In this [repo](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/
 
 ## Encoder-Only Transformers
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/encoder-only_diagram.png" width="700">
+<img src="https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/Transformers/LLM/images" width="700">
 
 [Encoder-Only Transformers (like BERT) for RAG, Clearly Explained!!!](https://www.youtube.com/watch?v=GDN649X_acE&t=972s) has itroduction about what an encoder-only transformer is. 
 
