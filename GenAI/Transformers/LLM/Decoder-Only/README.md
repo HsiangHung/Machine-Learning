@@ -216,8 +216,8 @@ K \langle "what" \rangle = \begin{bmatrix}
 1.1
 \end{bmatrix}
 \sim \begin{bmatrix} 
--2.9 \\
--1.3
+4.3 \\
+-5.9
 \end{bmatrix},
 $$
 $$
@@ -230,8 +230,8 @@ K \langle "is" \rangle = \begin{bmatrix}
 0.71
 \end{bmatrix}
 \sim \begin{bmatrix} 
-1.1 \\
-0.9
+-1.7 \\
+0.7
 \end{bmatrix}.
 $$
 
@@ -262,8 +262,8 @@ V \langle "is" \rangle = \begin{bmatrix}
 0.71
 \end{bmatrix}
 \sim \begin{bmatrix} 
--1.7 \\
-0.7
+1.1 \\
+0.9
 \end{bmatrix}.
 $$
 
