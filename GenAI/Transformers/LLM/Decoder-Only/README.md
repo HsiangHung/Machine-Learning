@@ -136,11 +136,11 @@ $$
 \end{bmatrix} +  
 \begin{bmatrix} 
 0.8  \\
-0.5
+0.54
 \end{bmatrix} = 
 \begin{bmatrix} 
 1.41  \\
-0.67
+0.71
 \end{bmatrix},
 $$
 
@@ -159,7 +159,7 @@ $$
 \end{bmatrix} +  
 \begin{bmatrix} 
 0.9  \\
--0.4
+-0.42
 \end{bmatrix} = 
 \begin{bmatrix} 
 -1.47  \\
@@ -184,5 +184,42 @@ K = \begin{bmatrix}
 V = \begin{bmatrix} 
 1 & -0.5 \\
 0.6 & 0.1  
-\end{bmatrix} 
+\end{bmatrix}.
+$$ 
+
+Then for **Query** for "is", 
+$$
+Q<"is"> = \begin{bmatrix} 
+-0.8 & -1.7 \\
+0.4 & 2.8  
+\end{bmatrix}
+\begin{bmatrix} 
+1.45 \\
+0.71
+\end{bmatrix}
+\sim \begin{bmatrix} 
+-2.4 \\
+2.6
+\end{bmatrix}.
+$$
+
+**Key** for "what" and "is" are
+
+$$ 
+K<"is"> = \begin{bmatrix} 
+-1.5 & 0.7 \\
+1.5 & -2.1  
+\end{bmatrix}
+\begin{bmatrix} 
+1.45 \\
+0.71
+\end{bmatrix}
+\sim \begin{bmatrix} 
+-1.7 \\
+0.7
+\end{bmatrix}, \ \ \ 
+V = \begin{bmatrix} 
+1 & -0.5 \\
+0.6 & 0.1  
+\end{bmatrix}.
 $$ 
