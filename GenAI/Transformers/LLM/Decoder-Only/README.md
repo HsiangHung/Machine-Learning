@@ -177,7 +177,7 @@ $$
 
 Then we need to masked self-attention
 
-$$ \textrm{Softmax} \Big( \frac{Q[w_1] K[w_2]^T}{\sqrt{d}} \Big) V[w_2] = Pr(w_1, w_2) V[w_2], $$
+$$ \textrm{SoftMax} \Big( \frac{Q[w_1] K[w_2]^T}{\sqrt{d}} \Big) V[w_2] = Pr(w_1, w_2) V[w_2], $$
 
 where $\sqrt{d}$ is the normalization for embedding dimension, thus $\sqrt{d}=\sqrt{2}$. However, in the following, for simplicity, I just use $\sqrt{d}=1$. (This doesn't impact results of attentions.)
 
@@ -445,3 +445,12 @@ $$
 Sum over word embeddings, positional encodings and masked self-attentions, we have residual connections
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/resid_connection.png" width="1000">
+
+
+## 5. Fully Connect Layer and Token Prediction
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-1.png" width="1000">
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-2.png" width="1000">
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-3.png" width="1000">
