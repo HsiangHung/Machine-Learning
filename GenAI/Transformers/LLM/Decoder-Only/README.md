@@ -210,8 +210,6 @@ $$
 
 
 
-#### Query 
-
 **Query** for "what", "is", and "StatQuest" are
 
 $$
@@ -259,7 +257,6 @@ Q["StatQuest"] = \begin{bmatrix}
 \end{bmatrix}.
 $$
 
-#### Key
 
 **Key** for "what", "is" and "StatQuest" are
 
@@ -306,9 +303,8 @@ K["StatQuest"] = \begin{bmatrix}
 \end{bmatrix}.
 $$
 
-#### Value
 
-**Value** for "what" and "is" are
+**Value** for "what", "is" and "StatQuest" are
 
 $$ 
 V["what"] = \begin{bmatrix} 
