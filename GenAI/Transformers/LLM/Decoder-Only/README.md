@@ -235,7 +235,17 @@ K \langle "is" \rangle = \begin{bmatrix}
 \end{bmatrix}.
 $$
 
-The similarities between Q and V are
+The similarity between Q and V for "what" is
+
+$$ < Q \langle "is"  \rangle, K \langle "what" \rangle > = \begin{bmatrix} 
+-2.4 & 2.6  
+\end{bmatrix} 
+\begin{bmatrix} 
+4.3 \\
+-5.9  
+\end{bmatrix} \sim -25.$$
+
+For "is"
 
 $$ < Q \langle "is"  \rangle, K \langle "is" \rangle > = \begin{bmatrix} 
 -2.4 & 2.6  
