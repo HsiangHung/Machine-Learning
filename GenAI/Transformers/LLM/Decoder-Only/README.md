@@ -394,5 +394,13 @@ $$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  V["what"]Pr("is", "w
 \end{bmatrix} \times 1 = \begin{bmatrix} 
 1.1 \\
 0.9
-\end{bmatrix}
+\end{bmatrix}.
+$$
+
+For "what", only "what" is prior to it. Thus
+
+$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  V["what"]Pr("what", "what")  = \begin{bmatrix} 
+-2.9 \\
+-1.3
+\end{bmatrix}.
 $$
