@@ -409,7 +409,7 @@ where $Pr("what", "what")=1$.
 
 For "StatQuest"
 
-$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  Pr("StateQuest", "what") \begin{bmatrix} 
+$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V &=  Pr("StateQuest", "what") \begin{bmatrix} 
 -2.9 \\
 -1.3
 \end{bmatrix} + Pr("StateQuest", "is") \begin{bmatrix} 
@@ -419,7 +419,7 @@ $$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  Pr("StateQuest", "wh
 -1.3 \\
 -0.9
 \end{bmatrix} \\ 
-\sim 1 \times \begin{bmatrix} 
+& \sim 1 \times \begin{bmatrix} 
 -2.9 \\
 -1.3
 \end{bmatrix} + 0 \times \begin{bmatrix} 
