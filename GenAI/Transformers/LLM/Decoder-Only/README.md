@@ -358,7 +358,7 @@ V["StatQuest"] = \begin{bmatrix}
 $$
 
 
-### 3.2 Similarity
+### 3.2 Similarity and SoftMax
 
 Assume now query is "is".
 
@@ -382,7 +382,6 @@ $$ \langle Q["is"], K["is"] \rangle = \begin{bmatrix}
 0.7  
 \end{bmatrix} = 5.9.$$
 
-### 3.3 SoftMax
 
 The softMax probabilities are
 
@@ -390,7 +389,7 @@ $$ Pr("is", "what") = \textrm{SoftMax} \Big( Q["is"] K["what"]^T \Big) = \frac{e
 $$ Pr("is", "is") = \textrm{SoftMax} \Big( Q["is"] K["is"]^T \Big) = \frac{e^{5.9}}{e^{5.9} + e^{-25}} \sim 1. $$
 
 
-### 3.4 Masked Self-Attention
+### 3.3 Masked Self-Attention
 
 The masked self-attention for "is" is
 
