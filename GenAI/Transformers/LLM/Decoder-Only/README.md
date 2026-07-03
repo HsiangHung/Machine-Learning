@@ -180,11 +180,11 @@ $$
 
 ## 3. Masked Self-Attention
 
-Then we need to masked self-attention
+Then we need to compute masked self-attention values
 
 $$ \textrm{SoftMax} \Big( \frac{Q[w_1] K[w_2]^T}{\sqrt{d}} \Big) V[w_2] = Pr(w_1, w_2) V[w_2], $$
 
-where $\sqrt{d}$ is the normalization for embedding dimension, thus $\sqrt{d}=\sqrt{2}$. However, in the following, for simplicity, I just use $\sqrt{d}=1$. (This doesn't impact results of attentions.)
+where $\sqrt{d}$ is the normalization relevant to embedding dimensions. Here $\sqrt{d}=\sqrt{2}$. However, in the following, for simplicity, I just ignore it as $\sqrt{d}=1$. (This doesn't impact results of attentions.)
 
 For **decoder-only** transformer, we only need masked self-attentions, only the tokens prior to the query. 
 
