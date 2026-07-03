@@ -475,6 +475,6 @@ We see the first predicted token is correct, but the second slightly deviates fr
 
 For token "StatQuest":
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-2.png" width="500">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-2.png" width="350">
 
 We see the model predicts it is the end of sentence.
