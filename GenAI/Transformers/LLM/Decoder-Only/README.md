@@ -449,8 +449,20 @@ Sum over word embeddings, positional encodings and masked self-attentions, we ha
 
 ## 5. Fully Connect Layer and Token Prediction
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-1.png" width="500">
+Given residual connects for the tokens, assume we have trained fully connected layer (MLP), we can compute the probability of each token.
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-2.png" width="500">
+For example, for token "what":
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-3.png" width="500">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-1.png" width="400">
+
+So next token will be "is"
+
+For token "is":
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-2.png" width="400">
+
+For token "StatQuest":
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-3.png" width="400">
+
+We see the model predicts it is the end of sentence.
