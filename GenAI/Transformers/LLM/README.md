@@ -10,7 +10,7 @@ Here we focus on LLM application.
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/decoder-only_diagram.png" width="900">
 
-[StatQuest video: Decoder-Only Transformers, ChatGPTs specific Transformer, Clearly Explained!!!](https://www.youtube.com/watch?v=bQ5BoolX9Ag) has tutorial explanation how  a decoder-only transformer works. 
+Josh Starmer's [StatQuest video: Decoder-Only Transformers, ChatGPTs specific Transformer, Clearly Explained!!!](https://www.youtube.com/watch?v=bQ5BoolX9Ag) video has tutorial explanation how a decoder-only transformer works. 
 
 In this [repo](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/Transformers/LLM/Decoder-Only), we show the processes step by step.
 
@@ -19,9 +19,11 @@ In this [repo](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/images/encoder-only_diagram.png" width="250">
 
-[Encoder-Only Transformers (like BERT) for RAG, Clearly Explained!!!](https://www.youtube.com/watch?v=GDN649X_acE&t=972s) has itroduction about what an encoder-only transformer is. 
+Josh Starmer's [Encoder-Only Transformers (like BERT) for RAG, Clearly Explained!!!](https://www.youtube.com/watch?v=GDN649X_acE&t=972s) video has itroduction about what an encoder-only transformer is. 
 
 An encoder-only transformer consider positional encodings, and provides so-called **context aware embedding** or **contextualized embedding**.
+
+One thing we can do is to build a sentiment classifier. We use the encoder-only transformer to generate contextualized embedding for a sentence and input in a neural network to train the classification model. 
 
 
 
