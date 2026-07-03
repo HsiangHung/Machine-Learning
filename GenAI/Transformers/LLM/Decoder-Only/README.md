@@ -190,6 +190,7 @@ For example, to compute the masked self-attention of "is", we only need to consi
 
 For encode transformer we still need self-attention.
 
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/self_attention.png" width="1000">
 
 ### 3.1 Q, K, V
 
@@ -441,6 +442,6 @@ $$
 
 ## 4. Residual Connection
 
-Sum over word embedding, positional encoding and masked self-attention, we have residual connection
+Sum over word embeddings, positional encodings and masked self-attentions, we have residual connections
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/resid_connection.png" width="1000">
