@@ -36,9 +36,10 @@ To understand why "the decoder provides the queries" and "the encoder provides t
 ### A Concrete Example: French $\to$ English
 
 Imagine translating the French sentence "Le chat noir" into English ("The black cat"):
+* "Le chat noir" is the input. (and $\langle EOS \rangle$ is the end token)
 * The Encoder processes "Le chat noir" and generates Keys and Values for all three words.
-* The Decoder starts translating. Let's say it has already generated the word "The".
-* The **Decoder** now generates a **Query**: "I just said 'The'. I need a noun to follow it."
+* The **Decoder** starts translating. Let's say it has already generated the word "The".
+* Then Decoder needs to determine what the next token is after "The". Now **Query** =  "The".
 * This Query is compared against all the **Keys** from the French sentence. It finds a massive mathematical match with the Key for "chat" (because "chat" is a noun).
 * The model grabs the Value of "chat" (which holds the meaning "feline/cat") and pulls it into the decoder.
 * The decoder outputs "cat".
