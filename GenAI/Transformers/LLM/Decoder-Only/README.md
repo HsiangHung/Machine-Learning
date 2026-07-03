@@ -193,7 +193,7 @@ For example, to compute the masked self-attention of "is", we only need to consi
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/masked_self_attention.png" width="1000">
 
 
-For encode transformer we still need self-attention.
+For encode transformer we still need self-attentions.
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/self_attention.png" width="1000">
 
@@ -360,7 +360,7 @@ $$
 
 ### 3.2 Similarity
 
-The similarity between $Q["is"]$ and K for "what" is
+The similarity between $Q["is"]$ and $K["what"]$ is
 
 $$ \langle Q["is"], K["what"] \rangle = \begin{bmatrix} 
 -2.4 & 2.6  
