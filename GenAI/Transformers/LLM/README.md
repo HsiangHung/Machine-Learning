@@ -29,5 +29,7 @@ One thing we can do is to build a sentiment classifier. We use the encoder-only 
 
 ## Encoder-Decoder Transformers
 
-Language translator: [Encoder + Decoder Translator](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/Transformers/LLM/Translators).
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/images/encoder-decoder_transformer.png" width="800">
+
+We have detailed code about a language translator in [Encoder + Decoder Translator](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/Transformers/LLM/Translators).
 
