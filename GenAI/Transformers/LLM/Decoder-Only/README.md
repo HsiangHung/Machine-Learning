@@ -190,7 +190,7 @@ $$
 Then for **Query** for "is", 
 
 $$
-Q \langle "is" \rangle = \begin{bmatrix} 
+Q["is"] = \begin{bmatrix} 
 -0.8 & -1.7 \\
 0.4 & 2.8  
 \end{bmatrix}
@@ -207,7 +207,7 @@ $$
 **Key** for "what" and "is" are
 
 $$ 
-K \langle "what" \rangle = \begin{bmatrix} 
+K["what"] = \begin{bmatrix} 
 -1.5 & 0.7 \\
 1.5 & -2.1  
 \end{bmatrix}
@@ -221,7 +221,7 @@ K \langle "what" \rangle = \begin{bmatrix}
 \end{bmatrix},
 $$
 $$
-K \langle "is" \rangle = \begin{bmatrix} 
+K["is"] = \begin{bmatrix} 
 -1.5 & 0.7 \\
 1.5 & -2.1  
 \end{bmatrix}
@@ -239,7 +239,7 @@ $$
 **Value** for "what" and "is" are
 
 $$ 
-V \langle "what" \rangle = \begin{bmatrix} 
+V["what"] = \begin{bmatrix} 
 1 & -0.5 \\
 0.6 & 0.1  
 \end{bmatrix}
@@ -253,7 +253,7 @@ V \langle "what" \rangle = \begin{bmatrix}
 \end{bmatrix},
 $$
 $$
-V \langle "is" \rangle = \begin{bmatrix} 
+V["is"] = \begin{bmatrix} 
 1 & -0.5 \\
 0.6 & 0.1  
 \end{bmatrix}
@@ -277,7 +277,7 @@ Then we need to masked self-attention
 
 The similarity between Q and V for "what" is
 
-$$ < Q \langle "is"  \rangle, K \langle "what" \rangle > = \begin{bmatrix} 
+$$ \langle Q["is"], K["what"] \rangle = \begin{bmatrix} 
 -2.4 & 2.6  
 \end{bmatrix} 
 \begin{bmatrix} 
@@ -287,7 +287,7 @@ $$ < Q \langle "is"  \rangle, K \langle "what" \rangle > = \begin{bmatrix}
 
 For "is"
 
-$$ < Q \langle "is"  \rangle, K \langle "is" \rangle > = \begin{bmatrix} 
+$$ \langle Q["is"], K["is"] \rangle = \begin{bmatrix} 
 -2.4 & 2.6  
 \end{bmatrix} 
 \begin{bmatrix} 
@@ -299,6 +299,6 @@ $$ < Q \langle "is"  \rangle, K \langle "is" \rangle > = \begin{bmatrix}
 
 The softmax 
 
-$$ Q K^T["is", "is"] = \frac{e^{5.9}}{e^{5.9} + e^{-25}} \sim 1. $$
+$$ Softmax \Big( Q["is"] K^T["is"] \Big) = \frac{e^{5.9}}{e^{5.9} + e^{-25}} \sim 1. $$
 
-$$ Q K^T["is", "what"] = \frac{e^{-25}}{e^{5.9} + e^{-25}} \sim 0. $$
+$$ Softmax \Big( Q["is"] K^T["what"] \Big) = \frac{e^{-25}}{e^{5.9} + e^{-25}} \sim 0. $$
