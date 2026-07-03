@@ -102,7 +102,7 @@ The positional encoding functions are like
 
 ![positional_encoding_squiggle](images/positional_encoding_squiggle.png)
 
-Since embedding dimension D = 2, we only need to look up first two plots, and first three token positions. For example, the positional encodings of "what" and "is" are
+Since the embedding dimension D = 2, we only need to look up lower two plots, and first three token positions (due to input = "what is StatQuest"). For example, the positional encodings of "what" and "is" are
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/pos_encoding.png" width="800">
 
@@ -468,7 +468,7 @@ $$
 \end{bmatrix}.
 $$
 
-Note there are 5 tokens in our vocabulary, thus the layer connects D=2 to 5 tokens.
+Note since there are 5 tokens in our vocabulary, thus the layer converts D=2 to d=5.
 
 For example, for input token "what" and "is":
 
