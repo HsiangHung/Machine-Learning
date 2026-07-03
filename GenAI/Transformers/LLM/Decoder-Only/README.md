@@ -506,7 +506,7 @@ When everytime a token is generated, the token becomes **query** and is plugged 
 
 For example, now ChatGPT generates the first token "awesome", then we ask
 
-$$\textrm{"what is StatQuest"} \ \langle EOS \rangle \to \textrm{"awesome"} \to ?.$$
+$$\textrm{"what is StatQuest"} \ \langle EOS \rangle \to \textrm{"awesome"} \to ???.$$
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/complete_input.png" width="1000">
 
