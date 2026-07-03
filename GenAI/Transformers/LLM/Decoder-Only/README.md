@@ -334,6 +334,20 @@ V["is"] = \begin{bmatrix}
 0.9
 \end{bmatrix}.
 $$
+$$
+V["StatQuest"] = \begin{bmatrix} 
+1 & -0.5 \\
+0.6 & 0.1  
+\end{bmatrix}
+\begin{bmatrix} 
+-1.47 \\
+-0.32
+\end{bmatrix}
+\sim \begin{bmatrix} 
+-1.3 \\
+-0.9
+\end{bmatrix}.
+$$
 
 
 ### 3.2 Similarity
