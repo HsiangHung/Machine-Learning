@@ -384,7 +384,7 @@ $$ Pr("is", "is") = \textrm{Softmax} \Big( Q["is"] K["is"]^T \Big) = \frac{e^{5.
 
 The masked self-attention for "is" is
 
-$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  V["what"]Pr("is", "what") + V["is"]Pr("is", "is") = \begin{bmatrix} 
+$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  Pr("is", "what")V["what"] + Pr("is", "is") V["is"] = \begin{bmatrix} 
 -2.9 \\
 -1.3
 \end{bmatrix} \times 0 + 
@@ -399,7 +399,7 @@ $$
 
 For "what", only "what" is prior to it. Thus
 
-$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  V["what"]Pr("what", "what")  = \begin{bmatrix} 
+$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  Pr("what", "what")V["what"]  = \begin{bmatrix} 
 -2.9 \\
 -1.3
 \end{bmatrix},
@@ -415,7 +415,7 @@ $$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  Pr("StateQuest", "wh
 \end{bmatrix} + Pr("StateQuest", "is") \begin{bmatrix} 
 1.1 \\
 0.9
-\end{bmatrix} + V["what"]Pr("StateQuest", "StateQuest") \begin{bmatrix} 
+\end{bmatrix} + Pr("StateQuest", "StateQuest") \begin{bmatrix} 
 -1.3 \\
 -0.9
 \end{bmatrix}.
