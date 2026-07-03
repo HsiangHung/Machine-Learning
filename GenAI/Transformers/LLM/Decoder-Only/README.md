@@ -236,4 +236,5 @@ K \langle "is" \rangle = \begin{bmatrix}
 $$
 
 The similarities between Q and V are
+
 $$ < Q \langle "is"  \rangle. K \langle "is" \rangle >$$
