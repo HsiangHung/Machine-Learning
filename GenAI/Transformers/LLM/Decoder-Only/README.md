@@ -471,10 +471,10 @@ For example, for input token "what" and "is":
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-1.png" width="800">
 
 
-We see the first predicted token is correct, but the second slightly deviates from our expectation.
+We see the first token predicts "is", which is correct. However the second predicts "what", which slightly deviates from our expectation. By better training model and updating the weights, this can be fixed. 
 
-For token "StatQuest":
+For the third token "StatQuest"
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-2.png" width="350">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-2.png" width="380">
 
-We see the model predicts it is the end of sentence.
+We see the model predicts <EOS>, the end of sentence.
