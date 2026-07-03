@@ -171,13 +171,20 @@ $$
 $$
 
 
-## 3. (Masked) Self-Attention
+## 3. Masked Self-Attention
 
 Then we need to masked self-attention
 
 $$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V. $$
 
 $\sqrt{d}$ is the normalization for embedding dimension, thus $\sqrt{d}=\sqrt{2}$. In the following, for simplicity, I just use $\sqrt{d}=1$.
+
+For decoder-only transformer, we only need masked self-attentions, only the tokens prior to the query. For example, 
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/masked_self_attention.png" width="1000">
+
+For the masked self-attention of "is", we only need the words "The pizza .... and".
+
 
 ### 3.1 Q, K, V
 
@@ -197,6 +204,8 @@ V = \begin{bmatrix}
 0.6 & 0.1  
 \end{bmatrix}.
 $$ 
+
+
 
 #### Query 
 
@@ -326,12 +335,6 @@ V["is"] = \begin{bmatrix}
 0.9
 \end{bmatrix}.
 $$
-
-For masked self-attention, we only need tokens prior to the query. For example, 
-
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/masked_self_attention.png" width="1000">
-
-For the masked self-attention of "is", we only need the words "The pizza .... and".
 
 
 ### 3.2 Similarity
