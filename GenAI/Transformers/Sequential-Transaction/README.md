@@ -27,6 +27,6 @@ These notebooks are all run using Google Colab. For third notebook to run NeMo, 
 
 | # | Notebook |	Description |
 | --- | --- | --- |
-| 1 | N1-XGBoost-Fraud-Detection.ipynb | Load the TabFormer financial transaction dataset, create temporal train/val/test splits, and train a GPU-accelerated XGBoost baseline for fraud detection. |
-| 2 | N2-Sequential-Preprocessing-Tokenization.ipynb | Build a custom GPU-accelerated tokenizer pipeline that converts transaction records into domain-specific token sequences. | 
-| 3 | N-3Foundation=Model-Training.ipynb | Pretrain a decoder-only foundation model (~29M parameters) on tokenized transaction sequences using NeMo AutoModel with causal language modeling. |
+| 1 | **n1_XGBoost_fraud_detection.ipynb** | Load the TabFormer financial transaction dataset, create temporal train/val/test splits, and train a GPU-accelerated XGBoost baseline for fraud detection. |
+| 2 | **n2_sequential_preprocessing_tokenization.ipynb** | Build a custom GPU-accelerated tokenizer pipeline that converts transaction records into domain-specific token sequences. | 
+| 3 | **n3_foundation_model_training.ipynb** | Pretrain a decoder-only foundation model (~29M parameters) on tokenized transaction sequences using NeMo AutoModel with causal language modeling. |
