@@ -182,8 +182,6 @@ $$
 
 In general terms, **self-attention** works by seeing how similar each word is to all of the words in the sentences, including itself.
 
-Then we need to compute masked self-attention values
-
 $$ \textrm{SoftMax} \Big( \frac{Q[w_1] K[w_2]^T}{\sqrt{d}} \Big) V[w_2] = Pr(w_1, w_2) V[w_2], $$
 
 where $\sqrt{d}$ is the normalization relevant to embedding dimensions. Here $\sqrt{d}=\sqrt{2}$. However, in the following, for simplicity, I just ignore it as $\sqrt{d}=1$. (This doesn't impact results of attentions.)
@@ -192,7 +190,7 @@ The $Q$, $K$, $V$ can be multiple layers, i.e. multi-head attentions
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/multi_head_attention.png" width="1000">
 
-For **decoder-only** transformer, we only need masked self-attentions, and only consider the tokens prior to the query. 
+For **decoder-only** transformer, we only need **masked self-attentions**, and only consider the tokens prior to the query. 
 
 For example, to compute the masked self-attention of "is", we only need to consider the tokens "The pizza .... and".
 
