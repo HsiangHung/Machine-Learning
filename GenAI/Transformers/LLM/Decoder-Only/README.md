@@ -179,11 +179,14 @@ $$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V. $$
 
 $\sqrt{d}$ is the normalization for embedding dimension, thus $\sqrt{d}=\sqrt{2}$. In the following, for simplicity, I just use $\sqrt{d}=1$.
 
-For decoder-only transformer, we only need masked self-attentions, only the tokens prior to the query. For example, 
+For **decoder-only** transformer, we only need masked self-attentions, only the tokens prior to the query. 
+
+For example, to compute the masked self-attention of "is", we only need to consider the tokens "The pizza .... and".
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/masked_self_attention.png" width="1000">
 
-For the masked self-attention of "is", we only need the words "The pizza .... and".
+
+For encode transformer we still need self-attention.
 
 
 ### 3.1 Q, K, V
