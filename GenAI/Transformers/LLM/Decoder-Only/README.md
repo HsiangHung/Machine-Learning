@@ -492,15 +492,23 @@ We see the model predicts $\langle \textrm{EOS} \rangle$, the end of sentence.
 
 ## Token Prediction
 
-Input the prompt "what is StatQuest" and EOS token. Next we will ask
+After typing the input prompt "what is StatQuest", EOS token will be on the end. Next we will ask
 
-$$\textrm{"what is StatQuest"} \langle EOS \rangle \to ???. $$
+$$\textrm{"what is StatQuest"} \ \langle EOS \rangle \to ???. $$
 
 
-Everytime a token is generated. The token becomes query and is plugged into the model with work embedding, positional encoding, masked self-attention considering all prior tokens, residual connection, and predict next token via fully connected layer + SoftMax.
+When everytime a token is generated, the token becomes **query** and is plugged into the model with 
+* work embedding
+* positional encoding
+* masked self-attention considering all prior tokens
+* residual connection
+* and predict next token via fully connected layer + SoftMax.
 
-For example, now GPT generates first token "awesome", then we ask
+For example, now ChatGPT generates the first token "awesome", then we ask
 
-$$\textrm{"what is StatQuest"} \langle EOS \rangle \to \textrm{"awesome"} \to ?.$$
+$$\textrm{"what is StatQuest"} \ \langle EOS \rangle \to \textrm{"awesome"} \to ?.$$
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/complete_input.png" width="1000">
+
+To compute masked self-attention for "awesome", we need K, V for "what", "is", "StatQuest", "EOS" and "awesome". And then use predict which token has the larges probability.
+
