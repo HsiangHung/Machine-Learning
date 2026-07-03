@@ -451,15 +451,12 @@ Sum over word embeddings, positional encodings and masked self-attentions, we ha
 
 Given residual connects for the tokens, assume we have trained fully connected layer (MLP), we can compute the probability of each token.
 
-For example, for token "what":
+For example, for input token "what" and "is":
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-1.png" width="400">
-
-So next token will be "is"
-
-For token "is":
-
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-2.png" width="400">
+
+We see the first predicted token is correct, but second slightly deviated from our expectation.
 
 For token "StatQuest":
 
