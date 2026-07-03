@@ -188,6 +188,7 @@ V = \begin{bmatrix}
 $$ 
 
 Then for **Query** for "is", 
+
 $$
 Q<"is"> = \begin{bmatrix} 
 -0.8 & -1.7 \\
