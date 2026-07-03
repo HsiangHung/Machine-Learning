@@ -170,7 +170,7 @@ $$
 
 ## 3. Q, K, V
 
-Assume we have Q/K/V matrices (from trained or randomly initialized) as 
+Assume we have Q/K/V matrices (either from trained or randomly initialized) as 
 
 $$
 Q = \begin{bmatrix} 
@@ -230,12 +230,46 @@ K \langle "is" \rangle = \begin{bmatrix}
 0.71
 \end{bmatrix}
 \sim \begin{bmatrix} 
+1.1 \\
+0.9
+\end{bmatrix}.
+$$
+
+
+**Value** for "what" and "is" are
+
+$$ 
+V \langle "what" \rangle = \begin{bmatrix} 
+1 & -0.5 \\
+0.6 & 0.1  
+\end{bmatrix}
+\begin{bmatrix} 
+-2.38 \\
+1.1
+\end{bmatrix}
+\sim \begin{bmatrix} 
+-2.9 \\
+-1.3
+\end{bmatrix},
+$$
+$$
+V \langle "is" \rangle = \begin{bmatrix} 
+1 & -0.5 \\
+0.6 & 0.1  
+\end{bmatrix}
+\begin{bmatrix} 
+1.45 \\
+0.71
+\end{bmatrix}
+\sim \begin{bmatrix} 
 -1.7 \\
 0.7
 \end{bmatrix}.
 $$
 
-## 4. Similarity and Softmax
+## 4. (Masked) Self-Attention
+
+Then we need to masked self-attention
 
 The similarity between Q and V for "what" is
 
@@ -259,4 +293,6 @@ $$ < Q \langle "is"  \rangle, K \langle "is" \rangle > = \begin{bmatrix}
 
 The softmax 
 
-$$ Q K^T["is", "is"] = \frac{e^{5.9}}{e^{5.9} + e^{-25}} \sim 100 % $$
+$$ Q K^T["is", "is"] = \frac{e^{5.9}}{e^{5.9} + e^{-25}} \sim 1. $$
+
+$$ Q K^T["is", "what"] = \frac{e^{-25}}{e^{5.9} + e^{-25}} \sim 0. $$
