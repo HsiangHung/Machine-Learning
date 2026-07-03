@@ -216,8 +216,8 @@ K \langle "what" \rangle = \begin{bmatrix}
 1.1
 \end{bmatrix}
 \sim \begin{bmatrix} 
-4.3 \\
--5.9
+-2.9 \\
+-1.3
 \end{bmatrix},
 $$
 $$
