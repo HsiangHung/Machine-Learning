@@ -273,7 +273,7 @@ For masked self-attention, we only need tokens prior to the query.
 
 Then we need to masked self-attention
 
-$$Softmax (Q K^T) $$
+$$ \textrm{Softmax} (Q K^T) $$
 
 ### Similarity
 
@@ -301,6 +301,6 @@ $$ \langle Q["is"], K["is"] \rangle = \begin{bmatrix}
 
 The softmax 
 
-$$ Softmax \Big( Q["is"] K["is"]^T \Big) = \frac{e^{5.9}}{e^{5.9} + e^{-25}} \sim 1. $$
+$$ \textrm{Softmax} \Big( Q["is"] K["is"]^T \Big) = \frac{e^{5.9}}{e^{5.9} + e^{-25}} \sim 1. $$
 
-$$ Softmax \Big( Q["is"] K["what"]^T \Big) = \frac{e^{-25}}{e^{5.9} + e^{-25}} \sim 0. $$
+$$ \textrm{Softmax} \Big( Q["is"] K["what"]^T \Big) = \frac{e^{-25}}{e^{5.9} + e^{-25}} \sim 0. $$
