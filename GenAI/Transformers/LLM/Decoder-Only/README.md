@@ -271,6 +271,7 @@ For masked self-attention, we only need tokens prior to the query. For example,
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/masked_self_attention.png" width="1000">
 
+For the masked self-attention of "is", we only need the words "The pizza .... and".
 
 ## 4. (Masked) Self-Attention
 
