@@ -461,7 +461,7 @@ Sum over word embeddings, positional encodings and masked self-attentions, we ha
 
 ## 5. Fully Connect Layer + SoftMax
 
-Given residual connects for the tokens, assume we have trained fully connected layer (MLP), we can compute the probability of each token.
+Assume we have trained the fully connected layer (MLP). Given residual connections, we can compute the probability of each token.
 
 In the below example, we use the weights of the fully connect layer as
 
