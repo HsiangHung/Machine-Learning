@@ -1,12 +1,29 @@
-# LLM with Transformers
+# LLM Transformers
 
-Transformer is a neural network architecture for AI. Transformer can be used for language model, diffusion model and classification model etc.
+Transformer is a neural network architecture for AI. 
+
+Transformer starts to be used for large language model (LLM), but later was extend to us for diffusion model and classification model etc.
+
+Here we focus on LLM application.
 
 ## Decoder-Only Transformers
 
-* [StatQuest video: Decoder-Only Transformers, ChatGPTs specific Transformer, Clearly Explained!!!](https://www.youtube.com/watch?v=bQ5BoolX9Ag)
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/decoder-only_diagram.png" width="700">
 
-## Encoder-Decoder Transformer
+[StatQuest video: Decoder-Only Transformers, ChatGPTs specific Transformer, Clearly Explained!!!](https://www.youtube.com/watch?v=bQ5BoolX9Ag) has tutorial explanation how  a decoder-only transformer works. 
+
+In this [repo](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/Transformers/LLM/Decoder-Only), we show the processes step by step.
+
+
+## Encoder-Only Transformers
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/decoder-only_diagram.png" width="700">
+
+* [Encoder-Only Transformers (like BERT) for RAG, Clearly Explained!!!](https://www.youtube.com/watch?v=GDN649X_acE&t=972s)
+
+
+
+## Encoder-Decoder Transformers
 
 Language translator: [Encoder + Decoder Translator](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/Transformers/LLM/Translators).
 
