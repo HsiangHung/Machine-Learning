@@ -418,5 +418,18 @@ $$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  Pr("StateQuest", "wh
 \end{bmatrix} + Pr("StateQuest", "StateQuest") \begin{bmatrix} 
 -1.3 \\
 -0.9
+\end{bmatrix} \\ 
+\sim 1 \times \begin{bmatrix} 
+-2.9 \\
+-1.3
+\end{bmatrix} + 0 \times \begin{bmatrix} 
+1.1 \\
+0.9
+\end{bmatrix} + 0 \times \begin{bmatrix} 
+-1.3 \\
+-0.9
+\end{bmatrix} = \begin{bmatrix} 
+-2.9 \\
+-1.3
 \end{bmatrix}.
 $$
