@@ -4,7 +4,7 @@ Below we will have a step-by-step instruction how transformer works in a decoder
 
 We followed the StatQuest video: [Decoder-Only Transformers, ChatGPTs specific Transformer, Clearly Explained!!!](https://www.youtube.com/watch?v=bQ5BoolX9Ag) to explain how how a decoder-only transformer can take a simple input prompt, and generate a simple response.
 
-The explanation also covers detailed computation step by step using more math way. We used all numbers shown in the above video. Meanwhile, the notebook under this directory has the correspodning transformer code.
+The explanation also covers detailed computation step by step using more math way. We used all numbers shown in the above video. Meanwhile, the notebook under this directory has the correspodning transformer code. For more detail and the code, we can refer the notebbok [decoder-only-transformer.ipynb](https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/decoder-only-transformer.ipynb).
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/decoder-only_diagram.png" width="1000">
 
@@ -488,4 +488,19 @@ For the third token "StatQuest"
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-2.png" width="380">
 
-We see the model predicts <EOS>, the end of sentence.
+We see the model predicts $\langle \textrm{EOS} \rangle$, the end of sentence.
+
+## Token Prediction
+
+Input the prompt "what is StatQuest" and EOS token. Next we will ask
+
+$$\textrm{"what is StatQuest"} \langle EOS \rangle \to ???. $$
+
+
+Everytime a token is generated. The token becomes query and is plugged into the model with work embedding, positional encoding, masked self-attention considering all prior tokens, residual connection, and predict next token via fully connected layer + SoftMax.
+
+For example, now GPT generates first token "awesome", then we ask
+
+$$\textrm{"what is StatQuest"} \langle EOS \rangle \to \textrm{"awesome"} \to ?.$$
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/complete_input.png" width="1000">
