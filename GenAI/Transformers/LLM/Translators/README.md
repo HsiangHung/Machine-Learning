@@ -33,7 +33,7 @@ To understand why "the decoder provides the queries" and "the encoder provides t
 * The **Values ($V$)** come from the **Encoder**: Think of the Values as the **actual contents of the book**.
     * Once the decoder's Query matches strongly with an encoder's Key, the Transformer pulls the corresponding Value (the rich, mathematical representation of that word's meaning) and uses it to generate the next translated word.
 
-### A Concrete Example: French to English
+### A Concrete Example: French $\to$ English
 
 Imagine translating the French sentence "Le chat noir" into English ("The black cat"):
 * The Encoder processes "Le chat noir" and generates Keys and Values for all three words.
