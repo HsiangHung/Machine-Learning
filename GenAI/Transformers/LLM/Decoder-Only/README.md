@@ -404,6 +404,7 @@ $$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  V["what"]Pr("what", 
 -1.3
 \end{bmatrix},
 $$
+
 where $Pr("what", "what")=1$.
 
 For "StatQuest"
