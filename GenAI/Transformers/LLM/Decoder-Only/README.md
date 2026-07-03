@@ -508,7 +508,7 @@ For example, now ChatGPT generates the first token "awesome", then we ask
 
 $$\textrm{"what is StatQuest"} \ \langle EOS \rangle \to \textrm{"awesome"} \to ???.$$
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/complete_input.png" width="1000">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/complete_input.png" width="900">
 
 To compute masked self-attention for "awesome", we need K, V for "what", "is", "StatQuest", "EOS" and "awesome". And then use predict which token has the larges probability.
 
