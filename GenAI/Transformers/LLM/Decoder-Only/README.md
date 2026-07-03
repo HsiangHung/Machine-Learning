@@ -269,7 +269,7 @@ $$
 
 For masked self-attention, we only need tokens prior to the query. For example, 
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/masked_self_attention.png" width="700">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/masked_self_attention.png" width="1000">
 
 
 ## 4. (Masked) Self-Attention
