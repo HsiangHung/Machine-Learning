@@ -180,6 +180,8 @@ $$
 
 ## 3. Masked Self-Attention
 
+In general terms, **self-attention** works by seeing how similar each word is to all of the words in the sentences, including itself.
+
 Then we need to compute masked self-attention values
 
 $$ \textrm{SoftMax} \Big( \frac{Q[w_1] K[w_2]^T}{\sqrt{d}} \Big) V[w_2] = Pr(w_1, w_2) V[w_2], $$
