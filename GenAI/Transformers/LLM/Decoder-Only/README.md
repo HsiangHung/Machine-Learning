@@ -171,7 +171,15 @@ $$
 $$
 
 
-## 3. Q, K, V
+## 3. (Masked) Self-Attention
+
+Then we need to masked self-attention
+
+$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V. $$
+
+$\sqrt{d}$ is the normalization for embedding dimension, thus $\sqrt{d}=\sqrt{2}$. In the following, for simplicity, I just use $\sqrt{d}=1$.
+
+### 3.1 Q, K, V
 
 Assume we have Q/K/V matrices (either from trained or randomly initialized) as 
 
@@ -190,7 +198,24 @@ V = \begin{bmatrix}
 \end{bmatrix}.
 $$ 
 
-Then for **Query** for "is", 
+#### Query 
+
+**Query** for "what", "is", and "StatQuest" are
+
+$$
+Q["what"] = \begin{bmatrix} 
+-0.8 & -1.7 \\
+0.4 & 2.8  
+\end{bmatrix}
+\begin{bmatrix} 
+-2.38 \\
+1.1
+\end{bmatrix}
+\sim \begin{bmatrix} 
+0 \\
+2.1
+\end{bmatrix}.
+$$
 
 $$
 Q["is"] = \begin{bmatrix} 
@@ -207,7 +232,24 @@ Q["is"] = \begin{bmatrix}
 \end{bmatrix}.
 $$
 
-**Key** for "what" and "is" are
+$$
+Q["StatQuest"] = \begin{bmatrix} 
+-0.8 & -1.7 \\
+0.4 & 2.8  
+\end{bmatrix}
+\begin{bmatrix} 
+-1.47 \\
+-0.32
+\end{bmatrix}
+\sim \begin{bmatrix} 
+1.7 \\
+-1.5
+\end{bmatrix}.
+$$
+
+#### Key
+
+**Key** for "what", "is" and "StatQuest" are
 
 $$ 
 K["what"] = \begin{bmatrix} 
@@ -237,7 +279,22 @@ K["is"] = \begin{bmatrix}
 0.7
 \end{bmatrix}.
 $$
+$$
+K["StatQuest"] = \begin{bmatrix} 
+-1.5 & 0.7 \\
+1.5 & -2.1  
+\end{bmatrix}
+\begin{bmatrix} 
+-1.47 \\
+-0.32
+\end{bmatrix}
+\sim \begin{bmatrix} 
+2 \\
+-1.5
+\end{bmatrix}.
+$$
 
+#### Value
 
 **Value** for "what" and "is" are
 
@@ -276,17 +333,10 @@ For masked self-attention, we only need tokens prior to the query. For example,
 
 For the masked self-attention of "is", we only need the words "The pizza .... and".
 
-## 4. (Masked) Self-Attention
 
-Then we need to masked self-attention
+### 3.2 Similarity
 
-$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V. $$
-
-$\sqrt{d}$ is the normalization for embedding dimension, thus $\sqrt{d}=\sqrt{2}$. In the following, for simplicity, I just use $\sqrt{d}=1$.
-
-### Similarity
-
-The similarity between Q and V for "what" is
+The similarity between $Q["is"]$ and K for "what" is
 
 $$ \langle Q["is"], K["what"] \rangle = \begin{bmatrix} 
 -2.4 & 2.6  
@@ -296,7 +346,7 @@ $$ \langle Q["is"], K["what"] \rangle = \begin{bmatrix}
 -5.9  
 \end{bmatrix} \sim -25.$$
 
-For "is"
+K for "is" is
 
 $$ \langle Q["is"], K["is"] \rangle = \begin{bmatrix} 
 -2.4 & 2.6  
@@ -306,19 +356,19 @@ $$ \langle Q["is"], K["is"] \rangle = \begin{bmatrix}
 0.7  
 \end{bmatrix} = 5.9.$$
 
-### Softmax
+### 3.3 Softmax
 
 The softmax probabilities are
 
-$$ P("what", "is") = \textrm{Softmax} \Big( Q["is"] K["is"]^T \Big) = \frac{e^{5.9}}{e^{5.9} + e^{-25}} \sim 1. $$
+$$ Pr("what", "is") = \textrm{Softmax} \Big( Q["is"] K["is"]^T \Big) = \frac{e^{5.9}}{e^{5.9} + e^{-25}} \sim 1. $$
 
-$$ P("is", "is") = \textrm{Softmax} \Big( Q["is"] K["what"]^T \Big) = \frac{e^{-25}}{e^{5.9} + e^{-25}} \sim 0. $$
+$$ Pr("is", "is") = \textrm{Softmax} \Big( Q["is"] K["what"]^T \Big) = \frac{e^{-25}}{e^{5.9} + e^{-25}} \sim 0. $$
 
-### Masked Self-Attention
+### 3.4 Masked Self-Attention
 
 The masked self-attention for "is" is
 
-$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  V["what"]P("what", "is") + V["is"]P("is", "is") = \begin{bmatrix} 
+$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  V["what"]Pr("what", "is") + V["is"]Pr("is", "is") = \begin{bmatrix} 
 -2.9 \\
 -1.3
 \end{bmatrix} \times 0 + 
