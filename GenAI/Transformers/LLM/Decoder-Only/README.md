@@ -175,9 +175,9 @@ $$
 
 Then we need to masked self-attention
 
-$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V. $$
+$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V, $$
 
-$\sqrt{d}$ is the normalization for embedding dimension, thus $\sqrt{d}=\sqrt{2}$. In the following, for simplicity, I just use $\sqrt{d}=1$.
+where $\sqrt{d}$ is the normalization for embedding dimension, thus $\sqrt{d}=\sqrt{2}$. However, in the following, for simplicity, I just use $\sqrt{d}=1$. (This doesn't impact results of attentions.)
 
 For **decoder-only** transformer, we only need masked self-attentions, only the tokens prior to the query. 
 
@@ -376,9 +376,9 @@ $$ \langle Q["is"], K["is"] \rangle = \begin{bmatrix}
 
 The softmax probabilities are
 
-$$ Pr("what", "is") = \textrm{Softmax} \Big( Q["is"] K["is"]^T \Big) = \frac{e^{5.9}}{e^{5.9} + e^{-25}} \sim 1. $$
+$$ Pr("is", "what") = \textrm{Softmax} \Big( Q["is"] K["what"]^T \Big) = \frac{e^{-25}}{e^{5.9} + e^{-25}} \sim 0. $$
+$$ Pr("is", "is") = \textrm{Softmax} \Big( Q["is"] K["is"]^T \Big) = \frac{e^{5.9}}{e^{5.9} + e^{-25}} \sim 1. $$
 
-$$ Pr("is", "is") = \textrm{Softmax} \Big( Q["is"] K["what"]^T \Big) = \frac{e^{-25}}{e^{5.9} + e^{-25}} \sim 0. $$
 
 ### 3.4 Masked Self-Attention
 
