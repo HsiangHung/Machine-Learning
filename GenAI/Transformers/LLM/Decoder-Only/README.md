@@ -190,7 +190,7 @@ $$
 Then for **Query** for "is", 
 
 $$
-Q<"is"> = \begin{bmatrix} 
+Q \< "is"> = \begin{bmatrix} 
 -0.8 & -1.7 \\
 0.4 & 2.8  
 \end{bmatrix}
