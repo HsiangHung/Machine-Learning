@@ -452,6 +452,20 @@ Sum over word embeddings, positional encodings and masked self-attentions, we ha
 
 Given residual connects for the tokens, assume we have trained fully connected layer (MLP), we can compute the probability of each token.
 
+In the below example, we use the weights of the fully connect layer as
+
+$$
+\begin{bmatrix} 
+1.5 & 1.2 \\
+-2.5 & 4.1 \\
+1.2 & 1.6 \\
+1.7 & -3.0 \\
+-0.6 & -1.5 \\
+\end{bmatrix}.
+$$
+
+Note there are 5 tokens in our vocabulary, thus the layer connects D=2 to 5 tokens.
+
 For example, for input token "what" and "is":
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-1.png" width="800">
