@@ -138,11 +138,11 @@ $$
 0.17
 \end{bmatrix} +  
 \begin{bmatrix} 
-0.8  \\
+0.84  \\
 0.54
 \end{bmatrix} = 
 \begin{bmatrix} 
-1.41  \\
+1.45  \\
 0.71
 \end{bmatrix},
 $$
