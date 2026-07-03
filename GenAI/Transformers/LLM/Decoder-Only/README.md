@@ -102,7 +102,11 @@ The positional encoding functions are like
 
 ![positional_encoding_squiggle](images/positional_encoding_squiggle.png)
 
-Since embedding dimension D = 2, we only need to look up first two plots, and first three token positions. Thus the inputs of the tokens into the transformer are
+Since embedding dimension D = 2, we only need to look up first two plots, and first three token positions. For example, the positional encodings of "what" and "is" are
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/pos_encoding.png" width="800">
+
+Thus the inputs of the tokens into the transformer are
 
 $$
 "what" = \begin{bmatrix} 
