@@ -402,5 +402,20 @@ For "what", only "what" is prior to it. Thus
 $$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  V["what"]Pr("what", "what")  = \begin{bmatrix} 
 -2.9 \\
 -1.3
+\end{bmatrix},
+$$
+where $Pr("what", "what")=1$.
+
+For "StatQuest"
+
+$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V =  Pr("StateQuest", "what") \begin{bmatrix} 
+-2.9 \\
+-1.3
+\end{bmatrix} + Pr("StateQuest", "is") \begin{bmatrix} 
+1.1 \\
+0.9
+\end{bmatrix} + V["what"]Pr("StateQuest", "StateQuest") \begin{bmatrix} 
+-1.3 \\
+-0.9
 \end{bmatrix}.
 $$
