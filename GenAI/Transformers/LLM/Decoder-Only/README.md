@@ -360,7 +360,7 @@ $$
 
 ### 3.2 Similarity
 
-The similarity between $Q["is"]$ and $K["what"]$ is
+The similarity score between $Q["is"]$ and $K["what"]$ is
 
 $$ \langle Q["is"], K["what"] \rangle = \begin{bmatrix} 
 -2.4 & 2.6  
@@ -370,7 +370,7 @@ $$ \langle Q["is"], K["what"] \rangle = \begin{bmatrix}
 -5.9  
 \end{bmatrix} \sim -25.$$
 
-K for "is" is
+For $K["is"]$, the score is
 
 $$ \langle Q["is"], K["is"] \rangle = \begin{bmatrix} 
 -2.4 & 2.6  
