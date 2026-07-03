@@ -175,7 +175,7 @@ $$
 
 Then we need to masked self-attention
 
-$$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V, $$
+$$ \textrm{Softmax} \Big( \frac{Q[w_1] K[w_2]^T}{\sqrt{d}} \Big) V[w_2] = Pr(w_1, w_2) V[w_2], $$
 
 where $\sqrt{d}$ is the normalization for embedding dimension, thus $\sqrt{d}=\sqrt{2}$. However, in the following, for simplicity, I just use $\sqrt{d}=1$. (This doesn't impact results of attentions.)
 
