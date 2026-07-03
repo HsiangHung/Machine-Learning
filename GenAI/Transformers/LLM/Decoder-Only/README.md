@@ -237,4 +237,10 @@ $$
 
 The similarities between Q and V are
 
-$$ < Q \langle "is"  \rangle. K \langle "is" \rangle >$$
+$$ < Q \langle "is"  \rangle, K \langle "is" \rangle > = \begin{bmatrix} 
+-2.4 & 2.6  
+\end{bmatrix} 
+\begin{bmatrix} 
+-1.7 \\
+0.7  
+\end{bmatrix} = 5.9$$
