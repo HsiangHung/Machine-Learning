@@ -204,6 +204,7 @@ For encode transformer we still need self-attentions.
 ### 3.1 Q, K, V
 
 Here we just consider single-layer attentions.
+
 Assume we have Q/K/V matrices (either from trained or randomly initialized) as 
 
 $$
