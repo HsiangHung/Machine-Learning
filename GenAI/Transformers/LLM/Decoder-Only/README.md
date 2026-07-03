@@ -449,8 +449,8 @@ Sum over word embeddings, positional encodings and masked self-attentions, we ha
 
 ## 5. Fully Connect Layer and Token Prediction
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-1.png" width="1000">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-1.png" width="500">
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-2.png" width="1000">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-2.png" width="500">
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-3.png" width="1000">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/LLM/Decoder-Only/images/fully_connect_layer-3.png" width="500">
