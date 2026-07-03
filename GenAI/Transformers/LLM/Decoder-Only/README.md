@@ -218,7 +218,9 @@ K \langle "what" \rangle = \begin{bmatrix}
 \sim \begin{bmatrix} 
 4.3 \\
 -5.9
-\end{bmatrix}, \ \ \
+\end{bmatrix},
+$$
+$$
 K \langle "is" \rangle = \begin{bmatrix} 
 -1.5 & 0.7 \\
 1.5 & -2.1  
@@ -231,4 +233,7 @@ K \langle "is" \rangle = \begin{bmatrix}
 -1.7 \\
 0.7
 \end{bmatrix}.
-$$ 
+$$
+
+The similarities between Q and V are
+$$ \langle Q \langle "is"  \rangle. K \langle "is" \rangle \rangle$$
