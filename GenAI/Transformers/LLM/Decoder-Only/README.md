@@ -275,6 +275,8 @@ Then we need to masked self-attention
 
 $$ \textrm{Softmax} \Big( \frac{Q K^T}{\sqrt{d}} \Big) V. $$
 
+$\sqrt{d}$ is the normalization for embedding dimension, thus $\sqrt{d}=\sqrt{2}$. In the following, for simplicity, I just use $\sqrt{d}=1$.
+
 ### Similarity
 
 The similarity between Q and V for "what" is
