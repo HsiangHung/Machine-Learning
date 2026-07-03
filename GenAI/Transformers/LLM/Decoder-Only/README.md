@@ -168,7 +168,7 @@ $$
 $$
 
 
-## 3. Q, K, V Matrices 
+## 3. Q, K, V
 
 Assume we have Q/K/V matrices (from trained or randomly initialized) as 
 
@@ -235,6 +235,8 @@ K \langle "is" \rangle = \begin{bmatrix}
 \end{bmatrix}.
 $$
 
+## 4. Similarity and Softmax
+
 The similarity between Q and V for "what" is
 
 $$ < Q \langle "is"  \rangle, K \langle "what" \rangle > = \begin{bmatrix} 
@@ -253,4 +255,7 @@ $$ < Q \langle "is"  \rangle, K \langle "is" \rangle > = \begin{bmatrix}
 \begin{bmatrix} 
 -1.7 \\
 0.7  
-\end{bmatrix} = 5.9$$
+\end{bmatrix} = 5.9.$$
+
+The softmax 
+$$ Q K^T["is", "is"] = \frac{e^5.9}{e^5.9 + e^{-25}} \sim 100 \% $$
