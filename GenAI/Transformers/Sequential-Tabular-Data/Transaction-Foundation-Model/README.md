@@ -38,7 +38,7 @@ The sequence fed into the Transformer looks like a continuous story:
 Thus, a complete temporal transaction looks like 
 
 ```
-<bos> $ bos \rangle$  AMT_1  MERCH_1  ... CUST_1 $\langle sep \rangle$ AMT_2  MERCH_2  ... CUST_2  $\langle sep \rangle$  AMT_3  MERCH_3  ... CUST_3  $\langle eos \rangle$
+<bos> AMT_1  MERCH_1  ... CUST_1 <sep> AMT_2  MERCH_2  ... CUST_2  <sep>  AMT_3  MERCH_3  ... CUST_3  <eos>
 ```
 
 The transaction foundation model allows a single 4,096-token sequence. It allows packs in roughly 315 ($\sim$ 4096/13) consecutive transactions for a single account.
