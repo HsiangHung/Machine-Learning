@@ -12,6 +12,32 @@ By pretraining on large volumes of unlabeled transaction sequences, we can learn
 
 and so on.
 
+## Finanical Tokenization
+
+While traditional machine learning models evaluate a single transaction row in isolation, a Transaction Foundation Model strings hundreds of transactions together in chronological order to form a longitudinal timeline of a user's life.
+
+Here is how the tokenization breaks down into two distinct levels to capture that timeline.
+
+### 1. The Micro-Sequence (Within a Record)
+
+First, the model must convert a single tabular row into something a Transformer can read. It takes the disparate fields of a single transaction (like the merchant, the transaction amount, and the time of day) and flattens them into a short "phrase" of discrete tokens.
+
+For example, a single $15 coffee purchase might become a micro-sequence of tokens:
+["Merchant_Category_Cafe", "Amount_Bucket_10_20", "Day_Tuesday", "Time_Morning"]
+
+The data schema we use here has 13 features per transaction (e.g., Merchant ID, Amount, Time, Card Type, etc.), and the serialization script maps each feature to exactly 1 token, then every single transaction record consumes exactly 13 tokens in the sequence.
+
+
+### 2. The Macro-Sequence (Across Records)
+
+Once those individual transactions are flattened into micro-sequences, they are concatenated together in chronological order to represent the user's historical behavior. Then the funnel analogy of financial events applies
+
+The sequence fed into the Transformer looks like a continuous story:
+[...Transaction 1 Tokens...] -> [...Transaction 2 Tokens...] -> [...Transaction 3 Tokens...] 
+
+The transaction foundation model allows a single 4,096-token sequence. It allows packs in roughly 315 ($\sim$ 4096/13) consecutive transactions for a single account.
+
+
 ## Technology
 
 In this example, we follow the code from the Nvidia repo: [NVIDIA Developer Example: Build Your Own Transaction Foundation Model](https://github.com/HsiangHung/transaction-foundation-model/tree/a2fb683917f47f6e44582dad994925e96155f836). In this repo:
