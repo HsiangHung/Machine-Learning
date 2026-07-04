@@ -23,7 +23,9 @@ Here is how the tokenization breaks down into two distinct levels to capture tha
 First, the model must convert a single tabular row into something a Transformer can read. It takes the disparate fields of a single transaction (like the merchant, the transaction amount, and the time of day) and flattens them into a short "phrase" of discrete tokens.
 
 For example, a single $15 coffee purchase might become a micro-sequence of tokens:
+```
 ["Merchant_Category_Cafe", "Amount_Bucket_10_20", "Day_Tuesday", "Time_Morning"]
+```
 
 The data schema we use here has 13 features per transaction (e.g., Merchant ID, Amount, Time, Card Type, etc.), and the serialization script maps each feature to exactly 1 token, then every single transaction record consumes exactly 13 tokens in the sequence.
 
@@ -33,7 +35,10 @@ The data schema we use here has 13 features per transaction (e.g., Merchant ID, 
 Once those individual transactions are flattened into micro-sequences, they are concatenated together in chronological order to represent the user's historical behavior. Then the funnel analogy of financial events applies
 
 The sequence fed into the Transformer looks like a continuous story:
+
+```
 [...Transaction 1 Tokens...] -> [...Transaction 2 Tokens...] -> [...Transaction 3 Tokens...] 
+```
 
 Thus, a complete temporal transaction looks like 
 
