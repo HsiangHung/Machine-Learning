@@ -1,10 +1,10 @@
-# Transformers to Tabular, Sequential Data
+# Transformers to Sequential Behavior Data
 
 Applying Transformer architectures to tabular, sequential data—rather than just text or images—is exactly how industry leaders like Stripe and Amazon are currently pushing the boundaries of fraud detection and personalization.
 
-Encoding a sequence of user behaviors (like swipe, transfer, click, purchase) requires treating transactions like words in a sentence, where the "grammar" is the user's baseline behavior, and a sudden deviation in that grammar might indicate fraud or signal a new purchase intent. 
+Encoding a sequence of **user behaviors** (like swipe, transfer, click, purchase) requires **treating transactions like words in a sentence**, where the "grammar" is the user's baseline behavior, and a sudden deviation in that grammar might indicate fraud or signal a new purchase intent. 
 
-When you start coding, you will find that the hardest part isn't the Transformer itself—it is the Tokenization. In NLP, tokenizing words is standard. In behavioral data, you have to decide how to represent continuous variables (like a transaction amount of $42.50) and categorical variables (like Merchant_ID) into a single discrete token or a unified embedding space before it ever touches the attention mechanism.
+When you start coding, you will find that the hardest part isn't the Transformer itself—it is the **Tokenization**. In NLP, tokenizing words is standard. However, in behavioral data, you have to decide how to represent continuous variables (like a transaction amount of $42.50) and categorical variables (like Merchant_ID) into a single discrete token or a unified embedding space before it ever touches the attention mechanism.
 
 Below we list relevant open-source repositories and public datasets tailored specifically for the use cases.
 
