@@ -12,22 +12,22 @@ Below we list relevant open-source repositories and public datasets tailored spe
 
 If you want to build something analogous to Stripe’s Payments Foundation Model, this is the exact blueprint you need.
 
-* The Repository: NVIDIA-AI-Blueprints/transaction-foundation-model
-* What it shows: This repo provides a complete, step-by-step Jupyter Notebook workflow for building a transaction foundation model. It covers how to convert raw tabular transaction records into domain-specific token sequences, pretrain a decoder-only foundation model using causal language modeling, extract the behavioral embeddings, and feed those embeddings into an XGBoost model to classify fraud.
-* Public Data: The blueprint natively uses the TabFormer dataset (originally created by IBM), which is a massive, publicly available synthetic dataset containing 24 million credit card transactions.
+* **Repository**: NVIDIA-AI-Blueprints/transaction-foundation-model
+* **What it shows**: This repo provides a complete, step-by-step Jupyter Notebook workflow for building a transaction foundation model. It covers how to convert raw tabular transaction records into domain-specific token sequences, pretrain a decoder-only foundation model using causal language modeling, extract the behavioral embeddings, and feed those embeddings into an XGBoost model to classify fraud.
+* **Public Data**: The blueprint natively uses the TabFormer dataset (originally created by IBM), which is a massive, publicly available synthetic dataset containing 24 million credit card transactions.
 
 ## Transformers4Rec For Recommendations
 
 If you want to encode behavioral sequences to predict a user's next action (e.g., product recommendations), you should look into the Merlin ecosystem.
 
-* The Repository: NVIDIA-Merlin/Transformers4Rec
-* What it shows: This is a flexible library built on PyTorch and Hugging Face Transformers specifically designed for sequential and session-based recommendations. It automatically handles the heavy lifting of merging context features with sequential features, allowing you to use over 64 different Transformer architectures (like BERT, GPT-2, or XLNet) to predict a user's next interaction based on their historical timeline.
-* Public Data: Their examples folder provides end-to-end tutorials using public e-commerce datasets like Yoochoose and REES46.
+* **Repository**: NVIDIA-Merlin/Transformers4Rec
+* **What it shows**: This is a flexible library built on PyTorch and Hugging Face Transformers specifically designed for sequential and session-based recommendations. It automatically handles the heavy lifting of merging context features with sequential features, allowing you to use over 64 different Transformer architectures (like BERT, GPT-2, or XLNet) to predict a user's next interaction based on their historical timeline.
+* **Public Data**: Their examples folder provides end-to-end tutorials using public e-commerce datasets like Yoochoose and REES46.
 
 ## Curated Research For Custom Time-Aware Architecture
 
 If you want to build a Time-Aware Transformer from scratch—specifically focusing on how to encode irregular time gaps between user actions (since users don't make purchases at perfectly even intervals)—you will need to look at specific time-series adaptations.
 
-* The Repositories: Search GitHub for curated lists like TongjiFinLab/awesome-time-series-forecasting or qingsongedu/time-series-transformers-review.
-* What they show: These repos aggregate open-source code for cutting-edge papers. You can find PyTorch implementations of how to replace standard positional encoding with Time2Vec (which learns representations of continuous time) or how to use patch-level tokenization for long sequences.
+* **Repositories**: Search GitHub for curated lists like TongjiFinLab/awesome-time-series-forecasting or qingsongedu/time-series-transformers-review.
+* **What they show**: These repos aggregate open-source code for cutting-edge papers. You can find PyTorch implementations of how to replace standard positional encoding with Time2Vec (which learns representations of continuous time) or how to use patch-level tokenization for long sequences.
 
