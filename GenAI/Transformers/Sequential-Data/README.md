@@ -1,6 +1,6 @@
 # Transformers to Sequential Behavior Data
 
-Applying Transformer architectures to tabular, sequential data—rather than just text or images—is exactly how industry leaders like Stripe and Amazon are currently pushing the boundaries of fraud detection and personalization.
+Applying Transformer architectures to **tabular**, **sequential data** — rather than just text or images—is exactly how industry leaders like Stripe and Amazon are currently pushing the boundaries of fraud detection and personalization.
 
 Encoding a sequence of **user behaviors** (like swipe, transfer, click, purchase) requires **treating transactions like words in a sentence**, where the "grammar" is the user's baseline behavior, and a sudden deviation in that grammar might indicate fraud or signal a new purchase intent. 
 
@@ -13,7 +13,11 @@ Below we list relevant open-source repositories and public datasets tailored spe
 If you want to build something analogous to Stripe’s Payments Foundation Model, this is the exact blueprint you need.
 
 * **Repository**: NVIDIA-AI-Blueprints/transaction-foundation-model
-* **What it shows**: This repo provides a complete, step-by-step Jupyter Notebook workflow for building a transaction foundation model. It covers how to convert raw tabular transaction records into domain-specific token sequences, pretrain a decoder-only foundation model using causal language modeling, extract the behavioral embeddings, and feed those embeddings into an XGBoost model to classify fraud.
+* **What it shows**: This repo provides a complete, step-by-step Jupyter Notebook workflow for building a transaction foundation model. It covers:
+    * How to convert raw tabular transaction records into domain-specific token sequences
+    * Pretrain a decoder-only foundation model using causal language modeling
+    * Extract the behavioral embeddings
+    * Feed those embeddings into an XGBoost model to classify fraud
 * **Public Data**: The blueprint natively uses the TabFormer dataset (originally created by IBM), which is a massive, publicly available synthetic dataset containing 24 million credit card transactions.
 
 ## Transformers4Rec For Recommendations
