@@ -12,7 +12,7 @@ In recommendation, input data is typically a sequence of interactions such as it
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/Sequential-Data/RecSys/images/sequential_rec.png" width="800">
 
 
-Traditional recommendation algorithms usually ignore the temporal dynamics and the sequence of interactions when trying to model user behavior. Generally, the next user interaction is related to the sequence of the user's previous choices. In some cases, it might be a repeated purchase or song play. User interests can also suffer from interest drift because preferences can change over time. Those challenges are addressed by the **sequential recommendation** task.
+Traditional recommendation algorithms, however, usually ignore the **temporal dynamics** and the **sequence of interactions** when trying to model user behavior. Generally, the next user interaction is related to the sequence of the user's previous choices. In some cases, it might be a repeated purchase or song play. User interests can also suffer from interest drift because preferences can change over time. Those challenges are addressed by the **sequential recommendation** task.
 
 
 ## Session-based recommendation with Transformers4Rec
