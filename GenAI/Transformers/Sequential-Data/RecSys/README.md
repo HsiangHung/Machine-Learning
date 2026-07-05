@@ -8,7 +8,7 @@ It is a flexible and efficient library for sequential and **session-based recomm
 Input data is typically a sequence of interactions such as items that are browsed in a web session or items put in a cart. The library helps you process and model the interactions so that you can output better recommendations for the next item.
 
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/Sequential-Data/RecSys/images/sequential_rec.png" width="900">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/Sequential-Data/RecSys/images/sequential_rec.png" width="800">
 
 ## Sequential and Session-based recommendation with Transformers4Rec
 
@@ -20,5 +20,5 @@ To deal with sequential and session-based recommendation, many sequence learning
 
 ## Pipeline
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/Sequential-Data/RecSys/images/pipeline.png" width="700">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/Sequential-Data/RecSys/images/pipeline.png" width="800">
 
