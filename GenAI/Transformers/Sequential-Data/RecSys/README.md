@@ -1,7 +1,7 @@
 
 # Transformers For Recommendation Sys
 
-Transformers4Rec is an open source repo from Nvidia **NVIDIA-Merlin/Transformers4Rec**. 
+Transformers4Rec is an open source repo from Nvidia [**NVIDIA-Merlin/Transformers4Rec**](https://github.com/NVIDIA-Merlin/Transformers4Rec). 
 
 It is a flexible and efficient library for sequential and **session-based recommendation** and can work with PyTorch.
 
