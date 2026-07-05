@@ -24,7 +24,7 @@ Transformers4Rec has a first-class integration with Hugging Face (HF) Transforme
 
 
 
-### Integration with Hugging Face Transformers
+### Integration with Hugging Face Transformers
 
 Transformers4Rec integrates with Hugging Face Transformers, allowing RecSys researchers and practitioners to easily experiment with the latest state-of-the-art NLP Transformer architectures for sequential and session-based recommendation tasks and deploy those models into production.
 
