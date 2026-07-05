@@ -68,3 +68,4 @@ These notebooks are all run using Google Colab. For third notebook to run NeMo, 
 | 2 | **n2_sequential_preprocessing_tokenization.ipynb** | Build a custom GPU-accelerated tokenizer pipeline that converts transaction records into domain-specific token sequences. | 
 | 3 | **n3_foundation_model_training.ipynb** | Pretrain a decoder-only foundation model (~29M parameters) on tokenized transaction sequences using NeMo AutoModel with causal language modeling. |
 | 4 | **n4_inference_embedding_extraction.ipynb** | Load the pretrained model, run GPU inference, extract 512-dimensional embeddings via last-token pooling, and visualize with UMAP. |
+| 5 | **n5_XGBoost_transaction_embeddings.ipynb** | Compare XGBoost fraud detection using raw features, foundation model embeddings, and combined features. |
