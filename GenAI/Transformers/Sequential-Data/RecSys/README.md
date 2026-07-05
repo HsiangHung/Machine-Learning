@@ -22,7 +22,7 @@ To deal with sequential and session-based recommendation, many sequence learning
 
 Transformers4Rec has a first-class integration with Hugging Face (HF) Transformers, NVTabular, and Triton Inference Server, making it easy to build end-to-end GPU accelerated pipelines for sequential and session-based recommendation.
 
-
+Refer the info page: [End-to-End Pipeline with Hugging Face Transformers and NVIDIA Merlin](https://nvidia-merlin.github.io/Transformers4Rec/stable/pipeline.html).
 
 ### Integration with Hugging Face Transformers
 
