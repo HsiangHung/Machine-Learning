@@ -18,7 +18,21 @@ A special use case of **sequential-recommendation** is the session-based recomme
 
 To deal with sequential and session-based recommendation, many sequence learning algorithms previously applied in machine learning and NLP research have been explored for RecSys based on k-Nearest Neighbors, Frequent Pattern Mining, Hidden Markov Models, Recurrent Neural Networks, and more recently neural architectures using the Self-Attention Mechanism and transformer architectures. Unlike Transformers4Rec, these frameworks only accept sequences of item IDs as input and do not provide a modularized, scalable implementation for production usage.
 
-## Pipeline
+## Technology
+
+Transformers4Rec has a first-class integration with Hugging Face (HF) Transformers, NVTabular, and Triton Inference Server, making it easy to build end-to-end GPU accelerated pipelines for sequential and session-based recommendation.
+
+
+
+### Integration with Hugging Face Transformers
+
+Transformers4Rec integrates with Hugging Face Transformers, allowing RecSys researchers and practitioners to easily experiment with the latest state-of-the-art NLP Transformer architectures for sequential and session-based recommendation tasks and deploy those models into production.
+
+Models are composed of three building blocks:
+* Tokenizer that converts raw text to sparse index encodings
+* Transformer architecture
+* Head for NLP tasks such as text classification, generation, sentiment analysis, translation, and summarization
+
+### Pipeline
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/Sequential-Data/RecSys/images/pipeline.png" width="800">
-
