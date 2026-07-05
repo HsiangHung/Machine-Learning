@@ -17,3 +17,8 @@ Traditional recommendation algorithms usually ignore the temporal dynamics and t
 A special use case of **sequential-recommendation** is the session-based recommendation task where you only have access to the short sequence of interactions within the current session. This is very common in online services like e-commerce, news, and media portals where the user might choose to browse anonymously due to GDPR compliance that restricts collecting cookies or because the user is new to the site. This task is also relevant for scenarios where the users' interests change a lot over time depending on the user context or intent. In this case, leveraging the interactions for the current session is more promising than old interactions to provide relevant recommendations.
 
 To deal with sequential and session-based recommendation, many sequence learning algorithms previously applied in machine learning and NLP research have been explored for RecSys based on k-Nearest Neighbors, Frequent Pattern Mining, Hidden Markov Models, Recurrent Neural Networks, and more recently neural architectures using the Self-Attention Mechanism and transformer architectures. Unlike Transformers4Rec, these frameworks only accept sequences of item IDs as input and do not provide a modularized, scalable implementation for production usage.
+
+## Pipeline
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/Sequential-Data/RecSys/images/pipeline.png" width="700">
+
