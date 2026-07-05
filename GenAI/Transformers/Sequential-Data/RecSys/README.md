@@ -1,7 +1,7 @@
 
 # Transformers For Recommendation Sys
 
-Transformers4Rec is a flexible and efficient library for sequential and **session-based recommendation** and can work with PyTorch.
+Transformers4Rec is an open source repo from Nvidia **NVIDIA-Merlin/Transformers4Rec**. It is a flexible and efficient library for sequential and **session-based recommendation** and can work with PyTorch.
 
 Input data is typically a sequence of interactions such as items that are browsed in a web session or items put in a cart. The library helps you process and model the interactions so that you can output better recommendations for the next item.
 
