@@ -7,7 +7,7 @@ It is a flexible and efficient library for sequential and **session-based recomm
 
 ## Sequential recommendation
 
-In recommendation, input data is typically a sequence of interactions such as items that are browsed in a web session or items put in a cart. The library helps you process and model the interactions so that you can output better recommendations for the next item.
+In recommendation, input data is typically a sequence of interactions such as items that are browsed in a web session or items put in a cart. A recommendation system helps you process and model the interactions so that you can output better recommendations for the next item.
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/Sequential-Data/RecSys/images/sequential_rec.png" width="800">
 
