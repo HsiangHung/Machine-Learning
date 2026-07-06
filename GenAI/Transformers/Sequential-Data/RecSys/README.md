@@ -39,3 +39,5 @@ Models are composed of three building blocks:
 ### Pipeline
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/Sequential-Data/RecSys/images/pipeline.png" width="800">
+
+GPU-accelerated pipeline for Sequential and Session-based recommendation using NVIDIA Merlin components.
