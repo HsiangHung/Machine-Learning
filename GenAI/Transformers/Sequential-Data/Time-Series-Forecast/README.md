@@ -12,7 +12,9 @@ By [Transformers for Time Series Forecasting](https://medium.com/@serana.ai/tran
 
 ## Informer
 
+
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/Sequential-Data/Time-Series-Forecast/images/informer.png" width="700">
+
 (The image is from the paper Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting (2021) by Zhou et al.)
 
 One of Informer’s key features is the **ProbSparse attention** mechanism, which speeds up the model by reducing the computation needed. Instead of comparing every part of the input to every other part (which takes time that grows quadratically as the input gets longer), it focuses only on the most important parts.
