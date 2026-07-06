@@ -35,11 +35,11 @@ Transformers can be also used for time-series forecasting problem. By [GeeksforG
 * Advantages:
     * **Models long range dependencies**: Transformers use self attention mechanism to directly connect any two points in the input sequence no matter how far apart they are as they capture trends and seasonal patterns over **long horizons**.
     * **Scalability**: With innovations like Informer, Performer, or Reformer transformers can scale to very long sequences at manageable computational cost.
-    * **Unified architecture**: Transformers provide a unified framework that can incorporate different modalities like **categorical features**, **input embeddings** and tasks like forecasting, in real world problems.
-    * **Handles missing or irregular data**: Different variants of Transformer models can handle irregular time intervals and missing data in a better way than standard RNNs as they are trained to capture patterns of long time series data .
+    * **Unified architecture**: Transformers can incorporate different modalities like **categorical features**, **input embeddings** and tasks like forecasting, in real world problems.
+    * **Handles missing or irregular data**
 * Disadvantages
-    * **Quadratic complexity $O(n^2)$**: The way transformers calculate multi-head self-attention is problematic for time series because data points in a series must be multiplied by **every other data point** in the series as each data point we add to input increases the time it takes to calculate attention. This is called quadratic complexity.
-    * **High Costs**: Transformers require quadratic time and memory complexity with respect to the sequence length due to full self-attention. For a long time series data this can be computationally expensive and memory-intensive.
+    * **Quadratic complexity $O(n^2)$**: Data points in a series must be multiplied by **every other data point** in the series as each data point we add to input increases the time it takes to calculate attention. It is quadratic complexity.
+    * **High Costs**: Due to quadratic time and memory complexity with respect to the sequence length due to full self-attention. For a long time series data this can be computationally expensive and memory-intensive.
     * **Need large data**: Transformers need large amounts of training data to capture the patterns and make predictions. Small or noisy time series datasets can cause overfitting or poor model performance.
     * **Complex model design**: The architecture of time series transformers can be complex as it involves multiple components like input embeddings, positional encodings, and sometimes hybrid layers. This complexity leads to longer experimentation cycles and harder hyperparameter tuning.
 
