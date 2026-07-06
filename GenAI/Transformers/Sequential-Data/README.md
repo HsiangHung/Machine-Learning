@@ -10,6 +10,8 @@ Below we list relevant open-source repositories and public datasets tailored spe
 
 ## Transaction Foundation Model For Fraud Detection
 
+[Transaction-Foundation-Model](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/Transformers/Sequential-Data/Transaction-Foundation-Model)
+
 If you want to build something analogous to Stripe’s Payments Foundation Model, this is the exact blueprint you need.
 
 * **Repository**: NVIDIA-AI-Blueprints/transaction-foundation-model
@@ -22,6 +24,9 @@ If you want to build something analogous to Stripe’s Payments Foundation Model
 
 ## Transformers4Rec For Recommendations
 
+[Transformers4Rec](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/Transformers/Sequential-Data/RecSys)
+
+
 If you want to encode behavioral sequences to predict a user's next action (e.g., product recommendations), you should look into the Merlin ecosystem.
 
 * **Repository**: NVIDIA-Merlin/Transformers4Rec
@@ -29,6 +34,8 @@ If you want to encode behavioral sequences to predict a user's next action (e.g.
 * **Public Data**: Their examples folder provides end-to-end tutorials using public e-commerce datasets like Yoochoose and REES46.
 
 ## Time-Series Transformer
+
+[Time-Series-Forecast](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/Transformers/Sequential-Data/Time-Series-Forecast)
 
 Transformers can be also used for time-series forecasting problem. By [GeeksforGeeks: Transformer for time series forecasting](https://www.geeksforgeeks.org/deep-learning/transformer-for-time-series-forecasting/), there are some Pros and Cons:
 
@@ -43,7 +50,4 @@ Transformers can be also used for time-series forecasting problem. By [GeeksforG
     * **Need large data**: Transformers need large amounts of training data to capture the patterns and make predictions. Small or noisy time series datasets can cause overfitting or poor model performance.
     * **Complex model design**: The architecture of time series transformers can be complex as it involves multiple components like input embeddings, positional encodings, and sometimes hybrid layers. This complexity leads to longer experimentation cycles and harder hyperparameter tuning.
 
-
-
-* [GeeksforGeeks: Transformer for time series forecasting](https://www.geeksforgeeks.org/deep-learning/transformer-for-time-series-forecasting/)
 
