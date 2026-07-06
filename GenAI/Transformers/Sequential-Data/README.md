@@ -28,10 +28,22 @@ If you want to encode behavioral sequences to predict a user's next action (e.g.
 * **What it shows**: This is a flexible library built on PyTorch and Hugging Face Transformers specifically designed for sequential and session-based recommendations. It automatically handles the heavy lifting of merging context features with sequential features, allowing you to use over 64 different Transformer architectures (like BERT, GPT-2, or XLNet) to predict a user's next interaction based on their historical timeline.
 * **Public Data**: Their examples folder provides end-to-end tutorials using public e-commerce datasets like Yoochoose and REES46.
 
-## Curated Research For Custom Time-Aware Architecture
+## Time Series Transformer
 
-If you want to build a Time-Aware Transformer from scratch—specifically focusing on how to encode irregular time gaps between user actions (since users don't make purchases at perfectly even intervals)—you will need to look at specific time-series adaptations.
+Transformers can be also used for time-series forecasting problem. By GeeksforGeeks [Transformer for time series forecasting](https://www.geeksforgeeks.org/deep-learning/transformer-for-time-series-forecasting/), there are some Pros and Cons:
 
-* **Repositories**: Search GitHub for curated lists like TongjiFinLab/awesome-time-series-forecasting or qingsongedu/time-series-transformers-review.
-* **What they show**: These repos aggregate open-source code for cutting-edge papers. You can find PyTorch implementations of how to replace standard positional encoding with Time2Vec (which learns representations of continuous time) or how to use patch-level tokenization for long sequences.
+* Advantages:
+    * **Models long range dependencies**: Transformers use self attention mechanism to directly connect any two points in the input sequence no matter how far apart they are as they capture trends and seasonal patterns over **long horizons**.
+    * **Scalability**: With innovations like Informer, Performer, or Reformer transformers can scale to very long sequences at manageable computational cost.
+    * **Unified architecture**: Transformers provide a unified framework that can incorporate different modalities like **categorical features**, **input embeddings** and tasks like forecasting, in real world problems.
+    * **Handles missing or irregular data**: Different variants of Transformer models can handle irregular time intervals and missing data in a better way than standard RNNs as they are trained to capture patterns of long time series data .
+* Disadvantages
+    * **Quadratic complexity O(n^2)**: The way transformers calculate multi-head self-attention is problematic for time series because data points in a series must be multiplied by **every other data point** in the series as each data point we add to input increases the time it takes to calculate attention. This is called quadratic complexity.
+    * **High Costs**: Transformers require quadratic time and memory complexity with respect to the sequence length due to full self-attention. For a long time series data this can be computationally expensive and memory-intensive.
+    * **Need large data**: Transformers need large amounts of training data to capture the patterns and make predictions. Small or noisy time series datasets can cause overfitting or poor model performance.
+    * **Complex model design**: The architecture of time series transformers can be complex as it involves multiple components like input embeddings, positional encodings, and sometimes hybrid layers. This complexity leads to longer experimentation cycles and harder hyperparameter tuning.
+
+
+
+* [Transformer for time series forecasting](https://www.geeksforgeeks.org/deep-learning/transformer-for-time-series-forecasting/)
 
