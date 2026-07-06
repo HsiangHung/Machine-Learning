@@ -11,6 +11,7 @@ Six key architectures that represent distinct directions in the field:
 
 ## Autoformer
 
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/Sequential-Data/Time-Series/images/autoformer.png" width="900">
 
 Unlike models that decompose data as a pre-processing step, Autoformers perform decomposition inside the model **during** both training and inference. This allows it to **adaptively learn** patterns as part of the forecasting task.
 
