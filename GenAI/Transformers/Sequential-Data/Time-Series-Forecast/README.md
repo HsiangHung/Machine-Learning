@@ -13,7 +13,7 @@ By [Transformers for Time Series Forecasting](https://medium.com/@serana.ai/tran
 ## Informer
 
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/Sequential-Data/Time-Series-Forecast/images/informer.png" width="700">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/Sequential-Data/Time-Series-Forecast/images/informer.png" width="600">
 
 (The image is from the paper Informer: Beyond Efficient Transformer for Long Sequence Time-Series Forecasting (2021) by Zhou et al.)
 
@@ -30,6 +30,7 @@ Reference:
 ## Autoformer
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/Sequential-Data/Time-Series-Forecast/images/autoformer.png" width="700">
+
 (The image is from the paper DMEformer: A newly designed dynamic model ensemble transformer for crude oil futures prediction, (2023) by Liu et al.)
 
 Unlike models that decompose data as a pre-processing step, Autoformers perform decomposition inside the model **during** both training and inference. This allows it to **adaptively learn** patterns as part of the forecasting task.
