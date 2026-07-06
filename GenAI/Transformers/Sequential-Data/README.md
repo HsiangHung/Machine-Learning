@@ -28,7 +28,7 @@ If you want to encode behavioral sequences to predict a user's next action (e.g.
 * **What it shows**: This is a flexible library built on PyTorch and Hugging Face Transformers specifically designed for sequential and session-based recommendations. It automatically handles the heavy lifting of merging context features with sequential features, allowing you to use over 64 different Transformer architectures (like BERT, GPT-2, or XLNet) to predict a user's next interaction based on their historical timeline.
 * **Public Data**: Their examples folder provides end-to-end tutorials using public e-commerce datasets like Yoochoose and REES46.
 
-## Time Series Transformer
+## Time-Series Transformer
 
 Transformers can be also used for time-series forecasting problem. By GeeksforGeeks [Transformer for time series forecasting](https://www.geeksforgeeks.org/deep-learning/transformer-for-time-series-forecasting/), there are some Pros and Cons:
 
