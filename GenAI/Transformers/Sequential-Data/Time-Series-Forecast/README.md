@@ -1,6 +1,10 @@
-# Transformers for Time Series Forecasting
+# Transformers for Time-Series Forecasting
 
-By [Transformers for Time Series Forecasting](https://medium.com/@serana.ai/transformers-for-time-series-forecasting-e5e0327e78be), six key architectures that represent distinct directions in the field: 
+Time-series has sequential data, and can be obviously implemented with transformers.
+
+Followed the github repo [Time-Series-Forecasting](https://github.com/rezaAdinepour/Time-Series-Forecasting), we build a transformer time-series forecasting model. Even just one layer, the results look to have very good performance. Refer the notebook [here](https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/Sequential-Data/Time-Series-Forecast/simple_ts_transformer/train_ts_forecasting.ipynb).
+
+By the medium article: [Transformers for Time Series Forecasting](https://medium.com/@serana.ai/transformers-for-time-series-forecasting-e5e0327e78be), there are more complicated transformer architectures for the time-series forecasting directions: 
 * Informer
 * Autoformer
 * Temporal Fusion Transformer
@@ -44,4 +48,9 @@ Autoformer is a deterministic model, meaning it outputs a single forecast rather
 Reference:
 * Liu et al. DMEformer: A newly designed dynamic model ensemble transformer for crude oil futures prediction, (2023)
 
-## Temporal Fusion Transformer
+
+## Temporal Fusion Transformer (TFT)
+
+TFT is a transformer-based model designed for multi-horizon time-series forecasting, with a focus on interpretability and handling complex, real-world data. 
+
+Traditional models often fall short when dealing with mixed inputs like static features, known future events, and dynamic variables. TFT addresses these challenges using a combination of gating mechanisms, attention layers, and variable selection networks to model both short and long-term dependencies.
