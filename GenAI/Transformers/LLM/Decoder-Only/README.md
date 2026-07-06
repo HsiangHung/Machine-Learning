@@ -44,11 +44,11 @@ w["StatQuest"] = \begin{bmatrix}
 $$
 
 In a decoder-only transformer, we need to process the following components:
-1. Word Embedding
-2. Positional Encoding
-3. Masked Self-Attention
-4. Residual Connection
-5. Fully Connect Layer + SoftMax
+1. [Word Embedding](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/Transformers/LLM/Decoder-Only#1-word-embedding)
+2. [Positional Encoding](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/Transformers/LLM/Decoder-Only#2-positional-encoding)
+3. [Masked Self-Attention](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/Transformers/LLM/Decoder-Only#3-masked-self-attention)
+4. [Residual Connection](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/Transformers/LLM/Decoder-Only#4-residual-connection)
+5. [Fully Connect Layer + SoftMax](https://github.com/HsiangHung/Machine-Learning/tree/master/GenAI/Transformers/LLM/Decoder-Only#5-fully-connect-layer--softmax)
 
 ## 1. Word Embedding
 
@@ -184,7 +184,7 @@ In general terms, **self-attention** works by seeing how similar each word is to
 
 Self-attention for word $w_1$ is defined as
 
-$$ \textrm{SoftMax} \Big( \frac{Q[w_1] K[w_2]^T}{\sqrt{d}} \Big) V[w_2] = \sum_{w_2} Pr(w_1, w_2) V[w_2], $$
+$$ \textrm{SoftMax} \Big( \frac{Q[w_1] K^T}{\sqrt{d}} \Big) V = \sum_{w_2} Pr(w_1, w_2) V[w_2], $$
 
 where $w_1$ and $w_2$ are in the same sentence; $\sqrt{d}$ is the normalization relevant to embedding dimensions. Here $\sqrt{d}=\sqrt{2}$. However, in the following, for simplicity, I just ignore it as $\sqrt{d}=1$. (This doesn't impact results of attentions.)
 
