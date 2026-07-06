@@ -2,7 +2,7 @@
 
 ## Under This Directory
 
-We build a domain-specific foundation model that learns **sequential transaction patterns** via **self-supervised pre-training**, and show that combining its learned embeddings with raw features significantly improves fraud detection precision.
+We build a domain-specific foundation model, **Transaction Foundation Model**, that learns **sequential transaction patterns** via **self-supervised pre-training**, and show that combining its learned embeddings with raw features significantly improves fraud detection precision.
 
 By pretraining on large volumes of unlabeled transaction sequences, we can learn general-purpose representations of financial behavior that transfer to a wide range of downstream tasks:
 * Fraud detection
@@ -15,6 +15,8 @@ and so on.
 ## Finanical Tokenization
 
 While traditional machine learning models evaluate a single transaction row in isolation, a Transaction Foundation Model strings hundreds of transactions together in chronological order to form a longitudinal timeline of a user's life.
+
+The hardest part for the transaction foundation model is the Tokenization. Each feature in sequential tranactions will be a token.
 
 Here is how the tokenization breaks down into two distinct levels to capture that timeline.
 
