@@ -30,10 +30,17 @@ An ensemble is just a **collection of predictors** which come together (e.g. mea
 
 #### Strength and Weakness
 
-RF can handle large amount of training data efficiently and are inherently suited for multi-class problems [[5]][An Introduction to Random Forests for Multi-class Object Detection]. RF are much easier to tune than GBM. There are typically two parameters in RF: number of trees and number of features to be selected at each node. RF are harder to overfit than GBM [[4]][Gradient Boosting vs Random Forest].
+   **Strenth**:
+   1. RF can handle large amount of training data efficiently and are inherently suited for multi-class problems [[5]][An Introduction to Random Forests for Multi-class Object Detection]. 
+   2. RF are much easier to tune than GBM. 
+   3. There are typically two parameters in RF: number of trees and number of features to be selected at each node. 
+   4. RF are harder to overfit than GBM [[4]][Gradient Boosting vs Random Forest].
 
 
-Weakness: (1) A large number of trees may make the algorithm slow for real-time prediction. (2) Unlike decision trees, the classifications made by RF are **difficult for humans to interpret**. (3) For data including categorical variables with different number of levels, RF are biased in favor of those attributes with more levels. Therefore, the variable importance scores from RF are not reliable for this type of data. Methods such as partial permutations were used to solve the problem [[6]][Random Forest - Disadvantages].
+   **Weakness**:
+   1. A large number of trees may make the algorithm slow for real-time prediction. 
+   2. Unlike decision trees, the classifications made by RF are **difficult for humans to interpret**. 
+   3. For data including categorical variables with different number of levels, RF are biased in favor of those attributes with more levels. Therefore, the variable importance scores from RF are not reliable for this type of data. Methods such as partial permutations were used to solve the problem [[6]][Random Forest - Disadvantages].
 
 
 ### 2. Gradient boosting
@@ -44,9 +51,13 @@ Weakness: (1) A large number of trees may make the algorithm slow for real-time 
 
 #### Strength and Weakness
 
-Since boosted trees are derived by optimizing an objective function, basically GBM can be used to solve almost all objective function that we can write gradient out. This includes things like **ranking** [[7]][Efficient top rank optimization with gradient boosting for supervised anomaly detection] and **poission regression**, which RF is harder to achieve [[4]][Gradient Boosting vs Random Forest].
+   **Strenth**:
+   Since boosted trees are derived by optimizing an objective function, basically GBM can be used to solve almost all objective function that we can write gradient out. This includes things like **ranking** [[7]][Efficient top rank optimization with gradient boosting for supervised anomaly detection] and **poission regression**, which RF is harder to achieve [[4]][Gradient Boosting vs Random Forest].
 
-Weakness: (1) Sensitive to overfitting **if the data is noisy**. (2) Training generally takes **longer** because of the fact that trees are built sequentially. (3) **Harder to tune than RF** [[8]][What is better: gradient-boosted trees, or a random forest?]. There are typically three parameters: number of trees, depth of trees and learning rate, and the each tree built is generally shallow.
+   **Weakness**:
+   1. Sensitive to overfitting **if the data is noisy**. 
+   2. Training generally takes **longer** because of the fact that trees are built sequentially. 
+   3. **Harder to tune than RF** [[8]][What is better: gradient-boosted trees, or a random forest?]. There are typically three parameters: number of trees, depth of trees and learning rate, and the each tree built is generally shallow.
 
 
 A classification model comparison can be found here [[9]][An Empirical Comparison of Supervised Learning Algorithms Using Different Performance Metrics (2005)].
