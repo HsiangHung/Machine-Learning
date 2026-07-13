@@ -1,5 +1,31 @@
 
-# Embedding 
+# Active Learning
+
+
+Active Learning is a special case of Supervised Machine Learning, which allows a learning algorithm to interactively query a user to label data with the desired outputs. The algorithm actively chooses from the pool of unlabeled data the subset of examples to be labelled next in active learning. 
+
+The basic idea is to deliberately select the situations where the model is unsure of itself or where it could most benefit from more information.
+
+
+## Process
+
+Here's a detailed explanation of how active learning usually works:
+
+1. Initialization: To train an initial machine learning model, start with a small labelled dataset.
+2. Model Training: Using the available labelled data, train the first model.
+3. Uncertainty Estimation: 
+    * To predict the unlabeled data, apply the trained model.
+    * Calculate the model's prediction confidence or uncertainty. Margin, variance, and entropy are examples of common metrics.
+4. Query Technique:
+    * Choose the cases from the unlabeled pool where the model is unsure or has low confidence.
+    * Depending on the particular active learning algorithm, the query strategy selected may include picking the cases with the highest level of uncertainty, cases close to the decision boundary, or cases where models in an ensemble disagree.
+5. Labelling: Ask an oracle-a human annotator or another source of ground truth labels—for labels for the chosen instances.
+6. Model Update:
+    * Add the recently annotated data to the training set.
+    * Using the revised labeled dataset, retrain the model.
+7. Repeat: Repeat steps 2 through 6 iteratively until a budget is depleted or a performance threshold is reached.
+
+
 
 One notably successful use of deep learning is embedding, a method used to represent categorical variables as continuous vectors, rather than using one-hot encoding and label encoding [[Will Koehrsen]][Neural Network Embeddings Explained], [[Matias Aravena Gamboa]][Learning embeddings for your machine learning model]. 
 
