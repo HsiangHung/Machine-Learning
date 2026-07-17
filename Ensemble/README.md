@@ -28,12 +28,11 @@ An ensemble is just a **collection of predictors** which come together (e.g. mea
 
    The most prominent application of RF is multi-class object detection in large-scale real-world computer vision problems [[4]][Gradient Boosting vs Random Forest].
 
-#### Strength and Weakness
 
    **Strenth**:
    1. RF can handle large amount of training data efficiently and are inherently suited for multi-class problems [[5]][An Introduction to Random Forests for Multi-class Object Detection]. 
-   2. RF are much easier to tune than GBM. There are typically two parameters in RF: number of trees and number of features to be selected at each node. 
-   3. RF are harder to overfit than GBM [[4]][Gradient Boosting vs Random Forest].
+   2. RF are much **easier to tune** than GBM. There are typically two parameters in RF: number of trees and number of features to be selected at each node. 
+   3. RF are **harder to overfit** than GBM [[4]][Gradient Boosting vs Random Forest].
    4. It is highly parallelizable. Because each tree is built independently, training can be distributed across multiple cores or nodes (e.g., using PySpark), making it highly scalable for massive datasets.
    5. It is robust to raw Data. It does **not** require f**eature scaling (standardization/normalization)**. It naturally handles non-linear relationships, missing values, and categorical variables, and is highly resistant to outliers.
 
@@ -46,11 +45,10 @@ An ensemble is just a **collection of predictors** which come together (e.g. mea
 
 ### 2. Gradient boosting (Sequential Trees to Reduce Bias)
 
-   On the other hand, a GBM will start with a not very deep tree (sometimes a decision stump - a decision tree with only one split) and will model the original target. Then it takes the errors from the first round of predictions, and passes the errors as a new target to a second tree. The second tree will model the error from the first tree, record the new errors and pass that as a target to the third tree. And so forth. Essentially it focuses on modelling errors from previous trees. A shallow tree is a high bias-low variance model, but boosting aims to decrease bias. An excellent notebook demonstrate how a GBM minimizes bias during training [[3]][Gradient boosting simplified].
+   On the other hand, a GBM will start with a **not** very deep tree (sometimes a decision stump - a decision tree with only one split) and will model the original target. Then it takes the errors from the first round of predictions, and passes the errors as a new target to a second tree. The second tree will model the error from the first tree, record the new errors and pass that as a target to the third tree. And so forth. Essentially it focuses on modelling errors from previous trees. A shallow tree is a high bias-low variance model, but boosting aims to decrease bias. An excellent notebook demonstrate how a GBM minimizes bias during training [[3]][Gradient boosting simplified].
 
    A great application of GBM is anomaly detection in supervised learning settings where data is often highly imbalanced such as DNA sequences, credit card transactions or cyber security [[4]][Gradient Boosting vs Random Forest].
 
-#### Strength and Weakness
 
    **Strenth**:
 
@@ -58,7 +56,7 @@ An ensemble is just a **collection of predictors** which come together (e.g. mea
 
    **Weakness**:
    1. Sensitive to overfitting **if the data is noisy**. 
-   2. Training generally takes **longer** because of the fact that trees are built sequentially. 
+   2. Training generally takes **longer** because of the fact that trees are built **sequentially**. 
    3. **Harder to tune than RF** [[8]][What is better: gradient-boosted trees, or a random forest?]. There are typically three parameters: number of trees, depth of trees and learning rate, and the each tree built is generally shallow.
 
 
