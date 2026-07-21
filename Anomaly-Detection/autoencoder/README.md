@@ -1,9 +1,11 @@
 
 # Anomaly Detection Using AutoEncoder
 
-We can train an autoencoder model only on normal dataset, and define the reconstruct errors as anomaly scores.
+## Motivation
 
-The idea is that, we build the normal score distribution, and the hypothesis is that fraud may have different score distribution.
+We can train an autoencoder model only on normal dataset, and define the reconstruct errors as anomaly scores. Then build the normal score distribution.
+
+The hypothesis is that fraud may have different score distribution behavior.
 
 The study here follows the medium post [Autoencoders and Testing their Potential in Anomaly Detection](https://medium.com/@amnahhmohammed/autoencoders-and-testing-their-potential-in-anomaly-detection-09135140fd56).
 
