@@ -9,9 +9,16 @@ The hypothesis is that fraud may have different score distribution behavior.
 
 The study here follows the medium post [Autoencoders and Testing their Potential in Anomaly Detection](https://medium.com/@amnahhmohammed/autoencoders-and-testing-their-potential-in-anomaly-detection-09135140fd56).
 
-As we can see below, the normal datasets show very different distribution behavior as normal ones.
+
+### Reference
+
+* [Autoencoders and Testing their Potential in Anomaly Detection](https://medium.com/@amnahhmohammed/autoencoders-and-testing-their-potential-in-anomaly-detection-09135140fd56)
+* [Demystifying Neural Networks: Anomaly Detection with AutoEncoder](https://medium.com/@weidagang/demystifying-anomaly-detection-with-autoencoder-neural-networks-1e235840d879)
+
 
 ## Normal 
+
+As we can see below, the normal datasets show very different distribution behavior as normal ones.
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/Anomaly-Detection/autoencoder/images/normal_anomaly_score.png" width="700">
 
