@@ -3,9 +3,9 @@
 
 ## Motivation
 
-We can train an autoencoder model only on normal dataset, and define the reconstruct errors as anomaly scores. Then build the normal score distribution.
+We train an autoencoder model only on **normal** dataset, and define the **reconstruction errors** as anomaly scores. Then build the normal score distribution and the 99 percentile as the score threshold.
 
-The hypothesis is that fraud may have different score distribution behavior.
+The hypothesis is that fraud may have different score distribution behavior. 
 
 The study here follows the medium post [Autoencoders and Testing their Potential in Anomaly Detection](https://medium.com/@amnahhmohammed/autoencoders-and-testing-their-potential-in-anomaly-detection-09135140fd56).
 
