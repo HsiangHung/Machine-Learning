@@ -120,7 +120,7 @@ Note KL divergence have few properties:
 * **Asymmetric**: $D_{KL}(p \parallel q) \ne D_{KL}(q \parallel p)$.
 * **Expectation Form**: 
 
-$$D_{KL}(p \parallel q)  = \mathbf{E}_{x \sim P} \big[ \log \Big( \frac{P(x)}{Q(x)}\Big) \big].$$
+$$D_{KL}(p \parallel q)  = \mathbf{E}_{x \sim P} \big[ \log \frac{P(x)}{Q(x)} \big].$$
 
 
 The [blog: Kullback-Leibler Divergence Explained](https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained) shows using KL divergence to minimize how much information loss we have when approximating a distribution. We can combine KL divergence with neural networks allows us to learn very complex approximating distribution for our data. A common approach to this is called a "Variational Autoencoder" which learns the best way to approximate the information in a data set.
