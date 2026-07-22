@@ -106,15 +106,13 @@ Kullback-Leibler Divergence measures information lost.
 Cross_entropy = Entropy + KL-divergence
 ```
 
-In layman’s terms, the K-L divergence is a measure of how different a specific probability distribution is from a reference distribution [[Christiaan Defaux]][Kullback-Leibler Divergence for Machine Learning]. In the following, $D(K-L)$ is the divergence of $q$ from $p$:
-
-<!-- $$D_{KL}(p||q) = \big(-\sum_i p_i \log q_i \big) - \big( -\sum_i p_i \log p_i \big) = \sum_i p_i \log \Big( \frac{p_i}{q_i}\Big)$$ -->
+In layman’s terms, the K-L divergence is a measure of how different a specific probability distribution $Q$ is from a reference distribution $P$ [[Christiaan Defaux]][Kullback-Leibler Divergence for Machine Learning]. In the following, $D(K-L)$ is the divergence of $q$ from $p$:
 
 
 $$D_{KL}(p \parallel q)  = \big(-\sum_i p_i \log q_i \big) - \big( -\sum_i p_i \log p_i \big) = \sum_i p_i \log \Big( \frac{p_i}{q_i}\Big)$$
 
 
-NOTE KL divergence is asymmetric, i.e.
+Note that, KL divergence is asymmetric, i.e.
 
 $$D_{KL}(p \parallel q) \ne D_{KL}(q \parallel p)$$
 
