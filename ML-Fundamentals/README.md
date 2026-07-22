@@ -111,7 +111,7 @@ In layman’s terms, the K-L divergence is a measure of how different a specific
 <!-- $$D_{KL}(p||q) = \big(-\sum_i p_i \log q_i \big) - \big( -\sum_i p_i \log p_i \big) = \sum_i p_i \log \Big( \frac{p_i}{q_i}\Big)$$ -->
 
 
-<!-- $$D_{KL}\infdiv{p}{q}  = \big(-\sum_i p_i \log q_i \big) - \big( -\sum_i p_i \log p_i \big) = \sum_i p_i \log \Big( \frac{p_i}{q_i}\Big)$$ -->
+$$D_{KL}\infdiv{p}{q}  = \big(-\sum_i p_i \log q_i \big) - \big( -\sum_i p_i \log p_i \big) = \sum_i p_i \log \Big( \frac{p_i}{q_i}\Big)$$
 
 
 
