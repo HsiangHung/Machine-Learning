@@ -116,7 +116,7 @@ $$D_{KL}(p \parallel q)  = \big(-\sum_i p_i \log q_i \big) - \big( -\sum_i p_i \
 
 NOTE KL divergence is asymmetric, i.e.
 
-$$D_{KL}(p \parallel q) != D_{KL}(q \parallel p)$$
+$$D_{KL}(p \parallel q) \ne D_{KL}(q \parallel p)$$
 
 
 The [blog: Kullback-Leibler Divergence Explained](https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained) shows using KL divergence to minimize how much information loss we have when approximating a distribution. We can combine KL divergence with neural networks allows us to learn very complex approximating distribution for our data. A common approach to this is called a "Variational Autoencoder" which learns the best way to approximate the information in a data set.
