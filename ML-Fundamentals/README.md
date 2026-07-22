@@ -98,7 +98,7 @@ If our predictions are perfect, that is the predicted distribution is equal to t
 
 
 
-### 4.3 KL-Divergence
+### 4.3 KL-Divergence (Relative Entropy)
 
 Kullback-Leibler Divergence measures information lost. 
 
@@ -106,7 +106,7 @@ Kullback-Leibler Divergence measures information lost.
 Cross_entropy = Entropy + KL-divergence
 ```
 
-In layman’s terms, the K-L divergence is a measure of how different a specific probability distribution $Q$ is from a reference distribution $P$ [[Christiaan Defaux]][Kullback-Leibler Divergence for Machine Learning]. In the following, $D(K-L)$ is the divergence of $q$ from $p$:
+In layman’s terms, the K-L divergence is a measure of how different a specific probability distribution $Q = \lbrace q_1, q_2, \cdots \rbrace$ is from a reference distribution $P = \lbrace p_1, p_2, \cdots \rbrace$ [[Christiaan Defaux]][Kullback-Leibler Divergence for Machine Learning]. In the following, $D(K-L)$ is the divergence of $q$ from $p$:
 
 
 $$D_{KL}(p \parallel q)  = \big(-\sum_i p_i \log q_i \big) - \big( -\sum_i p_i \log p_i \big) = \sum_i p_i \log \Big( \frac{p_i}{q_i}\Big)$$
