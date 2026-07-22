@@ -113,7 +113,7 @@ $$D_{KL}(p \parallel q)  = \big(-\sum_i p_i \log q_i \big) - \big( -\sum_i p_i \
 
 For continuous probability density functions $p(x)$ and $q(x)$:
 
-$$D_{KL}(p \parallel q) = \int p(x) \log \Big( \frac{p_i}{q_i}\Big) dx.$$
+$$D_{KL}(p \parallel q) = \int p(x) \log \Big( \frac{p(x)}{q(x)}\Big) dx.$$
 
 Note KL divergence have few properties:
 * Non-Negativity: $D_{KL}(p \parallel q) > 0$.
