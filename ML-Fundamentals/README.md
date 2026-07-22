@@ -118,7 +118,7 @@ $$D_{KL}(p \parallel q) = \int p(x) \log \Big( \frac{p(x)}{q(x)}\Big) dx.$$
 Note KL divergence have few properties:
 * **Non-Negativity**: $D_{KL}(p \parallel q) > 0$.
 * **Asymmetric**: $D_{KL}(p \parallel q) \ne D_{KL}(q \parallel p)$.
-* **Expectation Form**: 
+* **Expectation Form**: It can be interpreted as the expected logarithmic difference between probabilities under $P$ and $Q$ ([GeeksforGeeks: Kullback Leibler (KL) Divergence](https://www.geeksforgeeks.org/machine-learning/kullback-leibler-divergence/))
 
 $$D_{KL}(p \parallel q)  = \mathbf{E}_{x \sim P} \big[ \log \frac{P(x)}{Q(x)} \big].$$
 
