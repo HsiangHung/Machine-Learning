@@ -25,7 +25,7 @@ In the one-hot encoded vector representation the ground truth $y_i=1$, otherwise
 
 The cross entropy loss function would be
 
-$$L = \sum^N_{i=1}H_i(p, q_{\theta}) = -\sum^N_{i=1} \sum^K_{y=1} p(y \vert x_i) \log q_{\theta}(y \vert x_i).$$
+$$L = \sum^N_{i=1}H_i(p, q_{\theta}) = -\sum^N_{i=1} \sum^K_{y=1} p(y \vert x_i) \log \big( q_{\theta}(y \vert x_i) \big).$$
 
 Label smoothing is given by introducing noise distribution $u(y \vert x)$ on ground truth label. Our new ground truth label became 
 
