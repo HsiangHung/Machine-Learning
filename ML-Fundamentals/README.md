@@ -48,7 +48,7 @@ The $L_q$ norms with $q < 1$ is not convex, so difficult to optimize [Cross Vali
 ![Lq_regularization](images/Lq_regularization.png)
 
 
-## 3. L1/L_2 regularization distribution
+## 3. L1/L2 regularization distribution
 
 $\textrm{L}_1$ and $\textrm{L}_2$ regularization correspond to the priors of MAP in Bayesian. See [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Bayesian_%26_MCMC#22-map). $\textrm{L}_2$ regularization is equivalent to **Gaussian** prior [[Cross Validated: Why is the L2 regularization equivalent to Gaussian prior?]][Why is the L2 regularization equivalent to Gaussian prior?], whereas $\textrm{L}_1$ corresponds to [Laplace prior](https://en.wikipedia.org/wiki/Laplace_distribution) (double exponential distribution).
 
