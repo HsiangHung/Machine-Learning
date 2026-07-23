@@ -128,19 +128,29 @@ $$D_{KL}(p \parallel q)  = \mathbf{E}_{x \sim P} \big[ \log \frac{P(x)}{Q(x)} \b
 $$D_{Jeffreys}(P, Q) = D_{KL}(P \vert{}\vert{} Q) + D_{KL}(Q \vert{}\vert{} P)$$
 
 
-#### Variational Autoencoder
 
 The [blog: Kullback-Leibler Divergence Explained](https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained) shows using KL divergence to minimize how much information loss we have when approximating a distribution. We can combine KL divergence with neural networks allows us to learn very complex approximating distribution for our data. A common approach to this is called a "Variational Autoencoder" which learns the best way to approximate the information in a data set.
 
 The [blog: Intuitive Guide to Understanding KL Divergence](https://towardsdatascience.com/light-on-math-machine-learning-intuitive-guide-to-understanding-kl-divergence-2b382ca2b2a8) shows an example using KL-divergence to interpret approximation to a true distribution with the bionomial and uniform distribition.
 
+#### Visualize KL Divergence
+
 In the following we visualize how KL divergence varies given a varying distribution P (blue) from a reference distribution Q. The screenshots are taken from the blog [Introduction to Diffusion Models for Machine Learning](https://www.assemblyai.com/blog/diffusion-models-for-machine-learning-introduction/#:~:text=More%20specifically%2C%20a%20Diffusion%20Model,with%20the%20same%20dimensionality%20as%20.) by Ryan O'Connor at AssemblyAI. 
 
 The green curve indicates the function within the integral in the definition for the KL divergence above, and the total area under the curve is the value of the KL divergence of P from Q at any given moment, a value which is also displayed numerically.  
 
-![](images/KL_divergence_1.png)
-![](images/KL_divergence_3.png)
-![](images/KL_divergence_4.png)
+https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Fundamentals/images/KL_divergence_1.png
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Fundamentals/images/KL_divergence_1.png" width="700">
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Fundamentals/images/KL_divergence_3.png" width="700">
+
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Fundamentals/images/KL_divergence_2.png" width="700">
+
+<!-- ![](images/KL_divergence_1.png) -->
+<!-- ![](images/KL_divergence_3.png) -->
+<!-- ![](images/KL_divergence_4.png) -->
 
 We can see if P is close to Q, the KL divergence is small. Otherwise the area under the green curve describes the distribution discrepancy between P and Q.
 
