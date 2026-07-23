@@ -9,11 +9,11 @@ The image generation by diffusion models is a sequence of denoising processes st
 
 This is called **reverse process**.
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/reverse_process_1.png" width="900">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/reverse_process_1.png" width="800">
 
 The denoise module is to predict noise, given by noised images and the step as input 
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/denoise_1.png" width="700">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/denoise_1.png" width="600">
 
 The denoised image is the input noised images removing the predicted noise.
 
