@@ -49,6 +49,11 @@ Imagine translating the French sentence "Le chat noir" into English ("The black 
     2. The Cross-Attention: It asks the encoder: "I have 'The black...'. What is the noun?"
     3. The Match: The Query compares against the Encoder's Keys again. Since it has already successfully extracted the meaning of "Le" and "noir", the highest mathematical match is now the Key for "chat".
     4. The Output: The Value for "chat" dominates the context vector, and the decoder outputs: "cat".
+* Knowing when to stop: $\langle \textrm{EOS} \rangle$
+    1. The Setup: The sequence is $\langle \textrm{EOS} \rangle \ The black cat$. A new Query is generated.
+    2. TheCross-Attention: It asks the encoder: "I've built 'The black cat'. What's next?"
+    3. The Match: The Query checks the Encoder's Keys. All the semantic meaning from the French words has been "used up" and accounted for. The Query now strongly aligns with the Key for the French $\langle \textrm{EOS} \rangle$ (End of Sequence) token that was attached to the input.
+    4. The Output: The decoder outputs its own $\langle \textrm{EOS} \rangle$ token, which tells the system the translation is complete.
 
 (Note: In English, adjectives come first, so the model would actually match with "noir" (black) first, but the Q-K-V mechanism remains exactly the same!)
 
