@@ -50,7 +50,7 @@ Prof. Lee also have following lectures [Diffusion Model 原理剖析 (1/4) (opti
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/VAE_vs_diffusion.png" width="800">
 
-The goal of image generation is to starting from a vector $z$
+The goal of image generation is to starting from an initial vector $z$, after the model network with conditions map onto a distribution which is approximate to the real image distribution.
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/diffusion_model_distribution.png" width="800">
 
