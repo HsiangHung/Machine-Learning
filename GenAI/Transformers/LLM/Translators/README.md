@@ -43,7 +43,11 @@ Imagine translating the French sentence "Le chat noir" into English ("The black 
     2. This Query is compared against **all** the **Keys** from the French sentence. It calculates the dot product between the Query for "The" and the Keys for "Le", "chat", and "noir". Because the model learned during training that English puts adjectives first, the Query strongly aligns with the Key for "noir" (black). 
     3. The attention weights heavily favor "noir". The Value vector for "noir" is pulled in, passed through the feed-forward network.
     4. The decoder outputs "black".
-8. 
+* Predicting the third word: "cat"
+    1. The Setup: The decoder's sequence is now $\langle \textrm{BOS} \rangle \textrm{The black}$. It uses this new, updated context to generate a fresh Query.
+    2. The Cross-Attention: It asks the encoder: "I have 'The black...'. What is the noun?"
+    3. The Match: The Query compares against the Encoder's Keys again. Since it has already successfully extracted the meaning of "Le" and "noir", the highest mathematical match is now the Key for "chat".
+    4. The Output: The Value for "chat" dominates the context vector, and the decoder outputs: "cat".
 
 (Note: In English, adjectives come first, so the model would actually match with "noir" (black) first, but the Q-K-V mechanism remains exactly the same!)
 
