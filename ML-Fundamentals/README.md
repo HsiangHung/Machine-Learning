@@ -129,6 +129,9 @@ If you just want a brute-force symmetric version of KL without introducing a mid
 
 $$D_{Jeffreys}(P, Q) = D_{KL}(P \vert{}\vert{} Q) + D_{KL}(Q \vert{}\vert{} P)$$
 
+
+#### Variational Autoencoder
+
 The [blog: Kullback-Leibler Divergence Explained](https://www.countbayesie.com/blog/2017/5/9/kullback-leibler-divergence-explained) shows using KL divergence to minimize how much information loss we have when approximating a distribution. We can combine KL divergence with neural networks allows us to learn very complex approximating distribution for our data. A common approach to this is called a "Variational Autoencoder" which learns the best way to approximate the information in a data set.
 
 The [blog: Intuitive Guide to Understanding KL Divergence](https://towardsdatascience.com/light-on-math-machine-learning-intuitive-guide-to-understanding-kl-divergence-2b382ca2b2a8) shows an example using KL-divergence to interpret approximation to a true distribution with the bionomial and uniform distribition.
