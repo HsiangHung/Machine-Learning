@@ -123,9 +123,7 @@ Note KL divergence have few properties:
 $$D_{KL}(p \parallel q)  = \mathbf{E}_{x \sim P} \big[ \log \frac{P(x)}{Q(x)} \big].$$
 
 
-#### Jeffreys Divergence (Symmetric KL)
-
-If you just want a brute-force symmetric version of KL without introducing a midpoint distribution, you can simply calculate the KL divergence in both directions and add them together.
+* **Jeffreys Divergence (Symmetric KL)**: If you just want a brute-force symmetric version of KL without introducing a midpoint distribution, you can simply calculate the KL divergence in both directions and add them together.
 
 $$D_{Jeffreys}(P, Q) = D_{KL}(P \vert{}\vert{} Q) + D_{KL}(Q \vert{}\vert{} P)$$
 
