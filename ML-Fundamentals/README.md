@@ -141,15 +141,15 @@ The green curve indicates the function within the integral in the definition for
 
 **KL-Divergence = 1.69**
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Fundamentals/images/KL_divergence_1.png" width="700">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Fundamentals/images/KL_divergence_1.png" width="600">
 
 **KL-Divergence = 0.72**
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Fundamentals/images/KL_divergence_3.png" width="700">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Fundamentals/images/KL_divergence_3.png" width="600">
 
 **KL-Divergence = 0**
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Fundamentals/images/KL_divergence_2.png" width="700">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Fundamentals/images/KL_divergence_2.png" width="600">
 
 
 
