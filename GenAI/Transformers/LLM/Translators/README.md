@@ -38,7 +38,7 @@ To understand why "the decoder provides the queries" and "the encoder provides t
 Imagine translating the French sentence "Le chat noir" into English ("The black cat"):
 * "Le chat noir" is the input. (and $\langle \textrm{EOS} \rangle$ is the end token)
 * The Encoder processes "Le chat noir" and generates Keys and Values for all three words.
-* The **Decoder** starts translating. Let's say it has already generated the word "The".
+* The **Decoder** starts translating. Let's say it has already generated the word "The". The decoder has produced $\langle \textrm{BOS} \rangle \textrm{The}$:
     1. Then Decoder needs to determine, after "The", what the next token is. Now **Query** =  "The".
     2. This Query is compared against **all** the **Keys** from the French sentence. It calculates the dot product between the Query for "The" and the Keys for "Le", "chat", and "noir". Because the model learned during training that English puts adjectives first, the Query strongly aligns with the Key for "noir" (black). 
     3. The attention weights heavily favor "noir". The Value vector for "noir" is pulled in, passed through the feed-forward network.
