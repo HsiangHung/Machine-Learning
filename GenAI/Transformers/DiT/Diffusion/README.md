@@ -3,6 +3,7 @@
 The note here follows Prof. Hung-Yi Lee's class. See [淺談圖像生成模型 Diffusion Model 原理](https://www.youtube.com/watch?v=azBugJzmz-o)
 
 
+
 ## Reverse Process
 
 The image generation by diffusion models is a sequence of denoising processes starting from random sample and keep removing noises until a good image.
@@ -42,3 +43,9 @@ Now in the forward process, we have three input:
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/forward_process_2.png" width="800">
 
+
+## Diffusion Model Theory
+
+Prof. Lee also have following lectures [Diffusion Model 原理剖析 (1/4) (optional)](https://www.youtube.com/watch?v=ifCDXFdeaaM) to mention that VAE and diffusion are actually very similar.
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/VAE_vs_diffusion.png" width="800">
