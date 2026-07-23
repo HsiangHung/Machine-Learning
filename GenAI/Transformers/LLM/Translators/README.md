@@ -38,13 +38,13 @@ To understand why "the decoder provides the queries" and "the encoder provides t
 Imagine translating the French sentence "Le chat noir" into English ("The black cat"):
 * "Le chat noir" is the input. (and $\langle \textrm{EOS} \rangle$ is the end token)
 * The Encoder processes "Le chat noir" and generates Keys and Values for all three words.
-* The **Decoder** starts translating. Let's say it has already generated the word "The". The decoder has produced $\langle \textrm{BOS} \rangle \textrm{The}$:
+* The **Decoder** starts translating. Let's say it has already generated the word "The". Now the decoder has produced $\langle \textrm{BOS} \rangle \ \textrm{The}$:
     1. Then Decoder needs to determine, after "The", what the next token is. Now **Query** =  "The".
     2. This Query is compared against **all** the **Keys** from the French sentence. It calculates the dot product between the Query for "The" and the Keys for "Le", "chat", and "noir". Because the model learned during training that English puts adjectives first, the Query strongly aligns with the Key for "noir" (black). 
     3. The attention weights heavily favor "noir". The Value vector for "noir" is pulled in, passed through the feed-forward network.
     4. The decoder outputs "black".
 * Predicting the third word: "cat"
-    1. The Setup: The decoder's sequence is now $\langle \textrm{BOS} \rangle \textrm{The black}$. It uses this new, updated context to generate a fresh Query.
+    1. The Setup: The decoder's sequence is now $\langle \textrm{BOS} \rangle \ \textrm{The black}$. It uses this new, updated context to generate a fresh Query.
     2. The Cross-Attention: It asks the encoder: "I have 'The black...'. What is the noun?"
     3. The Match: The Query compares against the Encoder's Keys again. Since it has already successfully extracted the meaning of "Le" and "noir", the highest mathematical match is now the Key for "chat".
     4. The Output: The Value for "chat" dominates the context vector, and the decoder outputs: "cat".
