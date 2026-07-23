@@ -5,7 +5,7 @@ The note here follows Prof. Hung-Yi Lee's class. See [淺談圖像生成模型 D
 
 ## Reverse Process
 
-The image generation is a sequence of denoising processes starting from random sample and keep removing noises.
+The image generation by diffusion models is a sequence of denoising processes starting from random sample and keep removing noises until a good image.
 
 This is called **reverse process**.
 
@@ -21,9 +21,11 @@ The denoised image is the input noised images removing the predicted noise.
 ## Forward Process
 
 
-To train the denoise predictor, we need to prepare the paired data: input features are noised images and the step, and the label (ground truth) are noise.
+To train the denoise predictor, we need to prepare the paired data: 
+* Features: noised images and the step
+* Label (ground truth): noise.
 
-The process to add (Gaussian) noise to images is called **forward process**.
+The process to add (Gaussian) noise to images is called **forward (diffusion) process**.
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/forward_process_1.png" width="800">
 
