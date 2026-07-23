@@ -15,13 +15,13 @@ The denoise module is to predict noise, given by noised images and the step as i
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/denoise_1.png" width="600">
 
-The denoised image is the input noised images removing the predicted noise.
+The output denoised image is the input noised images removing the predicted noise.
 
 
 ## Forward Process
 
 
-To train the denoise predictor, we need to prepare the paired data: 
+To train the **noise predictor**, we need to prepare the paired data: 
 * Features: noised images and the step
 * Label (ground truth): noise.
 
@@ -30,4 +30,13 @@ The process to add (Gaussian) noise to images is called **forward (diffusion) pr
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/forward_process_1.png" width="800">
 
 
+## Text-Image 
+
+For text-image diffusion model, the text will be additional input:
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/denoise_2.png" width="600">
+
+The text in the forward process
+
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/forward_process_2.png" width="600">
 
