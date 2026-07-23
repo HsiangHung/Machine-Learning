@@ -139,7 +139,6 @@ In the following we visualize how KL divergence varies given a varying distribut
 
 The green curve indicates the function within the integral in the definition for the KL divergence above, and the total area under the curve is the value of the KL divergence of P from Q at any given moment, a value which is also displayed numerically.  
 
-https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Fundamentals/images/KL_divergence_1.png
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Fundamentals/images/KL_divergence_1.png" width="700">
 
@@ -148,9 +147,7 @@ https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Fundamentals/image
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Fundamentals/images/KL_divergence_2.png" width="700">
 
-<!-- ![](images/KL_divergence_1.png) -->
-<!-- ![](images/KL_divergence_3.png) -->
-<!-- ![](images/KL_divergence_4.png) -->
+
 
 We can see if P is close to Q, the KL divergence is small. Otherwise the area under the green curve describes the distribution discrepancy between P and Q.
 
