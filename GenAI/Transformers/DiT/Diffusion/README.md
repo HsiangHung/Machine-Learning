@@ -34,9 +34,11 @@ The process to add (Gaussian) noise to images is called **forward (diffusion) pr
 
 For text-image diffusion model, the text will be additional input:
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/denoise_2.png" width="600">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/denoise_2.png" width="700">
 
-The text in the forward process
+Now in the forward process, we have three input:
+* Features: noised images, the step and text
+* Label (ground truth): noise.
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/forward_process_2.png" width="600">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/forward_process_2.png" width="800">
 
