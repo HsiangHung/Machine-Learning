@@ -55,4 +55,6 @@ The goal of image generation is to starting from an initial vector $z$, after th
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/diffusion_model_distribution.png" width="800">
 
 
+Our goal is to compute $P_{\theta}(x)$, approximate to $P_{D}(x)$. This is a maximum likelihood estimation process.
+
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/maximum_likelihood_estimation.png" width="800">
