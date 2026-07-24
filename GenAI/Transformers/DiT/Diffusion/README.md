@@ -33,11 +33,11 @@ The process is to iteratively add (Gaussian) noise to images. Thus we have train
 
 ## Text-To-Image 
 
-For text-image diffusion model, the text will be additional input:
+For text-image diffusion model, we need texts as additional inputs:
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/denoise_2.png" width="700">
 
-Now in the forward process, we have three input:
+Now in the forward process, we have three input features:
 * Features: noised images, the step and text
 * Label (ground truth): noise.
 
@@ -55,8 +55,12 @@ In diffusion model, image generation is to starting from an initial vector $z$, 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/diffusion_model_distribution.png" width="800">
 
 
-Our goal is to find a model network $\Theta$ which gives $P_{\Theta}(x)$, approximate to $P_{data}(x)$. 
+Our goal is to find a model (a neural network) $\theta$ which gives $P_{\theta}(x)$, approximate to $P_{data}(x)$. 
 
 This is a maximum likelihood estimation process.
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/maximum_likelihood_estimation.png" width="800">
+
+Assume the data sample $P_{data}(x) = \lbrace x_1, x_2, \cdots, x_m \rbrace$, then
+
+$$\theta^* = \arg \max_{\theta} \Prod^m_{i=1}P_{\theta}(x)$$
