@@ -31,7 +31,7 @@ The process is to iteratively add (Gaussian) noise to images. Thus we have train
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/forward_process_1.png" width="800">
 
 
-## Text-Image 
+## Text-To-Image 
 
 For text-image diffusion model, the text will be additional input:
 
