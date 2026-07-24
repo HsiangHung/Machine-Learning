@@ -39,21 +39,28 @@ Imagine translating the French sentence "Le chat noir" into English ("The black 
 * "Le chat noir" is the input. (and $\langle \textrm{EOS} \rangle$ is the end token)
 * The Encoder processes "Le chat noir" and generates Keys and Values for all three words.
 * The **Decoder** starts translating. 
-* Let's say it has already generated the word "The". Now the decoder has produced $\langle \textrm{BOS} \rangle \ \textrm{The}$:
-    1. Then Decoder needs to determine, after "The", what the next token is. Now **Query** =  "The".
-    2. This Query is compared against **all** the **Keys** from the French sentence. It calculates the dot product between the Query for "The" and the Keys for "Le", "chat", and "noir". Because the model learned during training that English puts adjectives first, the Query strongly aligns with the Key for "noir" (black). 
-    3. The attention weights heavily favor "noir". The Value vector for "noir" is pulled in, passed through the feed-forward network.
-    4. The decoder outputs "black".
-* Predicting the third word: "cat"
-    1. The Setup: The decoder's sequence is now $\langle \textrm{BOS} \rangle \ \textrm{The black}$. It uses this new, updated context to generate a fresh Query.
-    2. The Cross-Attention: It asks the encoder: "I have 'The black...'. What is the noun?"
-    3. The Match: The Query compares against the Encoder's Keys again. Since it has already successfully extracted the meaning of "Le" and "noir", the highest mathematical match is now the Key for "chat".
-    4. The Output: The Value for "chat" dominates the context vector, and the decoder outputs: "cat".
-* Knowing when to stop: $\langle \textrm{EOS} \rangle$
-    1. The Setup: The sequence is $\langle \textrm{EOS} \rangle \ \textrm{The black cat}$. A new Query is generated.
-    2. TheCross-Attention: It asks the encoder: "I've built 'The black cat'. What's next?"
-    3. The Match: The Query checks the Encoder's Keys. All the semantic meaning from the French words has been "used up" and accounted for. The Query now strongly aligns with the Key for the French $\langle \textrm{EOS} \rangle$ (End of Sequence) token that was attached to the input.
-    4. The Output: The decoder outputs its own $\langle \textrm{EOS} \rangle$ token, which tells the system the translation is complete.
+* Let's say it has already generated the word "The". Now the decoder has produced $\langle \textrm{BOS} \rangle \ \textrm{The}$
+
+#### 1. Predicting the second word: "black"
+
+*  Then Decoder needs to determine, after "The", what the next token is. Now **Query** =  "The".
+*  This Query is compared against **all** the **Keys** from the French sentence. It calculates the dot product between the Query for "The" and the Keys for "Le", "chat", and "noir". Because the model learned during training that English puts adjectives first, the Query strongly aligns with the Key for "noir" (black). 
+*  The attention weights heavily favor "noir". The Value vector for "noir" is pulled in, passed through the feed-forward network.
+*  The decoder outputs "black".
+
+#### 2. Predicting the third word: "cat"
+
+*  The Setup: The decoder's sequence is now $\langle \textrm{BOS} \rangle \ \textrm{The black}$. It uses this new, updated context to generate a fresh Query.
+*  The Cross-Attention: It asks the encoder: "I have 'The black...'. What is the noun?"
+*  The Match: The Query compares against the Encoder's Keys again. Since it has already successfully extracted the meaning of "Le" and "noir", the highest mathematical match is now the Key for "chat".
+*  The Output: The Value for "chat" dominates the context vector, and the decoder outputs: "cat".
+
+#### 3. Knowing when to stop: $\langle \textrm{EOS} \rangle$
+
+*  The Setup: The sequence is $\langle \textrm{EOS} \rangle \ \textrm{The black cat}$. A new Query is generated.
+*  TheCross-Attention: It asks the encoder: "I've built 'The black cat'. What's next?"
+*  The Match: The Query checks the Encoder's Keys. All the semantic meaning from the French words has been "used up" and accounted for. The Query now strongly aligns with the Key for the French $\langle \textrm{EOS} \rangle$ (End of Sequence) token that was attached to the input.
+*  The Output: The decoder outputs its own $\langle \textrm{EOS} \rangle$ token, which tells the system the translation is complete.
 
 (Note: In English, adjectives come first, so the model would actually match with "noir" (black) first, but the Q-K-V mechanism remains exactly the same!)
 
