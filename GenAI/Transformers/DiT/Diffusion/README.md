@@ -55,7 +55,7 @@ In diffusion model, image generation is to starting from an initial vector $z$, 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/diffusion_model_distribution.png" width="800">
 
 
-Our goal is to find a model (a neural network) $\theta$ which gives $P_{\theta}(x)$, approximate to $P_{data}(x)$. 
+Our goal is to find a model (a neural network) $\theta$, providing $P_{\theta}(x)$ being  approximate to $P_{data}(x)$. 
 
 This is a maximum likelihood estimation process.
 
@@ -63,4 +63,4 @@ This is a maximum likelihood estimation process.
 
 Assume the data sample $P_{data}(x) = \lbrace x_1, x_2, \cdots, x_m \rbrace$, then
 
-$$\theta^* = \arg \max_{\theta} \Prod^m_{i=1}P_{\theta}(x)$$
+$$\theta^* = \arg \max_{\theta} \prod^m_{i=1}P_{\theta}(x)$$
