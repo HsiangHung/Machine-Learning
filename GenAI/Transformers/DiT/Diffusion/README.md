@@ -6,7 +6,7 @@ The note here follows Prof. Hung-Yi Lee's class. See [淺談圖像生成模型 D
 
 ## Reverse Process
 
-The image generation by diffusion models is a sequence of denoising processes starting from random sample and keep removing noises until a good image.
+The image generation by diffusion models is a sequence of denoising processes, starting from random sample and iteratively removing noises until a good-quality image.
 
 This is called **reverse process**.
 
