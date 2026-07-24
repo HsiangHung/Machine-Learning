@@ -63,4 +63,4 @@ This is a maximum likelihood estimation process.
 
 Assume the data sample $P_{data}(x) = \lbrace x_1, x_2, \cdots, x_m \rbrace$, then
 
-$$\theta^* = \arg \max_{\theta} \prod^m_{i=1}P_{\theta}(x)$$
+$$\theta^* = \arg \max_{\theta} \prod^m_{i=1}P_{\theta}(x_i)$$
