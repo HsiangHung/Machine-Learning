@@ -26,7 +26,7 @@ To train the **noise predictor**, we need to prepare the paired data:
 * Features: noised images and the step
 * Label (ground truth): noise.
 
-The process to add (Gaussian) noise to images is called **forward (diffusion) process**.
+The process is to iteratively add (Gaussian) noise to images. Thus we have training data: noised images, steps and the noise. This process is called **forward (diffusion) process**.
 
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/GenAI/Transformers/DiT/Diffusion/images/forward_process_1.png" width="800">
 
