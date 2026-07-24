@@ -39,7 +39,7 @@ Imagine translating the French sentence "Le chat noir" into English ("The black 
 * "Le chat noir" is the input. (and $\langle \textrm{EOS} \rangle$ is the end token)
 * The Encoder processes "Le chat noir" and generates Keys and Values for all three words.
 * The **Decoder** starts translating. 
-* Let's say it has already generated the word "The". Now the decoder has produced $\langle \textrm{BOS} \rangle \ \textrm{The}$
+* Let's say it has already generated the word "The". Now the decoder has produced $\langle \textrm{BOS} \rangle \ \textrm{The}$.
 
 #### 1. Predicting the second word: "black"
 
@@ -50,17 +50,17 @@ Imagine translating the French sentence "Le chat noir" into English ("The black 
 
 #### 2. Predicting the third word: "cat"
 
-*  The Setup: The decoder's sequence is now $\langle \textrm{BOS} \rangle \ \textrm{The black}$. It uses this new, updated context to generate a fresh Query.
+*  The decoder's sequence is now $\langle \textrm{BOS} \rangle \ \textrm{The black}$. Now Query = "black".
 *  The Cross-Attention: It asks the encoder: "I have 'The black...'. What is the noun?"
-*  The Match: The Query compares against the Encoder's Keys again. Since it has already successfully extracted the meaning of "Le" and "noir", the highest mathematical match is now the Key for "chat".
-*  The Output: The Value for "chat" dominates the context vector, and the decoder outputs: "cat".
+*  The Query compares against the Encoder's Keys again. Since it has already successfully extracted the meaning of "Le" and "noir", the highest mathematical match is now the Key for "chat".
+*  The decoder outputs: "cat".
 
 #### 3. Knowing when to stop: $\langle \textrm{EOS} \rangle$
 
-*  The Setup: The sequence is $\langle \textrm{EOS} \rangle \ \textrm{The black cat}$. A new Query is generated.
-*  TheCross-Attention: It asks the encoder: "I've built 'The black cat'. What's next?"
+*  The decoder sequence is $\langle \textrm{EOS} \rangle \ \textrm{The black cat}$. Now Query = "cat"
+*  The Cross-Attention: It asks the encoder: "I've built 'The black cat'. What's next?"
 *  The Match: The Query checks the Encoder's Keys. All the semantic meaning from the French words has been "used up" and accounted for. The Query now strongly aligns with the Key for the French $\langle \textrm{EOS} \rangle$ (End of Sequence) token that was attached to the input.
-*  The Output: The decoder outputs its own $\langle \textrm{EOS} \rangle$ token, which tells the system the translation is complete.
+*  The decoder outputs its own $\langle \textrm{EOS} \rangle$ token, which tells the system the translation is complete.
 
 (Note: In English, adjectives come first, so the model would actually match with "noir" (black) first, but the Q-K-V mechanism remains exactly the same!)
 
