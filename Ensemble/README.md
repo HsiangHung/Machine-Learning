@@ -93,6 +93,39 @@ A classification model comparison can be found here [[9]][An Empirical Compariso
 | Inference Latency | Moderate (Slower) | Moderate | Extremely Fast |
 | Interpretability | Low (Black Box) | Low (Black Box) | Very High (White Box) |
 
+### Categorical Feature and Missing Values
+
+#### LightGBM 
+
+LightGBM is Native Categorical Handling. You do not need to One-Hot Encode them. You simply convert the column to a Pandas category dtype (or pass the indices to the categorical_feature parameter) and let LightGBM do the work. 
+
+#### XGBoost
+
+ Historically required OHE, but modern versions (1.5+) have experimental native categorical support.
+
+#### Random Forest
+
+If you are using the standard `sklearn.ensemble.RandomForestRegressor` or `Classifier`, You cannot pass categorical strings natively. It will throw an error. You must convert them to numbers.
+
+However, if you use One-Hot Encoding (OHE) for high-cardinality features, you will destroy your model's performance.
+
+Instead of OHE, you replace the categorical string with the historical mean of the target variable for that category, **Target Encoding (Mean Encoding)** or **Entity Embeddings**.
+
+
+### Missing Values
+
+#### LightGBM 
+
+LightGBM is Native Missing Value Support. You do not need to impute them (fill them in) before training. You can pass `NaN` or `None` directly into the model.
+
+#### XGBoost 
+
+Like LightGBM, if you are using XGBoost, you generally do not need to impute missing values before training. XGBoost handles missing values natively.
+
+### Random Forest (scikit-learn): 
+
+For RF using sklearn, the missing data imputation is required. Scikit-learn’s Random Forest cannot handle missing values natively. If you pass a `NaN`, it will throw a ValueError. You must build an imputation step into your pipeline before the data hits the model
+
 
 ## Summary
 
