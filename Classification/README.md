@@ -15,8 +15,9 @@ Table of Contents:
 * [3. Loss Function: Cross-Entropy](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3-loss-function-cost-function-cross-entropy)
      * [3.1 Binary](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#31-binary)
      * [3.2 Multiclass](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#32-multiclass)
+     * [3.3 Ordinal Classification](https://github.com/HsiangHung/Machine-Learning/tree/master/Classification#33-ordinal-classification)
      
-* [4. Label Smoothing ](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3-loss-function-cost-function-cross-entropy)
+* [4. Label Smoothing ](https://github.com/HsiangHung/Machine-Learning/tree/master/Classification#4-label-smoothing)
 
 
 ## 1. Binary Classification Models
