@@ -93,15 +93,12 @@ A classification model comparison can be found here [[9]][An Empirical Compariso
 | Inference Latency | Moderate (Slower) | Moderate | Extremely Fast |
 | Interpretability | Low (Black Box) | Low (Black Box) | Very High (White Box) |
 
-### Categorical Feature and Missing Values
+### Others: Categorical Feature and Missing Values
 
-#### LightGBM 
+#### GBM
 
-LightGBM is Native Categorical Handling. You do not need to One-Hot Encode them. You simply convert the column to a Pandas category dtype (or pass the indices to the categorical_feature parameter) and let LightGBM do the work. 
-
-#### XGBoost
-
- Historically required OHE, but modern versions (1.5+) have experimental native categorical support.
+* LightGBM is Native Categorical Handling. You do not need to One-Hot Encode them. You simply convert the column to a Pandas category dtype (or pass the indices to the categorical_feature parameter) and let LightGBM do the work. 
+* XGBoost historically required OHE, but modern versions (1.5+) have experimental native categorical support.
 
 #### Random Forest
 
@@ -114,13 +111,10 @@ Instead of OHE, you replace the categorical string with the historical mean of t
 
 ### Missing Values
 
-#### LightGBM 
+#### GBM 
 
-LightGBM is Native Missing Value Support. You do not need to impute them (fill them in) before training. You can pass `NaN` or `None` directly into the model.
-
-#### XGBoost 
-
-Like LightGBM, if you are using XGBoost, you generally do not need to impute missing values before training. XGBoost handles missing values natively.
+* LightGBM is Native Missing Value Support. You do not need to impute them (fill them in) before training. You can pass `NaN` or `None` directly into the model.
+* If you are using XGBoost, like LightGBM,, you generally do not need to impute missing values before training. XGBoost handles missing values natively.
 
 ### Random Forest (scikit-learn): 
 
