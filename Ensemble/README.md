@@ -116,7 +116,7 @@ Instead of OHE, you replace the categorical string with the historical mean of t
 * LightGBM is Native Missing Value Support. You do not need to impute them (fill them in) before training. You can pass `NaN` or `None` directly into the model.
 * If you are using XGBoost, like LightGBM,, you generally do not need to impute missing values before training. XGBoost handles missing values natively.
 
-### Random Forest (scikit-learn): 
+#### Random Forest (scikit-learn): 
 
 For RF using sklearn, the missing data imputation is required. Scikit-learn’s Random Forest cannot handle missing values natively. If you pass a `NaN`, it will throw a ValueError. You must build an imputation step into your pipeline before the data hits the model
 
