@@ -16,6 +16,8 @@ Table of Contents:
      * [3.1 Binary](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#31-binary)
      * [3.2 Multiclass](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#32-multiclass)
      
+* [4. Label Smoothing ](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Classification#3-loss-function-cost-function-cross-entropy)
+
 
 ## 1. Binary Classification Models
 
@@ -238,7 +240,7 @@ The cross-entropy of a $K = 3$ example is shown below (credit from [Cross-entrop
 ![](images/cross_entropy-4.png)
 
 
-## 4. Ordinal Classification 
+### 3.3 Ordinal Classification 
 
 The categorical label has order, for example, severity in insurance's damage report.
 
@@ -246,7 +248,7 @@ Because severity has a natural mathematical order ($\text{Low} < \text{Medium} <
 
 Instead of a single softmax output layer with 4 independent nodes, you structure the network to predict cumulative probabilities (e.g., "What is the probability this claim is greater than Medium severity?"). This forces the loss function to penalize far-away misclassifications much more severely than near-misses.
 
-## 5. Label Smoothing
+## 4. Label Smoothing
 
 When using deep learning models for classification tasks, we usually encounter the following problems: overfitting, and overconfidence. Overfitting is well studied and can be tackled with early stopping, dropout, weight regularization etc. 
 
