@@ -5,4 +5,4 @@
 
 ## Decision Workflow 
 
-<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Application/Casual-ML/images/CLV_workflow.png" width="700">
+<img src="https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Application/Casual-ML/images/CLV_workflow.png" width="900">
