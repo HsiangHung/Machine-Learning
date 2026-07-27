@@ -243,11 +243,15 @@ The cross-entropy of a $K = 3$ example is shown below (credit from [Cross-entrop
 
 ### 3.3 Ordinal Classification 
 
-The categorical label has order, for example, severity in insurance's damage report.
+Ordinal classification, or ordinal regression, is a predictive modeling task where the target variable is categorical, but its categories have a strict, meaningful order. 
+It captures the rank and relationship between classes to prevent illogical ranking errors. 
 
+For example, identify severity in insurance's damage report.
 Because severity has a natural mathematical order ($\text{Low} < \text{Medium} < \text{High} < \text{Catastrophic}$), you should pitch **Ordinal Regression/Classification.**
 
 Instead of a single softmax output layer with 4 independent nodes, you structure the network to predict cumulative probabilities (e.g., "What is the probability this claim is greater than Medium severity?"). This forces the loss function to penalize far-away misclassifications much more severely than near-misses.
+
+Refer [mord: Ordinal Regression in Python](https://pythonhosted.org/mord/?source=post_page-----1cb97c8993e6---------------------------------------)
 
 ## 4. Label Smoothing
 
