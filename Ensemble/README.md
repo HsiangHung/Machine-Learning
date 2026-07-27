@@ -17,7 +17,7 @@ An ensemble is just a **collection of predictors** which come together (e.g. mea
    Because **new predictors are learning from mistakes committed by previous predictors**, it takes less time/iterations to reach close to actual predictions. One can interpret boosting as trying to **minimize the bias** of the overall predictor. So when you use `boosting`, you’re incentivized to use `low-variance and high-bias estimators` (e.g. **shallow** decision trees). However, it could lead to **overfitting** on training data. **Gradient Boosting** (GBM) is an example of boosting algorithm.
    
 
-## Model Comparison: RF VS GBM
+## Model Comparison: RF vs GBM
 
 
    Both are ensemble models to produce a distribution of simple ML models on subsets of the original data, and both leverage decision trees as their base estimator, and then combine the distribution into one "aggregated" model. [[2]][What are the differences between Random Forest and Gradient Tree Boosting algorithms?]
