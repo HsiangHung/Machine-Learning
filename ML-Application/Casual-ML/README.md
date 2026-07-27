@@ -5,4 +5,8 @@
 
 ## Decision Workflow 
 
+If we decide to make treatment or not, using
+
+$$\hat{\tau} \times \textrm{LTV} - c > 0.$$
+
 <img src="https://github.com/HsiangHung/Machine-Learning/blob/master/ML-Application/Casual-ML/images/CLV_workflow.png" width="900">
