@@ -89,7 +89,7 @@ In the Naive Bayes classifier, we use Bayes’ theorem to break down the joint p
 SVMs are inherently two-class classifiers. In the **multiclass SVM**, if it is built as **one-versus-rest classifiers**, choose the class which classifies the test datum with **greatest margin**. If built as one-vs-one classifiers, still choose the class that is selected by the most classifiers [[Stanford NLP]][Multiclass SVMs].
 
 
-## 2. Cost Function: Cross-entropy
+## 2. Cost Function: Cross-Entropy
 
 For multiclass, $c = {1, ...K}$, $K$ classes. If our target is a **one-hot** vector, $p = [1, 0, ... 0]$ for $y = 1$, $p = [0, 2, ... 0]$, for $y = 2$, .... and $p = [0, 0, ... 1]$ for $y = K$, we arrive at the multiclassification cost function [[UFLDL Tutorial]][Softmax Regression]:
 
