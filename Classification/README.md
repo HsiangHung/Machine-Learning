@@ -259,7 +259,7 @@ Normally, classification tasks use hard "one-hot" encoded labels. If an instance
 
 Label smoothing softens these hard targets. By introducing a small smoothing parameter $\alpha$ (often between 0.1 and 0.2), we redistribute a fraction of the probability mass across all $K$ classes:
 
-$$y_k^{LS} = y_k(1 - \alpha) + \frac{\alpha}{K}$$
+$$y_c^{LS} = y_c(1 - \alpha) + \frac{\alpha}{K}$$
 
 A target of $[1, 0, 0]$ with $\alpha = 0.1$ becomes $[0.933, 0.033, 0.033]$. The model is no longer penalized for not being 100% absolutely certain.
 
