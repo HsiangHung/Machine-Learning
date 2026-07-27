@@ -227,10 +227,10 @@ where $\symbf{I} = 1$ for $y = c$; otherwise $\symbf{I}=0$.
 
 We also call the model as **Softmax Classifier** since it implements the softmax function:
 
-$$ p(y=c|x) = \textrm{Softmax}(z)_c = \frac{e^{\theta^{(j)T}\symbf{x}}}{\sum_{c=1} e^{(\theta_c)^T}\symbf{x}}, $$
+$$ p(y=c|x) = \textrm{Softmax}(z)_c = \frac{e^{(\theta_c)^T}\symbf{x}}{\sum_{c=1} e^{(\theta_c)^T}\symbf{x}}, $$
 
 
-where $z_j$​ represents the $j$-th calss score (also known as logits) of the model. $p(y=j|x)$ is probability of the input $x$ belonging to the class.
+where $z_j$​ represents the $c$-th calss score (also known as logits) of the model. $p(y=j|x)$ is probability of the input $x$ belonging to the class.
 
 The cross-entropy of a $K = 3$ example is shown below (credit from [Cross-entropy for classification](https://towardsdatascience.com/cross-entropy-for-classification-d98e7f974451))
 
