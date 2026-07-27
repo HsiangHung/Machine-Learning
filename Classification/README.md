@@ -220,15 +220,14 @@ In short, we can roighly argue that the second derivatives of the loss are posit
 
 For multiclass, e.g. $K$ classes, so $c = {1, ...K}$. If our target is a **one-hot** vector, $p = [1, 0, ... 0]$ for $y = 1$, $p = [0, 1, 0,... 0]$, for $y = 2$ and $p = [0, 0, ..., 1]$ for $y = K$, we arrive at the multiclassification cost function [[UFLDL Tutorial]][Softmax Regression]:
 
-<!-- $$L(\theta, \symbf{x}) = - \sum^K_{c=1}\symbf{I}(y=c)\log\big( h_{\theta_c}(\symbf{x}) \big) = - \sum^K_{c=1} \symbf{I}(y=c)\log \Big( \frac{e^{(\theta_c)^T}\symbf{x}}}{ \sum_{c=1} e^{(\theta_c)^T}\symbf{x}}} \Big)$$ -->
 
 $$L(\theta, \symbf{x}) = - \sum_{c=1}^K \symbf{I}(y=c)\log\big( h_{\theta_c}(\symbf{x}) \big) = - \sum_{c=1}^K \symbf{I}(y=c)\log \left( \frac{e^{(\theta_c)^T \symbf{x}}}{ \sum_{c'=1}^K e^{(\theta_{c'})^T \symbf{x}}} \right)$$
 
-where $\symbf{I} = 1$ for $y = j$; otherwise $\symbf{I}=0$. 
+where $\symbf{I} = 1$ for $y = c$; otherwise $\symbf{I}=0$. 
 
-We also call the model as Softmax Classifier since it implements the softmax function:
+We also call the model as **Softmax Classifier** since it implements the softmax function:
 
-$$ p(y=j|x) = \textrm{Softmax}(z)_j = \frac{e^{\theta^{(j)T}\symbf{x}}}{\sum_{j=1} e^{\theta^{(j)T}\symbf{x}}}, $$
+$$ p(y=c|x) = \textrm{Softmax}(z)_c = \frac{e^{\theta^{(j)T}\symbf{x}}}{\sum_{c=1} e^{(\theta_c)^T}\symbf{x}}}, $$
 
 
 where $z_j$​ represents the $j$-th calss score (also known as logits) of the model. $p(y=j|x)$ is probability of the input $x$ belonging to the class.
