@@ -89,9 +89,9 @@ In the Naive Bayes classifier, we use Bayes’ theorem to break down the joint p
 SVMs are inherently two-class classifiers. In the **multiclass SVM**, if it is built as **one-versus-rest classifiers**, choose the class which classifies the test datum with **greatest margin**. If built as one-vs-one classifiers, still choose the class that is selected by the most classifiers [[Stanford NLP]][Multiclass SVMs].
 
 
-## 2. Cost Function: Cross-Entropy
+## 2. Cost Function: Categorical Cross-Entropy
 
-For multiclass, $c = {1, ...K}$, $K$ classes. If our target is a **one-hot** vector, $p = [1, 0, ... 0]$ for $y = 1$, $p = [0, 2, ... 0]$, for $y = 2$, .... and $p = [0, 0, ... 1]$ for $y = K$, we arrive at the multiclassification cost function [[UFLDL Tutorial]][Softmax Regression]:
+For multiclass, $c = {1, ...K}$, $K$ classes. If our target is a **one-hot** vector, $p = [1, 0, ... 0]$ for $y = 1$, $p = [0, 2, ... 0]$, for $y = 2$, .... and $p = [0, 0, ... 1]$ for $y = K$, we arrive at the multiclassification cost function for a data instance $x$ [[UFLDL Tutorial]][Softmax Regression]:
 
 $$L(\theta, \mathbf{x}) = - \sum^K_{c=1} \mathbb{I}(y=c)\log\big( h_{\theta_c}(\mathbb{x}) \big) = - \sum^K_{c=1} \mathbf{I}(y=c)\log \left( \frac{\exp (\theta_c^T \mathbb{x}) }{ \sum_{c'} \exp (\theta_{c'}^T \mathbf{x} ) } \right),$$
 
