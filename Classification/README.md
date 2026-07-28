@@ -153,7 +153,7 @@ If there is no external business concern about low TPR or high FPR, one option i
 
 $$F_1 = \frac{2\textrm{P}\textrm{R}}{\textrm{P}+\textrm{R}} = \frac{TP}{TP+\frac{1}{2}(FP+FN)}.$$
 
-where $P$ = Precision and $R$ = Recall.
+where $P$ = Precision and $R$ = Recall (see [Micro, Macro & Weighted Averages of F1 Score, Clearly Explained](https://towardsdatascience.com/micro-macro-weighted-averages-of-f1-score-clearly-explained-b603420b292f/)).
 
 ### 2.4 Fraud rate to precision, recall, AUC
 
