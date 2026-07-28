@@ -144,11 +144,11 @@ where $n_i$ is the sample size for $i$ -th class.
 
 [[Boaz Shmueli-2]][Multi-Class Metrics Made Simple, Part II: the F1-score] show an example for three classes. The 3 x 3 confusion matrix is 
 
-|  |  True cat |  True fish | True han |
+|  |  True cat 🐱 |  True fish 🐟 | True hen 🐔 |
 | --- | --- | --- | --- |
-| pred cat | 4 | 6 | 3 | 
-| pred fish | 1 | 2 | 0 | 
-| pred han | 1 | 2 | 6 | 
+| pred cat 🐱 | 4 | 6 | 3 | 
+| pred fish 🐟 | 1 | 2 | 0 | 
+| pred hen 🐔 | 1 | 2 | 6 | 
 | total | 6 | 10 | 9 | 
 
 
