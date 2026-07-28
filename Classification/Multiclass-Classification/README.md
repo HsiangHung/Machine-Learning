@@ -152,6 +152,12 @@ where $n_i$ is the sample size for $i$ -th class.
 | **total** | 6 | 10 | 9 |  25 |
 
 
+|  |  True cat 🐱 |  True fish 🐟 | True hen 🐔 | 
+| --- | --- | --- | --- |
+| True Positive | 4 | 2 | 6 | 
+| False Positive | 9 | 1 | 3 | 
+| False Negative | 2 | 8 | 3 | 
+
 For each class, we can have precision, recall and F1 score like
 
 |  |  precision |  recall | F1 score |
@@ -160,6 +166,11 @@ For each class, we can have precision, recall and F1 score like
 | fish 🐟 | 0.667 (2/3)| 0.20 (2/10) | 0.308 (2x0.667x0.3/(0.667+0.3)) | 
 | hen 🐔 | 0.667 (6/9) | 0.667 (6/9) | 0.667 | 
 
+* Macro-precision = (0.31 + 0.67 + 0.67) / 3 = 0.547.
+* Micro-precision = (4 + 2 + 6) / (4 + 2 + 6 + 9 + 1 + 3) = 0.48.
+* Weight-precision = (0.31 * 6 + 0.67 * 10 + 0.67 * 9) / (6+10+9) = 0.58.
+* Macro-F1 = (0.421 + 0.308 + 0.667) / 3 = 0.465.
+
 
 |  |  precision |  recall | F1 score |
 | --- | --- | --- | --- |
@@ -167,10 +178,6 @@ For each class, we can have precision, recall and F1 score like
 | Micro | 0.48 | 0.48 |  | 
 | Weighted | 0.58 | | |
 
-* Macro-precision = (0.31 + 0.67 + 0.67) / 3 = 0.547.
-* Micro-precision = (4 + 2 + 6) / (4 + 2 + 6 + 9 + 1 + 3) = 0.48.
-* Weight-precision = (0.31 * 6 + 0.67 * 10 + 0.67 * 9) / (6+10+9) = 0.58.
-* Macro-F1 = (0.421 + 0.308 + 0.667) / 3 = 0.465.
 
 
 There are totally 4+2+6=12 TP, and totally 6+3+1+0+1+2=13 FP. Thus the micro-average precision is 12/(12+13)= 0.48. In the example, we can see total FN = FP. Therefore micro-averaged recall is the same as micro-averaged precision [[Boaz Shmueli-2]][Multi-Class Metrics Made Simple, Part II: the F1-score]. 
