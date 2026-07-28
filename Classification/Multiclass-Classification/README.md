@@ -154,9 +154,9 @@ where $n_i$ is the sample size for $i$ -th class.
 
 |  |  True cat 🐱 |  True fish 🐟 | True hen 🐔 | 
 | --- | --- | --- | --- |
-| True Positive | 4 | 2 | 6 | 
-| False Positive | 9 | 1 | 3 | 
-| False Negative | 2 | 8 | 3 | 
+| True Positive (TP) | 4 | 2 | 6 | 
+| False Positive (FP) | 9 | 1 | 3 | 
+| False Negative (FN) | 2 | 8 | 3 | 
 
 For each class, we can have precision, recall and F1 score like
 
