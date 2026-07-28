@@ -151,7 +151,7 @@ If there is no external business concern about low TPR or high FPR, one option i
 * which maximizes `TPR-FPR`, 
 * which has optimal `F1 score` [[Cross Validated: How to determine the optimal threshold for a classifier and generate ROC curve?]][How to determine the optimal threshold for a classifier and generate ROC curve?]: 
 
-$$F_1 = \frac{2\textrm{P}\textrm{R}}{\textrm{P}+\textrm{R}}$$
+$$F_1 = \frac{2\textrm{P}\textrm{R}}{\textrm{P}+\textrm{R}} = \frac{TP}{TP+\frac{1}{2}(FP+FN)}.$$
 
 where $P$ = Precision and $R$ = Recall.
 
