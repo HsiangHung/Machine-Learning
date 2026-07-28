@@ -142,14 +142,14 @@ where $n_i$ is the sample size for $i$ -th class.
 
 #### Example
 
-[[Boaz Shmueli-2]][Multi-Class Metrics Made Simple, Part II: the F1-score] show an example for three classes. The 3 x 3 confusion matrix is 
+[[Boaz Shmueli-1]][Multi-Class Metrics Made Simple, Part I: Precision and Recall] show an example for three classes. The 3 x 3 confusion matrix is 
 
-|  |  True cat 🐱 |  True fish 🐟 | True hen 🐔 |
-| --- | --- | --- | --- |
-| pred cat 🐱 | 4 | 6 | 3 | 
-| pred fish 🐟 | 1 | 2 | 0 | 
-| pred hen 🐔 | 1 | 2 | 6 | 
-| total | 6 | 10 | 9 | 
+|  |  True cat 🐱 |  True fish 🐟 | True hen 🐔 | total |
+| --- | --- | --- | --- | --- |
+| **pred cat** 🐱 | 4 | 6 | 3 |  13 |
+| **pred fish** 🐟 | 1 | 2 | 0 | 3 |
+| **pred hen** 🐔 | 1 | 2 | 6 |  9 |
+| **total** | 6 | 10 | 9 |  25 |
 
 
 For each class, we can have precision, recall and F1 score like
