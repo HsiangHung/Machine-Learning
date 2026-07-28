@@ -191,8 +191,8 @@ There are totally 4+2+6=12 TP, and totally 6+3+1+0+1+2=13 FP. Thus the micro-ave
 [[Algorithmia] Multiclass classification in machine learning](https://algorithmia.com/blog/multiclass-classification-in-machine-learning)
 * [Multi-class Classification — One-vs-All & One-vs-One]: https://towardsdatascience.com/multi-class-classification-one-vs-all-one-vs-one-94daed32a87b
 [[Amey Band] Multi-class Classification — One-vs-All & One-vs-One](https://towardsdatascience.com/multi-class-classification-one-vs-all-one-vs-one-94daed32a87b)
-* [Multi-Class Metrics Made Simple, Part I: Precision and Recall]: https://towardsdatascience.com/multi-class-metrics-made-simple-part-i-precision-and-recall-9250280bddc2
-[[Boaz Shmueli-1] Multi-Class Metrics Made Simple, Part I: Precision and Recall](https://towardsdatascience.com/multi-class-metrics-made-simple-part-i-precision-and-recall-9250280bddc2)
+* [Multi-Class Metrics Made Simple, Part I: Precision and Recall]: https://shmueli.medium.com/multi-class-metrics-made-simple-part-i-precision-and-recall-9250280bddc2
+[[Boaz Shmueli-1] Multi-Class Metrics Made Simple, Part I: Precision and Recall](https://shmueli.medium.com/multi-class-metrics-made-simple-part-i-precision-and-recall-9250280bddc2)
 * [Multi-Class Metrics Made Simple, Part II: the F1-score]: https://towardsdatascience.com/multi-class-metrics-made-simple-part-ii-the-f1-score-ebe8b2c2ca1
 [[Boaz Shmueli-2] Multi-Class Metrics Made Simple, Part II: the F1-score](https://towardsdatascience.com/multi-class-metrics-made-simple-part-ii-the-f1-score-ebe8b2c2ca1)
 * [A Tale of Two Macro-F1's]: https://towardsdatascience.com/a-tale-of-two-macro-f1s-8811ddcf8f04
