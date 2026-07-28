@@ -149,7 +149,7 @@ where $n_i$ is the sample size for $i$ -th class.
 | **pred cat** 🐱 | 4 | 6 | 3 |  13 |
 | **pred fish** 🐟 | 1 | 2 | 0 | 3 |
 | **pred hen** 🐔 | 1 | 2 | 6 |  9 |
-| **total** | 6 | 10 | 9 |  25 |
+| **total (n)** | 6 | 10 | 9 |  25 |
 
 
 |  |  True cat 🐱 |  True fish 🐟 | True hen 🐔 | 
@@ -167,7 +167,7 @@ For each class, we can have precision, recall and F1 score like
 | hen 🐔 | 0.667 (6/9) | 0.667 (6/9) | 0.667 | 
 
 * Macro-precision = (0.31 + 0.67 + 0.67) / 3 = 0.547.
-* Micro-precision = (4 + 2 + 6) / (4 + 2 + 6 + 9 + 1 + 3) = 0.48.
+* Micro-precision = (4 + 2 + 6) / (13 + 9 + 3) = 0.48.
 * Weight-precision = (0.31 * 6 + 0.67 * 10 + 0.67 * 9) / (6+10+9) = 0.58.
 * Macro-F1 = (0.421 + 0.308 + 0.667) / 3 = 0.465.
 
