@@ -183,7 +183,7 @@ For each class, we can have precision, recall and F1 score like
 There are totally 4+2+6=12 TP, and totally 6+3+1+0+1+2=13 FP. Thus the micro-average precision is 12/(12+13)= 0.48. In the example, we can see total FN = FP. Therefore micro-averaged recall is the same as micro-averaged precision [[Boaz Shmueli-1]][Multi-Class Metrics Made Simple, Part I: Precision and Recall]. 
 
 
-
+Also note, if we were to do **micro-average** for precision and recall, we would get the same value of F1 [[Kenneth Leung]][Micro, Macro & Weighted Averages of F1 Score, Clearly Explained].
 
 
 
@@ -208,4 +208,5 @@ There are totally 4+2+6=12 TP, and totally 6+3+1+0+1+2=13 FP. Thus the micro-ave
 [[Cross Validated: Many binary classifiers vs. single multiclass classifier] Many binary classifiers vs. single multiclass classifier](https://stats.stackexchange.com/questions/318520/many-binary-classifiers-vs-single-multiclass-classifier)
 * [Multiclass SVMs]: https://nlp.stanford.edu/IR-book/html/htmledition/multiclass-svms-1.html
 [[Stanford NLP] Multiclass SVMs](https://nlp.stanford.edu/IR-book/html/htmledition/multiclass-svms-1.htmlr)
-
+* [Micro, Macro & Weighted Averages of F1 Score, Clearly Explained]: https://towardsdatascience.com/micro-macro-weighted-averages-of-f1-score-clearly-explained-b603420b292f/
+[[Kenneth Leung] Micro, Macro & Weighted Averages of F1 Score, Clearly Explained](https://towardsdatascience.com/micro-macro-weighted-averages-of-f1-score-clearly-explained-b603420b292f/)
