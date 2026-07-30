@@ -97,7 +97,7 @@ The blog [[Andrew Young]][Isolation Forest is the best Anomaly Detection Algorit
 
 1. Most other outlier detection (OD) algorithms seek to **build a profile of “normal” instances then flag instances** that don’t fit that profile of normality. iForest explicitly isolates anomalous records by taking advantage of inherent properties of anomalies: they have unusual values for the set of covariates.
 
-2. Existing methods are constrained to low dimensional data and small data size due to computational expense.
+2. Most existing methods (e.g. DBSCAN, Statistical Profiling needs multivariate Gaussian models) are constrained to low dimensional data and small data size due to computational expense.
 
 3. Additionally, iForest has “a low constant and low memory requirement” i.e. low overhead. Specifics: the number of external nodes is n since each observation, n, is isolated by itself. The total number of internal nodes is clearly n-1, and the total number nodes is 2n-1. Hence, we see why the **memory requirement** is bounded and **grows linearly with n**.
 
