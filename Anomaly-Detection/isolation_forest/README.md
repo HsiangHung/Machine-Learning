@@ -28,7 +28,7 @@ This session explains how to build an isolation forest step by step [[Hyunsu Kim
 
 * **Step 2** — Making binary decision tree: Suppose we have two attributes (i.e. Q1 or Q2) as shown below, random choice of an attribute and random choice of a Q1 or Q2 value between its min and max (i.e. Q1’)
 
-* **Step 3** — Repeat step 2 Iteratively until each data is isolated as a leaf or specified maximum depth is reached.
+* **Step 3** — Repeat step 2 Iteratively until **each data is isolated as a leaf** or **specified maximum depth is reached** (NOTE, isolation forest doesn't have a parameter like `min_samples_leaf`).
 
 So far the step 1-3 can be summarized below
 
