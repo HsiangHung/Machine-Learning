@@ -184,7 +184,7 @@ $$s(x, n) = 2^{-\frac{\mathbb{E}[h(x)]}{c(n)}}$$
 where $\mathbb{E}[h(x)]$ is the average value of $h(x)$ from a collection of iTrees, where $h(x)$ is the **`path length`** of the sample $x$, and $c(n)$ is the ‘unsuccessful length search’ of a binary tree (the maximum path length of a binary tree from root to external node); $n$ is the number of external nodes. 
 
 
-**`path length`** is defined as the number of “splittings” made by the algorithm for an instance; the number of splittings required to isolate a sample is equivalent to the path length from the root node to the terminating node. As shown below, outliers will have shorter path lengths than the rest of the observations (pictures from [wiki](https://en.wikipedia.org/wiki/Isolation_forest) and [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]). Also see [my notebook example](https://github.com/HsiangHung/Machine_Learning_Note/blob/master/Anomaly_Detection/outlier_methods_sklearn.ipynb).
+**`path length`** is defined as the number of “splittings” made by the algorithm for an instance; the number of splittings required to isolate a sample is equivalent to the path length from the root node to the terminating node. As shown below, **outliers** will have **shorter path lengths** than the rest of the observations (pictures from [wiki](https://en.wikipedia.org/wiki/Isolation_forest) and [[Sergio Santoyo]][A Brief Overview of Outlier Detection Techniques]). Also see [my notebook example](https://github.com/HsiangHung/Machine_Learning_Note/blob/master/Anomaly_Detection/outlier_methods_sklearn.ipynb).
 
 ![isolation_forest](images/isolation_forest.png)
 
