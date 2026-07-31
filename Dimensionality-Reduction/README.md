@@ -9,7 +9,7 @@ Here is the note I read many blogs or posts about dimensionality reduction metho
 3. It becomes easier to visualize the data when reduced to very low dimensions such as 2D or 3D
 4. It avoids the curse of dimensionality
 
-## PCA (Linear)
+## Linear: PCA
 
 PCA is a commonly used algorithm in data science to compresses your data from a higher dimension to a lower dimension based on the eigenvector of the variance in your dataset, by **linear orthogonal transformation** [[Quroa: What are some of the limitations of principal component analysis?]][What are some of the limitations of principal component analysis?]. The post [[Syed Sadat Nazrul]][The DOs and DON’Ts of Principal Component Analysis] lists DO’s and DON'ts points. 
 
@@ -45,7 +45,7 @@ X_test_pca = pca.transform(X_test)
 ```
 We need to split training and test datasets before standardizing and PCA.
 
-## Non-Linear Dimensionality Reduction
+## Non-Linear
 
 ### Autoencoder
    
