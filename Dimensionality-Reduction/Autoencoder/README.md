@@ -67,13 +67,13 @@ The second is the regularization term to **penalize the activations** of hidden 
 1. L1 regularization
 2. KL-Divergence 
 
-In the following, we will write <a href="https://www.codecogs.com/eqnedit.php?latex=a^{(h)}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a^{(h)}_j" title="a^{(h)}_j" /></a> $a^{(h)}_j$ to denote the activation of the $j$-th hidden unit of hidden layer $h$, when the network is given a specific input $x$.
+In the following, we will write $a^{(h)}_j$ to denote the activation of the $j$-th hidden unit of hidden layer $h$, when the network is given a specific input $x$.
 
 ### 2.1 L1 regularization
 
 L1 regularization adds a term to our loss function that penalizes the absolute value of the vector of activations `a`, scaled by a tuning parameter λ [[Jermey Jordan-1]][Introduction to autoencoders], [[Wiki]][Autoencoder]. The resultsing cost function reads as
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;C(x,\hat{x})&space;&plus;&space;\lambda&space;\sum_{h,j}\sum_i&space;|a^{(h)}_j(x_i)|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;C(x,\hat{x})&space;&plus;&space;\lambda&space;\sum_{h,j}\sum_i&space;|a^{(h)}_j(x_i)|" title="C = C(x,\hat{x}) + \lambda \sum_{h,j}\sum_i |a^{(h)}_j(x_i)|" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;C(x,\hat{x})&space;&plus;&space;\lambda&space;\sum_{h,j}\sum_i&space;|a^{(h)}_j(x_i)|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;C(x,\hat{x})&space;&plus;&space;\lambda&space;\sum_{h,j}\sum_i&space;|a^{(h)}_j(x_i)|" title="C = C(x,\hat{x}) + \lambda \sum_{h,j}\sum_i |a^{(h)}_j(x_i)|" /></a> -->
 
 $$C = C(x,\hat{x}) + \lambda \sum_{h,j}\sum_i |a^{(h)}_j(x_i)|.$$
 
@@ -82,7 +82,7 @@ $$C = C(x,\hat{x}) + \lambda \sum_{h,j}\sum_i |a^{(h)}_j(x_i)|.$$
 
 In essence, KL-divergence is a measure of the difference between two probability distributions. Define 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;\big[&space;a^{(h)}_j(x_i)&space;\big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;\big[&space;a^{(h)}_j(x_i)&space;\big]" title="\hat{\rho}_j = \frac{1}{m} \sum^m_{i=1} \big[ a^{(h)}_j(x_i) \big]" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;\big[&space;a^{(h)}_j(x_i)&space;\big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;\big[&space;a^{(h)}_j(x_i)&space;\big]" title="\hat{\rho}_j = \frac{1}{m} \sum^m_{i=1} \big[ a^{(h)}_j(x_i) \big]" /></a> -->
 
 $$\hat{\rho}_j = \frac{1}{m} \sum^m_{i=1} \big[ a^{(h)}_j(x_i) \big],$$
 
@@ -105,7 +105,7 @@ This penalty function has the property that
 
  <!-- <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;0,&space;\&space;\textrm{if&space;}&space;\rho=\hat{\rho}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;0,&space;\&space;\textrm{if&space;}&space;\rho=\hat{\rho}_j" title="\textrm{KL}(\rho || \hat{\rho}_j) = 0, \ \textrm{if } \rho=\hat{\rho}_j" /></a> -->
  
-$$\textrm{KL}(\rho || \hat{\rho}_j) = 0, \ \textrm{if } \rho=\hat{\rho}_j,$$
+$$\textrm{KL}(\rho \parallel \hat{\rho}_j) = 0, \ \textrm{if } \rho=\hat{\rho}_j,$$
 
  otherwise it increases monotonically as $\hat{\rho}_j$ diverges from $\rho$. As an example, in the figure below, we have set ρ=0.2, the KL divergence penalty function looks like [[UFLDL Tutorial]][Autoencoders], [[Jermey Jordan-1]][Introduction to autoencoders]:
 
