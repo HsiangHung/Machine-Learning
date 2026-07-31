@@ -45,11 +45,17 @@ X_test_pca = pca.transform(X_test)
 ```
 We need to split training and test datasets before standardizing and PCA.
 
-## Autoencoder
+## Non-Linear Dimensionality Reduction
+
+### Autoencoder
    
 
 An autoencoder is a dimensionality reduction method using **non-linear** transformation. The model is constructed by neural networks and need training. The detail could be found [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder), and [[Arden Dertat]][Applied Deep Learning - Part 3: Autoencoders].
 
+### UMAP
+Uniform Manifold Approximation and Projection
+
+### t-SNE
 
 ## Curse of Dimensionality 
 
@@ -57,7 +63,7 @@ An autoencoder is a dimensionality reduction method using **non-linear** transfo
 [[Vincent Spruyt]][The Curse of Dimensionality in classification]
 
 
-## t-SNE
+
 
 
 
