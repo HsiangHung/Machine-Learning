@@ -87,13 +87,13 @@ In essence, KL-divergence is a measure of the difference between two probability
 $$\hat{\rho}_j = \frac{1}{m} \sum^m_{i=1} \big[ a^{(h)}_j(x_i) \big],$$
 
 
-be the **average** activation of hidden unit `j` (averaged over the `m` training set). We would like to (approximately) enforce the constraint 
+be the **average** activation of hidden unit $j$ (averaged over the $m$ training set). We would like to (approximately) enforce the constraint 
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\rho" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\rho" title="\hat{\rho}_j = \rho" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\rho" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\rho" title="\hat{\rho}_j = \rho" /></a> -->
 
 $$\hat{\rho}_j = \rho,$$
 
-where `ρ` is a ”‘sparsity parameter”’, typically a small value close to zero (say ρ=0.05). In other words, we would like the average activation of each hidden neuron `j` to be close to 0.05 (say); to satisfy this constraint, the hidden unit’s activations must mostly be near 0 [[UFLDL Tutorial]][Autoencoders].
+where $\rho$ is a ”‘sparsity parameter”’, typically a small value close to zero (say ρ=0.05). In other words, we would like the average activation of each hidden neuron $j$ to be close to 0.05 (say); to satisfy this constraint, the hidden unit’s activations must mostly be near 0 [[UFLDL Tutorial]][Autoencoders].
 
 Therefore, we can describe $\rho$ as a Bernoulli random variable distribution, and we implement the KL divergence (expanded below) to compare the ideal distribution $\rho$ to the observed distributions over all hidden layer nodes $\hat{\rho}$ (from our data). Therefore the regularization term to our optimization objective that penalizes $\hat{\rho}_j$ deviating significantly from $\rho$ is
 
