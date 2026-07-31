@@ -9,7 +9,7 @@ Here is the note I read many blogs or posts about dimensionality reduction metho
 3. It becomes easier to visualize the data when reduced to very low dimensions such as 2D or 3D
 4. It avoids the curse of dimensionality
 
-## PCA
+## PCA (Linear)
 
 PCA is a commonly used algorithm in data science to compresses your data from a higher dimension to a lower dimension based on the eigenvector of the variance in your dataset, by **linear orthogonal transformation** [[Quroa: What are some of the limitations of principal component analysis?]][What are some of the limitations of principal component analysis?]. The post [[Syed Sadat Nazrul]][The DOs and DON’Ts of Principal Component Analysis] lists DO’s and DON'ts points. 
 
@@ -48,7 +48,7 @@ We need to split training and test datasets before standardizing and PCA.
 ## Autoencoder
    
 
-An autoencoder is a dimensionality reduction method using nonlinear transformation. The model is constructed by neural networks and need training. The detail could be found [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder), and [[Arden Dertat]][Applied Deep Learning - Part 3: Autoencoders].
+An autoencoder is a dimensionality reduction method using **non-linear** transformation. The model is constructed by neural networks and need training. The detail could be found [here](https://github.com/HsiangHung/Machine_Learning_Note/tree/master/Dimensionality_Reduction/Autoencoder), and [[Arden Dertat]][Applied Deep Learning - Part 3: Autoencoders].
 
 
 ## Curse of Dimensionality 
