@@ -50,9 +50,13 @@ Our overall cost function for the autoencoder is [[UFLDL Tutorial]][Autoencoders
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;C(x,&space;\hat{x})&space;&plus;&space;\textrm{regularization}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;C(x,&space;\hat{x})&space;&plus;&space;\textrm{regularization}" title="C = C(x, \hat{x}) + \textrm{regularization}" /></a>
 
+$$C = C(x, \hat{x}) + \textrm{regularization}.$$
+
 The first term comes the reconstruction cost `C(x,x̂)`, which is the same as the cost function in [supervised neural networks](http://ufldl.stanford.edu/tutorial/supervised/MultiLayerNeuralNetworks/). If followed Andrew Ng's Machine Learning class's notation, it reads
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C(x,\hat{x})&space;=&space;J(\Theta)=&space;\frac{1}{m}\sum^m_{i=1}&space;\frac{1}{2}||&space;h_{\Theta}(x_i)&space;-y_i&space;||^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(x,\hat{x})&space;=&space;J(\Theta)=&space;\frac{1}{m}\sum^m_{i=1}&space;\frac{1}{2}||&space;h_{\Theta}(x_i)&space;-y_i&space;||^2" title="C(x,\hat{x}) = J(\Theta)= \frac{1}{m}\sum^m_{i=1} \frac{1}{2}|| h_{\Theta}(x_i) -y_i ||^2" /></a>
+
+$$C(x,\hat{x}) = J(\Theta)= \frac{1}{m}\sum^m_{i=1} \frac{1}{2}|| h_{\Theta}(x_i) -y_i ||^2.$$
 
 The second is the regularization term to **penalize the activations** of hidden units. There are two main ways to penalize the activation ([Jermey Jordan](https://www.jeremyjordan.me/autoencoders/) called them `Sparse Autoencoders`): 
 
@@ -67,6 +71,8 @@ L1 regularization adds a term to our loss function that penalizes the absolute v
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;C(x,\hat{x})&space;&plus;&space;\lambda&space;\sum_{h,j}\sum_i&space;|a^{(h)}_j(x_i)|" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;C(x,\hat{x})&space;&plus;&space;\lambda&space;\sum_{h,j}\sum_i&space;|a^{(h)}_j(x_i)|" title="C = C(x,\hat{x}) + \lambda \sum_{h,j}\sum_i |a^{(h)}_j(x_i)|" /></a>
 
+$$C = C(x,\hat{x}) + \lambda \sum_{h,j}\sum_i |a^{(h)}_j(x_i)|.$$
+
 
 ### 2.2 KL-divergence
 
@@ -74,22 +80,30 @@ In essence, KL-divergence is a measure of the difference between two probability
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;\big[&space;a^{(h)}_j(x_i)&space;\big]" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\frac{1}{m}&space;\sum^m_{i=1}&space;\big[&space;a^{(h)}_j(x_i)&space;\big]" title="\hat{\rho}_j = \frac{1}{m} \sum^m_{i=1} \big[ a^{(h)}_j(x_i) \big]" /></a>
 
+$$\hat{\rho}_j = \frac{1}{m} \sum^m_{i=1} \big[ a^{(h)}_j(x_i) \big],$$
+
+
 be the **average** activation of hidden unit `j` (averaged over the `m` training set). We would like to (approximately) enforce the constraint 
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j&space;=&space;\rho" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j&space;=&space;\rho" title="\hat{\rho}_j = \rho" /></a>
 
+$$\hat{\rho}_j = \rho,$$
+
 where `ρ` is a ”‘sparsity parameter”’, typically a small value close to zero (say ρ=0.05). In other words, we would like the average activation of each hidden neuron `j` to be close to 0.05 (say); to satisfy this constraint, the hidden unit’s activations must mostly be near 0 [[UFLDL Tutorial]][Autoencoders].
 
-Therefore, we can describe `ρ` as a Bernoulli random variable distribution, and we implement the KL divergence (expanded below) to compare the ideal distribution `ρ` to the observed distributions over all hidden layer nodes `ρ̂` (from our data). Therefore the regularization term to our optimization objective that penalizes <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j" title="\hat{\rho}_j" /></a> deviating significantly from ρ  is
+Therefore, we can describe `ρ` as a Bernoulli random variable distribution, and we implement the KL divergence (expanded below) to compare the ideal distribution `ρ` to the observed distributions over all hidden layer nodes `ρ̂` (from our data). Therefore the regularization term to our optimization objective that penalizes <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j" title="\hat{\rho}_j" /></a> $\hat{\rho}_j$ deviating significantly from ρ  is
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{regularization}&space;=&space;\sum^{n_l-1}_{l=1}&space;\sum^{s_l}_{j=1}&space;\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;\sum^{n_l-1}_{l=1}&space;\sum^{s_l}_{j=1}&space;\Big(&space;\rho&space;\log\frac{\rho}{\hat{\rho_j}}&space;&plus;&space;(1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}}&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{regularization}&space;=&space;\sum^{n_l-1}_{l=1}&space;\sum^{s_l}_{j=1}&space;\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;\sum^{n_l-1}_{l=1}&space;\sum^{s_l}_{j=1}&space;\Big(&space;\rho&space;\log\frac{\rho}{\hat{\rho_j}}&space;&plus;&space;(1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}}&space;\Big)" title="\textrm{regularization} = \sum^{n_l-1}_{l=1} \sum^{s_l}_{j=1} \textrm{KL}(\rho || \hat{\rho}_j) = \sum^{n_l-1}_{l=1} \sum^{s_l}_{j=1} \Big( \rho \log\frac{\rho}{\hat{\rho_j}} + (1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}} \Big)" /></a>
 
+$$\textrm{regularization} = \sum^{n_l-1}_{l=1} \sum^{s_l}_{j=1} \textrm{KL}(\rho || \hat{\rho}_j) = \sum^{n_l-1}_{l=1} \sum^{s_l}_{j=1} \Big( \rho \log\frac{\rho}{\hat{\rho_j}} + (1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}} \Big).$$
 
 This penalty function has the property that
 
  <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;0,&space;\&space;\textrm{if&space;}&space;\rho=\hat{\rho}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;0,&space;\&space;\textrm{if&space;}&space;\rho=\hat{\rho}_j" title="\textrm{KL}(\rho || \hat{\rho}_j) = 0, \ \textrm{if } \rho=\hat{\rho}_j" /></a>
  
- otherwise it increases monotonically as <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j" title="\hat{\rho}_j" /></a> diverges from ρ. As an example, in the figure below, we have set ρ=0.2, the KL divergence penalty function looks like [[UFLDL Tutorial]][Autoencoders], [[Jermey Jordan-1]][Introduction to autoencoders]:
+$$\textrm{KL}(\rho || \hat{\rho}_j) = 0, \ \textrm{if } \rho=\hat{\rho}_j,$$
+
+ otherwise it increases monotonically as <a href="https://www.codecogs.com/eqnedit.php?latex=\hat{\rho}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\hat{\rho}_j" title="\hat{\rho}_j" /></a> $\hat{\rho}_j$ diverges from ρ. As an example, in the figure below, we have set ρ=0.2, the KL divergence penalty function looks like [[UFLDL Tutorial]][Autoencoders], [[Jermey Jordan-1]][Introduction to autoencoders]:
 
 
 ![](images/KL_divergence_penalty.png)
