@@ -52,13 +52,13 @@ As a concrete example, suppose the inputs x are the pixel intensity values from 
 
 Our overall cost function for the autoencoder is [[UFLDL Tutorial]][Autoencoders], [[Jermey Jordan-1]][Introduction to autoencoders], [[Cross Validated]][Loss function for autoencoders]:
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;C(x,&space;\hat{x})&space;&plus;&space;\textrm{regularization}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;C(x,&space;\hat{x})&space;&plus;&space;\textrm{regularization}" title="C = C(x, \hat{x}) + \textrm{regularization}" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=C&space;=&space;C(x,&space;\hat{x})&space;&plus;&space;\textrm{regularization}" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C&space;=&space;C(x,&space;\hat{x})&space;&plus;&space;\textrm{regularization}" title="C = C(x, \hat{x}) + \textrm{regularization}" /></a> -->
 
 $$C = C(x, \hat{x}) + \textrm{regularization}.$$
 
 The first term comes the reconstruction cost $C(x,\hat{x})$, which is the same as the cost function in [supervised neural networks](http://ufldl.stanford.edu/tutorial/supervised/MultiLayerNeuralNetworks/). If followed Andrew Ng's Machine Learning class's notation, it reads
 
-<a href="https://www.codecogs.com/eqnedit.php?latex=C(x,\hat{x})&space;=&space;J(\Theta)=&space;\frac{1}{m}\sum^m_{i=1}&space;\frac{1}{2}||&space;h_{\Theta}(x_i)&space;-y_i&space;||^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(x,\hat{x})&space;=&space;J(\Theta)=&space;\frac{1}{m}\sum^m_{i=1}&space;\frac{1}{2}||&space;h_{\Theta}(x_i)&space;-y_i&space;||^2" title="C(x,\hat{x}) = J(\Theta)= \frac{1}{m}\sum^m_{i=1} \frac{1}{2} \parallel h_{\Theta}(x_i) -y_i \parallel^2" /></a>
+<!-- <a href="https://www.codecogs.com/eqnedit.php?latex=C(x,\hat{x})&space;=&space;J(\Theta)=&space;\frac{1}{m}\sum^m_{i=1}&space;\frac{1}{2}||&space;h_{\Theta}(x_i)&space;-y_i&space;||^2" target="_blank"><img src="https://latex.codecogs.com/gif.latex?C(x,\hat{x})&space;=&space;J(\Theta)=&space;\frac{1}{m}\sum^m_{i=1}&space;\frac{1}{2}||&space;h_{\Theta}(x_i)&space;-y_i&space;||^2" title="C(x,\hat{x}) = J(\Theta)= \frac{1}{m}\sum^m_{i=1} \frac{1}{2} \parallel h_{\Theta}(x_i) -y_i \parallel^2" /></a> -->
 
 $$C(x,\hat{x}) = J(\Theta)= \frac{1}{m}\sum^m_{i=1} \frac{1}{2} \parallel h_{\Theta}(x_i) -y_i \parallel^2.$$
 
@@ -67,7 +67,7 @@ The second is the regularization term to **penalize the activations** of hidden 
 1. L1 regularization
 2. KL-Divergence 
 
-In the following, we will write <a href="https://www.codecogs.com/eqnedit.php?latex=a^{(h)}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a^{(h)}_j" title="a^{(h)}_j" /></a>  to denote the activation of the `j`-th hidden unit of hidden layer `h`, when the network is given a specific input x.
+In the following, we will write <a href="https://www.codecogs.com/eqnedit.php?latex=a^{(h)}_j" target="_blank"><img src="https://latex.codecogs.com/gif.latex?a^{(h)}_j" title="a^{(h)}_j" /></a> $a^{(h)}_j$ to denote the activation of the $j$-th hidden unit of hidden layer $h$, when the network is given a specific input $x$.
 
 ### 2.1 L1 regularization
 
@@ -99,7 +99,7 @@ Therefore, we can describe `ρ` as a Bernoulli random variable distribution, and
 
 <a href="https://www.codecogs.com/eqnedit.php?latex=\textrm{regularization}&space;=&space;\sum^{n_l-1}_{l=1}&space;\sum^{s_l}_{j=1}&space;\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;\sum^{n_l-1}_{l=1}&space;\sum^{s_l}_{j=1}&space;\Big(&space;\rho&space;\log\frac{\rho}{\hat{\rho_j}}&space;&plus;&space;(1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}}&space;\Big)" target="_blank"><img src="https://latex.codecogs.com/gif.latex?\textrm{regularization}&space;=&space;\sum^{n_l-1}_{l=1}&space;\sum^{s_l}_{j=1}&space;\textrm{KL}(\rho&space;||&space;\hat{\rho}_j)&space;=&space;\sum^{n_l-1}_{l=1}&space;\sum^{s_l}_{j=1}&space;\Big(&space;\rho&space;\log\frac{\rho}{\hat{\rho_j}}&space;&plus;&space;(1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}}&space;\Big)" title="\textrm{regularization} = \sum^{n_l-1}_{l=1} \sum^{s_l}_{j=1} \textrm{KL}(\rho || \hat{\rho}_j) = \sum^{n_l-1}_{l=1} \sum^{s_l}_{j=1} \Big( \rho \log\frac{\rho}{\hat{\rho_j}} + (1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}} \Big)" /></a>
 
-$$\textrm{regularization} = \sum^{n_l-1}_{l=1} \sum^{s_l}_{j=1} \textrm{KL}(\rho || \hat{\rho}_j) = \sum^{n_l-1}_{l=1} \sum^{s_l}_{j=1} \Big( \rho \log\frac{\rho}{\hat{\rho_j}} + (1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}} \Big).$$
+$$\textrm{regularization} = \sum^{n_l-1}_{l=1} \sum^{s_l}_{j=1} \textrm{KL}(\rho \parallel \hat{\rho}_j) = \sum^{n_l-1}_{l=1} \sum^{s_l}_{j=1} \Big( \rho \log\frac{\rho}{\hat{\rho_j}} + (1-\rho)\log\frac{1-\rho}{1-\hat{\rho_j}} \Big).$$
 
 This penalty function has the property that
 
