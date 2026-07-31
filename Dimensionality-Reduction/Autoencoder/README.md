@@ -11,11 +11,15 @@ Autoencoders are neural network models used to learn efficient data patterns in 
 
 An original neural network (supervised) model is trained as 
 
-`model.fit(X, y)`
+```Python
+model.fit(X, y)
+```
 
 But an autocorder is trained as
 
-`model.fit(X, X)`
+```Python
+model.fit(X, X)
+```
 
 In other words, we build a model to predict output with the same dimension as input and minimum loss on information [[Elior Cohen]][Reducing Dimensionality from Dimensionality Reduction Techniques]. The values of the parameters in the hidden layers is updated by back-progagation.
 
